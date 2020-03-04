@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ásbrú Connection Manager">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Coding Standard - Ásbrú Connection Manager - Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Coding Standard";
+    var mkdocs_page_input_path = "General/CODING_STANDARD.md";
+    var mkdocs_page_url = "/General/CODING_STANDARD/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Ásbrú Connection Manager - Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">1. General</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Changelog/">Changelog</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Ásbrú Connection Manager - Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Coding Standard</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/asbru-cm/asbru-cm/edit/master/doc/General/CODING_STANDARD.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="coding-standard">Coding Standard</h1>
+<p>This coding standard consists of recommendations when contributing to the Ásbrú Connection Manager project.  Recommendations are meant to provide guidance that, when followed, should improve the safety, reliability, and security of the project.</p>
+<h2 id="coding-guidelines">Coding guidelines</h2>
+<ul>
+<li>Use spaces as indentation (no tabs).</li>
+<li>Use 4 spaces per indentation level.</li>
+<li>No trailing white space.</li>
+<li>Explicit if statements:</li>
+<li>No use of:<ul>
+<li><code>unless</code></li>
+<li>reversed if <code>next if $true;</code></li>
+<li>non explicit conditional expressions</li>
+<li><code>($a) &amp;&amp; ($b) and print "do this if both variables are true";</code></li>
+</ul>
+</li>
+<li>Ternary operator for assigment is allowed as long as the code does not obfuscate.</li>
+<li><code>my $value = ($exists) ? $exists : 1;</code></li>
+<li>Use of strings with interpolation.</li>
+<li>Example: <code>$CNF_DIR = "$ENV{'HOME'}/.config/pac";</code></li>
+<li>Nested parenthesis should be together unless you feel that a separation makes code more readable.</li>
+<li>All conditional blocks, Loops must be on different lines, even if it is one statement in the block.</li>
+<li>Local variables should be declared at the beginning of a function block, and if they are not initialized, they could be declared as one line.<ul>
+<li><code>my ($var1, $var2, $var3);</code></li>
+<li>Avoid declaring them in the middle of the block, unless is going to be used as a temporary variable inside an inner block.</li>
+</ul>
+</li>
+<li>Rules might be bent from time to time, when brings something valuable to the code over formatting.</li>
+<li>Function naming<ul>
+<li>Use camel case, example : myLongNameFunction</li>
+<li>Add an undersocore to local function names : _myPrivateFunction</li>
+</ul>
+</li>
+</ul>
+<h2 id="documentation-guidelines">Documentation guidelines</h2>
+<ul>
+<li>At the end of each script the <code>__END__</code> marker should be added</li>
+<li>This marker will tell the compiler to stop processing the file from that point onward.</li>
+<li>Allowing to write extensive documentation without being processed by the compiler.</li>
+<li>After the end marker, documentation can be added in pod format, to allow perldoc to format and present information on the screen or to export to other formats.</li>
+</ul>
+<h3 id="basic-pod-plain-old-documentation">Basic pod (Plain Old Documentation)</h3>
+<p><strong>Common Sections</strong>, as found in all CPAN documentation</p>
+<ul>
+<li><strong>NAME</strong> module or script name, a dash and a short description.</li>
+<li>SYNOPSIS shows example usage.</li>
+<li><strong>DESCRIPTION</strong> long description of what the module does and lists functions.</li>
+<li><strong>BUGS or CAVEATS</strong> about bugs or issues the user should know about.</li>
+<li>ACKNOWLEDGEMENTS thank bug fixers, testers and your parents.</li>
+<li>COPYRIGHT or LICENSE copyright restrictions.</li>
+<li>AVAILABILITY Where to download from</li>
+<li>AUTHOR who made it.</li>
+</ul>
+<p>The bold sections should be the minimum to Document. Other sections already exist in the repository or could not apply to this particular project.</p>
+<h3 id="pod-markup-summary">Pod markup summary</h3>
+<p><strong>This is a reduced set</strong>, if anyone is interested on the full description, follow this reference: https://perldoc.perl.org/perlpod.html</p>
+<pre><code class="pod">=encoding utf8
+
+=head1 NAME
+
+There are 4 header level 1..4
+
+Pod will indent each section,
+as in many markup languages, two or more lines together are printed as a single line.
+
+=head2
+
+Always leave a blank line before and after each pod tag,
+log lines can be split into consecutive lines.
+
+Indent one level with a tab to document code and create a verbatim sections where each line is printed separately.
+
+    sub myFunction {
+        print &quot;Something&quot;;
+    }
+
+</code></pre>
+
+<p>Basic styles not all available in terminal</p>
+<pre><code class="pod">B&lt;bold text&gt;
+I&lt;Italic text, shown as underline text in terminal&gt;
+C&lt;code text&gt;
+B&lt;tags can be I&lt;nested&gt;&gt;
+</code></pre>
+
+<p><strong>Example pod file in asbru-cm</strong></p>
+<pre><code>__END___
+=encoding utf8
+
+=head1 NAME
+
+asbru-cm
+
+=head1 SYNOPSYS
+
+asbru-cm [options]
+
+B&lt;Options&gt;
+
+    --help : show this message
+    --no-backup : do no create alternative config files as a backup (faster shutdown)
+    --start-shell : start a local terminal
+    --password=&lt;pwd&gt; : automatically logon with given password without prompting user
+    --start-uuid=&lt;uuid&gt;[:&lt;cluster] : start connection in cluster (if given)
+    --edit-uuid=&lt;uuid&gt; : edit connection
+    --dump-uuid=&lt;uuid&gt; : dump data for given connection
+    --scripts : open scripts window
+    --start-script=&lt;script&gt; : start given script
+    --preferences : open global preferences dialog
+    --quick-conn : open the Quick Connect dialog on startup
+    --list-uuids : list existing connections/groups and their UUIDs
+    --no-splash : no splash screen on startup
+    --iconified : go to tray once started
+    --readonly : start in read only mode (no config changes allowed)
+
+=head1 DESCRIPTION
+
+=head2 Global Variables
+
+I&lt;$CFG_DIR&gt;    Setup your configuration directory here.
+
+You may run different versions of Ásbru and each have different configuration settings and connections.
+
+=head2 Functions
+
+C&lt;sub config_migration&gt; (no parameters) (no return values)
+
+Function normally empty unless there is a migration of the configuration files.
+
+</code></pre>
+
+<p><strong>See result executing</strong> <code>perldoc asbru-cm</code></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/asbru-cm/asbru-cm/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
