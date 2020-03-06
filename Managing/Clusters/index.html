@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ásbrú Connection Manager">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Clusters - Ásbrú Connection Manager - Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Clusters";
+    var mkdocs_page_input_path = "Managing/Clusters.md";
+    var mkdocs_page_url = "/Managing/Clusters/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Ásbrú Connection Manager - Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">1. General</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../General/NEWS/">News</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../General/Changelog/">Changelog</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../General/Installation/">Installation</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">2. Managing</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">Clusters</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#why-do-you-need-a-cluster">Why do you need a cluster ?</a></li>
+    
+
+    <li class="toctree-l3"><a href="#create-a-cluster">Create a cluster</a></li>
+    
+
+    <li class="toctree-l3"><a href="#using-an-existing-cluster">Using an existing cluster</a></li>
+    
+
+    <li class="toctree-l3"><a href="#power-cluster-management">Power Cluster Management</a></li>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">3. Contributing</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Contributing/">Contributing</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Contributing/CODING_STANDARD/">Coding standards</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Contributing/CODE_OF_CONDUCT/">Code of conduct</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Ásbrú Connection Manager - Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>2. Managing &raquo;</li>
+        
+      
+    
+    <li>Clusters</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/asbru-cm/asbru-cm/edit/master/doc/Managing/Clusters.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>This article has been written by <a href="https://github.com/hanspr">Hans Peyrot</a></p>
+<h1 id="why-do-you-need-a-cluster">Why do you need a cluster ?</h1>
+<p>This is more an admin tool than programmers, you can use it to type common commands to servers that are identical or at least very similar, this allows to:</p>
+<ul>
+<li>update several servers</li>
+<li>edit a config file on all of them at the same time</li>
+</ul>
+<p>As an example, I program remote Raspeberri Pi that are connected to electronic scales, etc. And have very unique code that is similar across them but I do not have a development environment because I do not have the interest in buying expensive scales or robot arms, to be able to develop. So I connect to all of them simultaneously, they all have exactly the same code and I edit the code on one terminal and I'm patching on real time the others. Of course I could work on one and then copy the file to the others, but for small adjustments this has been always more practical.</p>
+<p>And there are some other more complicated uses when add to the terminals tunnels, expect, etc. All those tunnels will open simultaneously too.</p>
+<h1 id="create-a-cluster">Create a cluster</h1>
+<p>In <code>Clusters</code>, click on the <code>Add</code> button a provide the name of your new cluster:</p>
+<p><img alt="imagen" src="https://user-images.githubusercontent.com/1572396/67621669-81d8a900-f7d7-11e9-9587-140c838d9f0f.png" /></p>
+<p>Select the connections from the left list and add them to the cluster using button <code>Add to cluster</code>:</p>
+<p><img alt="imagen" src="https://user-images.githubusercontent.com/1572396/67621672-8ac97a80-f7d7-11e9-9508-3fbdcbf6df83.png" /></p>
+<p>When done selecting, click the <code>OK</code> button to save your changes:</p>
+<p><img alt="imagen" src="https://user-images.githubusercontent.com/1572396/67621678-a2086800-f7d7-11e9-996a-39692b22c9fc.png" /></p>
+<p>The new cluster will be available in the menu or the cluster list on the main window.</p>
+<p><img alt="imagen" src="https://user-images.githubusercontent.com/1572396/67621680-b5b3ce80-f7d7-11e9-85c3-54b9726d5447.png" /></p>
+<h1 id="using-an-existing-cluster">Using an existing cluster</h1>
+<p>Either from the system bar menu or from the <code>Clusters</code> menu in the left side bar of Ásbrú Connection Manager, run your cluster:</p>
+<p><img alt="imagen" src="https://user-images.githubusercontent.com/1572396/67621685-c5cbae00-f7d7-11e9-8946-010a863ccf57.png" /></p>
+<p>This will open all terminals <strong>simultaneously</strong> and link the keyboard to <strong><em>all terminals</em></strong> in the cluster.
+So anything you write on one will be simultaneously typed in the others.</p>
+<p><img alt="imagen" src="https://user-images.githubusercontent.com/1572396/67621699-fa3f6a00-f7d7-11e9-8bca-1cdde9285516.png" /></p>
+<h1 id="power-cluster-management">Power Cluster Management</h1>
+<p>The Power Cluster Management (aka PCC), is used on 2 conditions:</p>
+<ul>
+<li>You open several terminals that have no cluster</li>
+<li>So you open the PCC and activate, send keys to all open terminals, similar, but terminals are not clustered</li>
+<li>Open a cluster and for some reason you loose communication with one of them and that terminal reconnects but is no longer with the cluster.</li>
+<li>Its main advantage is that you can type a command on a single terminal and is not passed to the others, you use the PCC to pass it to all. With a cluster you can not type a different command on one of them they are tied together.</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../Contributing/" class="btn btn-neutral float-right" title="Contributing">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../General/Installation/" class="btn btn-neutral" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/asbru-cm/asbru-cm/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../../General/Installation/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../Contributing/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

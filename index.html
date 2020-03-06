@@ -53,13 +53,25 @@
     <a class="current" href=".">Home</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#asbru-connection-manager">Ásbrú Connection Manager</a></li>
+    <li class="toctree-l2"><a href="#a-free-and-open-source-connection-manager">A free and open-source connection manager</a></li>
     
-        <ul>
-        
-            <li><a class="toctree-l3" href="#a-free-and-open-source-connection-manager">A free and open-source connection manager</a></li>
-        
-        </ul>
+
+    <li class="toctree-l2"><a href="#features">Features</a></li>
+    
+
+    <li class="toctree-l2"><a href="#testing-new-features">Testing new features</a></li>
+    
+
+    <li class="toctree-l2"><a href="#installation-of-legacy-5x">Installation of legacy 5.x</a></li>
+    
+
+    <li class="toctree-l2"><a href="#frequenty-asked-questions">Frequenty Asked Questions</a></li>
+    
+
+    <li class="toctree-l2"><a href="#license">License</a></li>
+    
+
+    <li class="toctree-l2"><a href="#packages">Packages</a></li>
     
 
     </ul>
@@ -79,11 +91,37 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="General/CODING_STANDARD/">Coding standards</a>
+    <a class="" href="General/Installation/">Installation</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">2. Managing</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="Managing/Clusters/">Clusters</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">3. Contributing</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="Contributing/">Contributing</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="General/CODE_OF_CONDUCT/">Code of conduct</a>
+    <a class="" href="Contributing/CODING_STANDARD/">Coding standards</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Contributing/CODE_OF_CONDUCT/">Code of conduct</a>
                 </li>
     </ul>
 	    </li>
@@ -123,14 +161,8 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="asbru-connection-manager">Ásbrú Connection Manager</h1>
-<p><a href="https://travis-ci.org/asbru-cm/asbru-cm"><img alt="Travis" src="https://travis-ci.org/asbru-cm/asbru-cm.svg?branch=master" /></a>
-<a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/License-GPL--3-blue.svg?style=flat" /></a>
-<a href="https://packagecloud.io/asbru-cm/asbru-cm?filter=rpms"><img alt="RPM Packages" src="https://img.shields.io/badge/Packages-RPM-blue.svg?style=flat" /></a>
-<a href="https://packagecloud.io/asbru-cm/asbru-cm?filter=debs"><img alt="Debian Packages" src="https://img.shields.io/badge/Packages-Debian-blue.svg?style=flat" /></a>
-<a href="https://liberapay.com/asbru-cm/donate"><img alt="Liberapay" src="http://img.shields.io/liberapay/patrons/asbru-cm.svg?logo=liberapay" /></a></p>
-<p><a href="https://asbru-cm.net"><img src="https://www.asbru-cm.net/assets/img/asbru-logo-200.png" align="right" width="200px" height="200px" /></a></p>
-<h2 id="a-free-and-open-source-connection-manager">A free and open-source connection manager</h2>
+                <p><a href="https://asbru-cm.net"><img src="https://www.asbru-cm.net/assets/img/asbru-logo-200.png" align="right" width="200px" height="200px" /></a></p>
+<h3 id="a-free-and-open-source-connection-manager">A free and open-source connection manager</h3>
 <p><strong>Ásbrú Connection Manager</strong> is a user interface that helps organizing remote terminal sessions and automating repetitive tasks.</p>
 <h3 id="features">Features</h3>
 <ul>
@@ -155,24 +187,6 @@
 <li>Tray icon for 'right button' quick launching of managed connections. Screenshots and statistics.</li>
 <li>DEB, RPM and .TAR.GZ packages available</li>
 </ul>
-<h3 id="installation">Installation</h3>
-<p>We recommend installing Ásbrú Connection Manager using our latest pre-built packages hosted on <a href="https://packagecloud.io/">packagecould.io</a>.</p>
-<p>To do so, execute the following commands:</p>
-<ul>
-<li>Debian / Ubuntu</li>
-</ul>
-<p><code>$ curl -s https://packagecloud.io/install/repositories/asbru-cm/asbru-cm/script.deb.sh | sudo bash
-  $ sudo apt-get install asbru-cm</code></p>
-<ul>
-<li>Fedora</li>
-</ul>
-<p><code>$ curl -s https://packagecloud.io/install/repositories/asbru-cm/asbru-cm/script.rpm.sh | sudo bash
-  $ sudo dnf install asbru-cm</code></p>
-<ul>
-<li>Arch / Manjaro</li>
-</ul>
-<p><code>yaourt -S asbru-cm-git</code></p>
-<p>Once installed on your system, type <code>/opt/asbru/asbru</code> in your terminal.</p>
 <h3 id="testing-new-features">Testing new features</h3>
 <p>Our master and the snapshots are being kept as stable as possible. New features for new major releases are being developed inside the "loki" branch.</p>
 <p>Beware that Loki can sometimes behave in a malicious manner to you. You might think of "sid"</p>
@@ -209,9 +223,6 @@
 <p>Yes.</p>
 <p>As <a href="https://github.com/perseo22">David Torrejon Vaquerizas</a>, the author of PAC Manager, could not find time, for some reasons that we respect, to continue the work on his project and was not open for external contributions (<a href="https://github.com/perseo22/pacmanager/issues/57">see this</a>), a fork was needed to ensure the future and give the opportunity to the community to take over.</p>
 <p>More questions can be found on the <a href="https://github.com/asbru-cm/asbru-cm/wiki/Frequently-Asked-Questions">dedicated project wiki page</a>.</p>
-<h3 id="contributing">Contributing</h3>
-<p>If you want to contribute to Ásbrú Connection Manager, first check out the <a href="https://github.com/asbru-cm/asbru-cm/issues">issues</a> and see if your request is not listed yet.  Issues and pull requests will be triaged and responded to as quickly as possible.</p>
-<p>Before contributing, please review our <a href="https://github.com/asbru-cm/asbru-cm/blob/master/CONTRIBUTING.md">contributing doc</a> for info on how to make feature requests and bear in mind that we adhere to the <a href="https://github.com/asbru-cm/asbru-cm/blob/master/CODE_OF_CONDUCT.md">Contributor Covenant code of conduct</a>.</p>
 <h3 id="license">License</h3>
 <p>Ásbrú Connection Manager is licensed under the GNU General Public License version 3 <a href="http://www.gnu.org/licenses/gpl-3.0.html">http://www.gnu.org/licenses/gpl-3.0.html</a>.  A full copy of the license can be found in the <a href="https://github.com/asbru-cm/asbru-cm/blob/master/LICENSE">LICENSE</a> file.</p>
 <h3 id="packages">Packages</h3>
@@ -267,5 +278,5 @@
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2020-03-04 18:40:59
+Build Date UTC : 2020-03-06 16:27:20
 -->
