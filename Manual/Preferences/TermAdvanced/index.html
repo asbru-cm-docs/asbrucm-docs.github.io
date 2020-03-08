@@ -18,8 +18,8 @@
   <script>
     // Current page data
     var mkdocs_page_name = "Advanced";
-    var mkdocs_page_input_path = "Manual/Preferences/MOAdvanced.md";
-    var mkdocs_page_url = "/Manual/Preferences/MOAdvanced/";
+    var mkdocs_page_input_path = "Manual/Preferences/TermAdvanced.md";
+    var mkdocs_page_url = "/Manual/Preferences/TermAdvanced/";
   </script>
   
   <script src="../../../js/jquery-2.1.1.min.js" defer></script>
@@ -84,7 +84,7 @@
                     
     <a class="" href="../Preferences/">Preferences</a>
                 </li>
-                <li class=" current">
+                <li class="">
                     
     <span class="caption-text">Main Options</span>
     <ul class="subnav">
@@ -96,19 +96,13 @@
                     
     <a class="" href="../LookAndFeel/">Look&Feel</a>
                 </li>
-                <li class="toctree-l3 current">
+                <li class="toctree-l3">
                     
-    <a class="current" href="./">Advanced</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l4"><a href="#advanced-options">Advanced Options</a></li>
-    
-
-    </ul>
+    <a class="" href="../MOAdvanced/">Advanced</a>
                 </li>
     </ul>
                 </li>
-                <li class="">
+                <li class=" current">
                     
     <span class="caption-text">Terminal Options</span>
     <ul class="subnav">
@@ -120,9 +114,15 @@
                     
     <a class="" href="../TermLookAndFeel/">Look&Feel</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="toctree-l3 current">
                     
-    <a class="" href="../TermAdvanced/">Advanced</a>
+    <a class="current" href="./">Advanced</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#terminal-advanced-settings">Terminal Advanced Settings</a></li>
+    
+
+    </ul>
                 </li>
     </ul>
                 </li>
@@ -181,7 +181,7 @@
     
       
         
-          <li>Main Options &raquo;</li>
+          <li>Terminal Options &raquo;</li>
         
       
         
@@ -192,7 +192,7 @@
     <li>Advanced</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/asbru-cm/asbru-cm/edit/master/doc/Manual/Preferences/MOAdvanced.md"
+        <a href="https://github.com/asbru-cm/asbru-cm/edit/master/doc/Manual/Preferences/TermAdvanced.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -202,31 +202,36 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="advanced-options">Advanced Options</h1>
-<p><img alt="" src="../images/advs1.png" /></p>
+                <h1 id="terminal-advanced-settings">Terminal Advanced Settings</h1>
 <div class="admonition note">
-<p class="admonition-title">Customize to your language</p>
-<p>Some of this options might need to be customized to work with your language, or more detections might be needed for multiple languages.</p>
+<p class="admonition-title"> </p>
+<p>This options apply to all terminals. If you need a particular terminal to behave differently is best to configure the look and feel options at the connection level.</p>
 </div>
+<p><img alt="" src="../images/to3.png" /></p>
 <ul>
-<li><strong>PASSWORD prompt</strong> : Regular expression to identify your terminal password prompt.</li>
-<li><strong>USERNAME prompt</strong> : Regular expression to identify your terminal username prompt.</li>
-<li><strong>Command prompt</strong> : Regular expression to identify your terminal prompt.</li>
-<li><strong>Remote host key changed</strong> : Regular expression to identify when a message of a conflicting known host was sent by the terminal.</li>
-<li><strong>Select by word characters</strong> : List of characters that identify a "word". This is used when double clicking on the terminal. The selection will expand as long as any of the listed characters appears next to the doubleclick location. <strong>Important, this is "not" a regular expression, is a simple list of characters</strong></li>
-<li><strong>Host key verification string</strong> : Regular expression to identify when a message of a new known host was sent by the terminal.</li>
-<li><strong>Press any key to continue</strong> : Regular expression to identify when a request to continue has been sent by the terminal.</li>
-<li><strong>sudo password prompt</strong> : *pending</li>
-<li>
-<p><strong>sudo password</strong> : *pending</p>
-</li>
-<li>
-<p><strong>When opening screenshots, use</strong></p>
-<ul>
-<li>The internal viewer</li>
-<li>And external viewer. You must the the path and name of the application.</li>
+<li><strong>Character Encoding</strong> : Decode characters sent by the remote server before showing in the terminal.<ul>
+<li>This options is used when connecting to old servers that have a regional encoding installation. Current servers should work with UTF-8 as a standard.</li>
 </ul>
 </li>
+<li><strong>Backspace</strong> : Select the backspace character to send.</li>
+<li><strong>Expect DEBUG</strong> : Enable to see a full trace of the actions taken by the Expect module.<ul>
+<li>The expect module reads and processes login lines received in the terminal to detect: login patterns, password request, etc.</li>
+</ul>
+</li>
+<li><strong>Hide Connections submenu</strong> : (Enable recommended) When you right click on the terminal, a popup menu will show several options available. Normally the menu will include a list of all current connections available will be listed too. If your connections tree is too big, the pop up menu will take several seconds to show.  </li>
+</ul>
+<p><img alt="" src="../images/to8.png" /></p>
+<p><img alt="" src="../images/to9.png" /></p>
+<div class="admonition note">
+<p class="admonition-title"> </p>
+<p>You can always access your connections from the connection tree, or right clicking on the system tray.</p>
+</div>
+<ul>
+<li><strong>Audible Bell</strong> : Produce a sound when the terminal wants to send a bell event. (Not available in all vte versions)</li>
+<li><strong>Confirm chains selection / execution</strong> : * pending</li>
+<li><strong>Skip first Chain expect</strong> : Ignore the first event sent by terminals, normally is an empty command sent to expect aware applications.</li>
+<li><strong>Prevent F11 from going full screen</strong> : Disable F11 full screen option.</li>
+<li><strong>Use login shell to start connections</strong> : This is not necessary in general. But it can be used if your terminals behave in an unexpected way for the lack of Environment variables available.</li>
 </ul>
               
             </div>
@@ -235,10 +240,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../TermOptions/" class="btn btn-neutral float-right" title="Behaviour">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../../Managing/Clusters/" class="btn btn-neutral float-right" title="Clusters">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../LookAndFeel/" class="btn btn-neutral" title="Look&Feel"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../TermLookAndFeel/" class="btn btn-neutral" title="Look&Feel"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -266,10 +271,10 @@
           <a href="https://github.com/asbru-cm/asbru-cm/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../LookAndFeel/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../TermLookAndFeel/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../TermOptions/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../../Managing/Clusters/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

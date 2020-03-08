@@ -46,6 +46,21 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>http://docs.librenms.org/Manual/Preferences/TermOptions/</loc>
+     <lastmod>2020-03-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://docs.librenms.org/Manual/Preferences/TermLookAndFeel/</loc>
+     <lastmod>2020-03-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://docs.librenms.org/Manual/Preferences/TermAdvanced/</loc>
+     <lastmod>2020-03-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>http://docs.librenms.org/Managing/Clusters/</loc>
      <lastmod>2020-03-08</lastmod>
      <changefreq>daily</changefreq>
