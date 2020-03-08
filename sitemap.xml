@@ -2,42 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>http://docs.librenms.org/</loc>
-     <lastmod>2020-03-06</lastmod>
+     <lastmod>2020-03-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://docs.librenms.org/General/NEWS/</loc>
-     <lastmod>2020-03-06</lastmod>
+     <lastmod>2020-03-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://docs.librenms.org/General/Changelog/</loc>
-     <lastmod>2020-03-06</lastmod>
+     <lastmod>2020-03-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://docs.librenms.org/General/Installation/</loc>
-     <lastmod>2020-03-06</lastmod>
+     <lastmod>2020-03-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://docs.librenms.org/Managing/Clusters/</loc>
-     <lastmod>2020-03-06</lastmod>
+     <lastmod>2020-03-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://docs.librenms.org/Contributing/</loc>
-     <lastmod>2020-03-06</lastmod>
+     <lastmod>2020-03-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://docs.librenms.org/Contributing/CODING_STANDARD/</loc>
-     <lastmod>2020-03-06</lastmod>
+     <lastmod>2020-03-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://docs.librenms.org/Contributing/CODE_OF_CONDUCT/</loc>
-     <lastmod>2020-03-06</lastmod>
+     <lastmod>2020-03-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://docs.librenms.org/Manual/QuickStart/</loc>
+     <lastmod>2020-03-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://docs.librenms.org/Manual/Preferences/Preferences/</loc>
+     <lastmod>2020-03-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://docs.librenms.org/Manual/Preferences/MainOptions/</loc>
+     <lastmod>2020-03-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://docs.librenms.org/Manual/Preferences/LookAndFeel/</loc>
+     <lastmod>2020-03-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://docs.librenms.org/Manual/Preferences/MOAdvanced/</loc>
+     <lastmod>2020-03-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
