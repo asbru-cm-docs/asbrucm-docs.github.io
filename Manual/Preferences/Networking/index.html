@@ -8,7 +8,7 @@
   
   <meta name="author" content="Ásbrú Connection Manager">
   <link rel="shortcut icon" href="../../../img/favicon.ico">
-  <title>Look&Feel - Ásbrú Connection Manager - Docs</title>
+  <title>Networking - Ásbrú Connection Manager - Docs</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Look&Feel";
-    var mkdocs_page_input_path = "Manual/Preferences/TermLookAndFeel.md";
-    var mkdocs_page_url = "/Manual/Preferences/TermLookAndFeel/";
+    var mkdocs_page_name = "Networking";
+    var mkdocs_page_input_path = "Manual/Preferences/Networking.md";
+    var mkdocs_page_url = "/Manual/Preferences/Networking/";
   </script>
   
   <script src="../../../js/jquery-2.1.1.min.js" defer></script>
@@ -102,7 +102,7 @@
                 </li>
     </ul>
                 </li>
-                <li class=" current">
+                <li class="">
                     
     <span class="caption-text">Terminal Options</span>
     <ul class="subnav">
@@ -110,15 +110,9 @@
                     
     <a class="" href="../TermOptions/">Behaviour</a>
                 </li>
-                <li class="toctree-l3 current">
+                <li class="toctree-l3">
                     
-    <a class="current" href="./">Look&Feel</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l4"><a href="#look-feel">Look &amp; Feel</a></li>
-    
-
-    </ul>
+    <a class="" href="../TermLookAndFeel/">Look&Feel</a>
                 </li>
                 <li class="toctree-l3">
                     
@@ -130,9 +124,23 @@
                     
     <a class="" href="../ShellOptions/">Shell Options</a>
                 </li>
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../Networking/">Networking</a>
+    <a class="current" href="./">Networking</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#networking-options">Networking Options</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#socks-proxy">SOCKS Proxy</a></li>
+        
+            <li><a class="toctree-l4" href="#jump-server">Jump Server</a></li>
+        
+        </ul>
+    
+
+    </ul>
                 </li>
     </ul>
 	    </li>
@@ -189,18 +197,14 @@
     
       
         
-          <li>Terminal Options &raquo;</li>
-        
-      
-        
           <li>2. User's Manual &raquo;</li>
         
       
     
-    <li>Look&Feel</li>
+    <li>Networking</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/asbru-cm/asbru-cm/edit/master/doc/Manual/Preferences/TermLookAndFeel.md"
+        <a href="https://github.com/asbru-cm/asbru-cm/edit/master/doc/Manual/Preferences/Networking.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -210,65 +214,44 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="look-feel">Look &amp; Feel</h1>
+                <h1 id="networking-options">Networking Options</h1>
+<p><img alt="" src="../images/network1.png" /></p>
+<p>If you are behind a firewall and have no direct access to the external network, you may need an intermediate machine to get outside of your network.</p>
+<p>There are 2 technologies that can help you connect to a machine outside your network.</p>
+<h2 id="socks-proxy">SOCKS Proxy</h2>
+<p>If your network administrator has added a SOCKS server to the network and grants you access to it, you will have to select and configure the SOCKS Proxy.</p>
+<ul>
+<li><strong>IP/Host</strong> : Address of your SOCKS Server</li>
+<li><strong>User / Password</strong> : Should be set if your administration assigns you one.</li>
+</ul>
+<h2 id="jump-server">Jump Server</h2>
+<p>If you have access to a local machine in your network, that has access to the outside. And you have <strong><em>SSH</em></strong> access to this machine. Then you can use this technique to access to an external machine.</p>
+<p>You need to have a public key installed in your <strong>Jump Server</strong>  to be able to use it as an intermediate machine to access the external network.</p>
+<p>It can be a default public key, or a personal private key that you were assigned.</p>
 <div class="admonition note">
 <p class="admonition-title"> </p>
-<p>This options apply to all terminals. If you need a particular terminal to behave differently is best to configure the look and feel options at the connection level.</p>
+<p>The keys have to be "passwordless", without password.</p>
 </div>
-<p><img alt="" src="../images/to2.png" /></p>
 <ul>
-<li><strong>Start terminal maximized</strong> : If the new launched terminal window or tabbed window should be maximized.</li>
-<li><strong>Show status bar on every terminal</strong> : Add extra information and buttons at the bottom of the termina.</li>
-<li><strong>Change main window title with terminal title</strong> : Sets the main window (tabs window) title with the title from the selected terminal tab.</li>
+<li><strong>IP/Host</strong> : Address of your Jump Server</li>
+<li><strong>Port</strong> : Port to use to connect.</li>
+<li><strong>User</strong> : User to log in</li>
+<li><strong>Private Key</strong><ul>
+<li>If you are assigned a private key, select the private key.</li>
+<li>If you leave it blank, that it will default to your public local key.</li>
 </ul>
-<div class="admonition tip">
-<p class="admonition-title">Password Managers</p>
-<p>Changing the main window title with the current selected Tab, is useful with some password applications (like KeePassXC), that uses the main title window to execute auto typing sequences.</p>
+</li>
+</ul>
+<hr />
+<div class="admonition danger">
+<p class="admonition-title">Important</p>
+<p>When you activate any of this options, the default exit for all your connections will be using the selected technology.</p>
+<p>There are two possible scenarios for your situation.</p>
+<ul>
+<li><strong>Most of your connections are local inside your network</strong> : In this case you should leave the "Do not use proxy" option as the default. And configure the proxy or jump server for at the connection level.</li>
+<li><strong>Most of your connections are outside your network</strong> : In this case select the technology that best fits your network.</li>
+</ul>
 </div>
-<p>Example of a terminal windows with a status bar.</p>
-<p><img alt="" src="../images/to5.png" /></p>
-<p>Example of terminal window without the status bar.</p>
-<p><img alt="" src="../images/to4.png" /></p>
-<ul>
-<li><strong>Show MACROS</strong>: Show access to local macros configured in a terminal<ul>
-<li><strong>Never</strong> : Do not show configured macros.</li>
-<li><strong>In combobox</strong> : Show as a selection box, recommended when you have a long list.</li>
-<li><strong>As buttons</strong> : Recommended when you have a very short list of macros.</li>
-<li><strong>Show GLOBAL commands in terminal</strong> : Add the local and global commands to the list of available macros.</li>
-</ul>
-</li>
-</ul>
-<p>Example macros as buttons</p>
-<p><img alt="" src="../images/to6.png" /></p>
-<p>Example macros as list</p>
-<p><img alt="" src="../images/to7.png" /></p>
-<ul>
-<li>
-<p><strong>Tabs</strong> : Define colors for tabs depending on their terminal current state. Set the position to locate the tabs.</p>
-</li>
-<li>
-<p><strong>Terminal UI</strong></p>
-<ul>
-<li><strong>Text color</strong> : Default color for text.</li>
-<li><strong>Back color</strong> : Default background color for terminal.</li>
-<li><strong>Bold color</strong> : Default bold color</li>
-</ul>
-</li>
-<li><strong>Bold is</strong><ul>
-<li><strong>Also bright</strong> : show bold text as bright text too. (Not available in all vterm versions)</li>
-<li><strong>Same as text</strong> : show bold text as normal default text, no distinction</li>
-</ul>
-</li>
-<li><strong>Font</strong> : Set the font and size for all terminals.</li>
-<li><strong>Cursor shape</strong> : Cursor shape to use in the terminal.</li>
-<li><strong>Scrollback lines</strong> : How many lines of history to store to scroll back.</li>
-<li><strong>Transparency</strong> : Set transparency background for the terminal.</li>
-<li><strong>Colors</strong> : Set your predefined colors to override the basic 16 color terminal standard.<ul>
-<li>Top row are the normal text colors.</li>
-<li>Bottom row are the bold text colors.</li>
-</ul>
-</li>
-</ul>
               
             </div>
           </div>
@@ -276,10 +259,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../TermAdvanced/" class="btn btn-neutral float-right" title="Advanced">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../../Managing/Clusters/" class="btn btn-neutral float-right" title="Clusters">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../TermOptions/" class="btn btn-neutral" title="Behaviour"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../ShellOptions/" class="btn btn-neutral" title="Shell Options"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -307,10 +290,10 @@
           <a href="https://github.com/asbru-cm/asbru-cm/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../TermOptions/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../ShellOptions/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../TermAdvanced/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../../Managing/Clusters/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
