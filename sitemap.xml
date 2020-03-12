@@ -1,112 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-     <loc>http://docs.librenms.org/</loc>
+     <loc>https://docs.asbru-cm.net/</loc>
      <lastmod>2020-03-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.librenms.org/General/NEWS/</loc>
+     <loc>https://docs.asbru-cm.net/General/NEWS/</loc>
      <lastmod>2020-03-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.librenms.org/General/Installation/</loc>
+     <loc>https://docs.asbru-cm.net/General/Installation/</loc>
      <lastmod>2020-03-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.librenms.org/General/Changelog/</loc>
+     <loc>https://docs.asbru-cm.net/General/Changelog/</loc>
      <lastmod>2020-03-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.librenms.org/Manual/QuickStart/</loc>
+     <loc>https://docs.asbru-cm.net/Manual/QuickStart/</loc>
      <lastmod>2020-03-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.librenms.org/Manual/Preferences/Preferences/</loc>
+     <loc>https://docs.asbru-cm.net/Manual/Preferences/Preferences/</loc>
      <lastmod>2020-03-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.librenms.org/Manual/Preferences/MainOptions/</loc>
+     <loc>https://docs.asbru-cm.net/Manual/Preferences/MainOptions/</loc>
      <lastmod>2020-03-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.librenms.org/Manual/Preferences/LookAndFeel/</loc>
+     <loc>https://docs.asbru-cm.net/Manual/Preferences/LookAndFeel/</loc>
      <lastmod>2020-03-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.librenms.org/Manual/Preferences/MOAdvanced/</loc>
+     <loc>https://docs.asbru-cm.net/Manual/Preferences/MOAdvanced/</loc>
      <lastmod>2020-03-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.librenms.org/Manual/Preferences/TermOptions/</loc>
+     <loc>https://docs.asbru-cm.net/Manual/Preferences/TermOptions/</loc>
      <lastmod>2020-03-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.librenms.org/Manual/Preferences/TermLookAndFeel/</loc>
+     <loc>https://docs.asbru-cm.net/Manual/Preferences/TermLookAndFeel/</loc>
      <lastmod>2020-03-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.librenms.org/Manual/Preferences/TermAdvanced/</loc>
+     <loc>https://docs.asbru-cm.net/Manual/Preferences/TermAdvanced/</loc>
      <lastmod>2020-03-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.librenms.org/Manual/Preferences/ShellOptions/</loc>
+     <loc>https://docs.asbru-cm.net/Manual/Preferences/ShellOptions/</loc>
      <lastmod>2020-03-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.librenms.org/Manual/Preferences/Networking/</loc>
+     <loc>https://docs.asbru-cm.net/Manual/Preferences/Networking/</loc>
      <lastmod>2020-03-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.librenms.org/Manual/Preferences/GlobalVariables/</loc>
+     <loc>https://docs.asbru-cm.net/Manual/Preferences/GlobalVariables/</loc>
      <lastmod>2020-03-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.librenms.org/Manual/Preferences/LocalCommands/</loc>
+     <loc>https://docs.asbru-cm.net/Manual/Preferences/LocalCommands/</loc>
      <lastmod>2020-03-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.librenms.org/Manual/Preferences/RemoteCommands/</loc>
+     <loc>https://docs.asbru-cm.net/Manual/Preferences/RemoteCommands/</loc>
      <lastmod>2020-03-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.librenms.org/Managing/Clusters/</loc>
+     <loc>https://docs.asbru-cm.net/Managing/Clusters/</loc>
      <lastmod>2020-03-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.librenms.org/Managing/Templates/</loc>
+     <loc>https://docs.asbru-cm.net/Managing/Templates/</loc>
      <lastmod>2020-03-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.librenms.org/Contributing/</loc>
+     <loc>https://docs.asbru-cm.net/Contributing/</loc>
      <lastmod>2020-03-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.librenms.org/Contributing/CODING_STANDARD/</loc>
+     <loc>https://docs.asbru-cm.net/Contributing/CODING_STANDARD/</loc>
      <lastmod>2020-03-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.librenms.org/Contributing/CODE_OF_CONDUCT/</loc>
+     <loc>https://docs.asbru-cm.net/Contributing/CODE_OF_CONDUCT/</loc>
      <lastmod>2020-03-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
