@@ -8,7 +8,7 @@
   
   <meta name="author" content="Ásbrú Connection Manager">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>News - Ásbrú Connection Manager - Docs</title>
+  <title>Templates - Ásbrú Connection Manager - Docs</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "News";
-    var mkdocs_page_input_path = "General/NEWS.md";
-    var mkdocs_page_url = "/General/NEWS/";
+    var mkdocs_page_name = "Templates";
+    var mkdocs_page_input_path = "Managing/Templates.md";
+    var mkdocs_page_url = "/Managing/Templates/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
@@ -57,31 +57,17 @@
 		
     <span class="caption-text">1. General</span>
     <ul class="subnav">
-                <li class=" current">
+                <li class="">
                     
-    <a class="current" href="./">News</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#news">NEWS</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#15022020">15.02.2020</a></li>
-        
-            <li><a class="toctree-l4" href="#16122019">16.12.2019</a></li>
-        
-        </ul>
-    
-
-    </ul>
+    <a class="" href="../../General/NEWS/">News</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../Installation/">Installation</a>
+    <a class="" href="../../General/Installation/">Installation</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../Changelog/">Changelog</a>
+    <a class="" href="../../General/Changelog/">Changelog</a>
                 </li>
     </ul>
 	    </li>
@@ -163,11 +149,25 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../Managing/Clusters/">Clusters</a>
+    <a class="" href="../Clusters/">Clusters</a>
                 </li>
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../../Managing/Templates/">Templates</a>
+    <a class="current" href="./">Templates</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#templates">Templates</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#existing-connections-are-templates">Existing Connections are Templates</a></li>
+        
+            <li><a class="toctree-l4" href="#creating-templates-group">Creating Templates Group</a></li>
+        
+        </ul>
+    
+
+    </ul>
                 </li>
     </ul>
 	    </li>
@@ -213,14 +213,14 @@
     
       
         
-          <li>1. General &raquo;</li>
+          <li>3. Contributed Articles &raquo;</li>
         
       
     
-    <li>News</li>
+    <li>Templates</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/asbru-cm/asbru-cm/edit/master/doc/General/NEWS.md"
+        <a href="https://github.com/asbru-cm/asbru-cm/edit/master/doc/Managing/Templates.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -230,23 +230,49 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="news">NEWS</h1>
-<p>Here you can find important news on the project</p>
-<h2 id="15022020">15.02.2020</h2>
-<p>Dear testers,</p>
-<p>We have merged the codebase for version 6.1.0 into master. This release will bring some cleanups and a few new features which require testing.</p>
-<p>These new features are:</p>
+                <h1 id="templates">Templates</h1>
+<p>This article has been written by <a href="https://github.com/hanspr">Hans Peyrot</a></p>
+<p>A recurring question of users is if there is a possibility to have "Templates" for connections so you do not have to reconfigure everything.</p>
+<p>Thou the concept of Templates do not exist, it can be implemented very easy by you.</p>
+<p><strong>There are 2 approaches to this problem</strong></p>
+<ol>
+<li>All your existing connections are templates</li>
+<li>Create a Templates group and add templates off all common connection types that you use.</li>
+</ol>
+<h2 id="existing-connections-are-templates">Existing Connections are Templates</h2>
 <ul>
-<li>Support for SOCKS Proxy (for VNC/RDP/SSH/SFTP today) using <a href="https://nmap.org/ncat/">ncat</a> for advanced cases</li>
-<li>Support for Jump Host to simplify SSH tunneling for VNC/RDP/SSH connections.</li>
+<li>Click on any existing connection that has the most similar configuration that you need.</li>
+<li><code>&lt;Ctrl-D&gt;</code> or right click <code>Clone</code>.</li>
+<li>Edit the new cloned connection and adjust to your new conditions.</li>
+<li>If the connection has to be available in a different group.</li>
+<li><code>&lt;Ctrl-X&gt;</code> Cut the connection node.</li>
+<li>Click on group where you want the new node to be.</li>
+<li><code>&lt;Ctrl-V&gt;</code> paste the node in the new location.</li>
 </ul>
-<p>We would be happy if you can test the master snapshots as we would like to release the first official <em>rc1</em> build soon.</p>
-<p>Attention: please make sure you have a safe copy of your configuration directory (which is ~/.config/pac) by default before proceeding with your tests.</p>
-<p>Thanks and happy testing.</p>
-<h2 id="16122019">16.12.2019</h2>
+<h2 id="creating-templates-group">Creating Templates Group</h2>
+<p>Go to your Connection List and Create a new group called "Templates".</p>
+<ol>
+<li>Create a new connection of the type you need your template.</li>
+<li>Named so it gives you an idea of the options that has<ol>
+<li>SSH and Xforward.</li>
+<li>SSh and Local Forward.</li>
+</ol>
+</li>
+<li>Fill with generic data.</li>
+<li>Set the predefined options that you like to have on all new connections.</li>
+</ol>
+<p><img alt="" src="../images/template1.png" /></p>
+<p><img alt="" src="../images/template2.png" /></p>
+<p><img alt="" src="../images/template3.png" /></p>
+<p><img alt="" src="../images/template4.png" /></p>
+<p><img alt="" src="../images/template5.png" /></p>
+<p>To use your new templates.</p>
 <ul>
-<li>We are disabling the el-test repository. In future you will find the rpms for el7 and el8 in the main packagecloud repostory asbru-cm/asbru-cm</li>
-<li>gtk3 branch has been merged into master therefore we are disabling snapshot generation from the gtk3 branch.</li>
+<li>Click on the template configuration that you need.</li>
+<li><code>&lt;Ctrl-C&gt;</code> or right click <code>Copy</code>.</li>
+<li>Click on group where you want the new node to be.</li>
+<li><code>&lt;Ctrl-V&gt;</code> paste the node in the new location.</li>
+<li>Edit your new node with the real connection data.</li>
 </ul>
               
             </div>
@@ -255,10 +281,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Installation/" class="btn btn-neutral float-right" title="Installation">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../Contributing/" class="btn btn-neutral float-right" title="Contributing">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../.." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Clusters/" class="btn btn-neutral" title="Clusters"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -286,10 +312,10 @@
           <a href="https://github.com/asbru-cm/asbru-cm/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../Clusters/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../Installation/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../Contributing/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
