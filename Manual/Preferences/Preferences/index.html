@@ -91,6 +91,17 @@
     <li class="toctree-l3"><a href="#lower-buttons">Lower Buttons</a></li>
     
 
+    <li class="toctree-l3"><a href="#export-settings">Export Settings</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#settings-as-yml">Settings as yml</a></li>
+        
+            <li><a class="toctree-l4" href="#anonymized-data-for-debug">Anonymized data for DEBUG</a></li>
+        
+        </ul>
+    
+
     </ul>
                 </li>
                 <li class="">
@@ -152,6 +163,10 @@
                 <li class="">
                     
     <a class="" href="../KeePassXC/">KeePass</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../CommandLine/">Command Line</a>
                 </li>
     </ul>
 	    </li>
@@ -242,17 +257,34 @@
 <h2 id="lower-buttons">Lower Buttons</h2>
 <ul>
 <li><strong>Reset to DEFAULT values</strong> : Will reset all configuration settings to there original state</li>
-<li><strong>Export config</strong><ul>
-<li>Settings as yml : Will let you create a copy of all your configurations, so it can be used in another computer.</li>
-<li>Anonymized data for DEBUG: This creates a configuration file that cleans up all the sensitive information. Is requested and used by the Ásbrú to facilitate the solution of some bug report when we have problems trying to reproduce. Some bugs are related to the combination of settings and only can be reproduced all settings are known.</li>
-</ul>
-</li>
+<li><strong>Export config</strong> : Export configuration settings (explained below).</li>
 <li><strong>Close without saving</strong> : Abort any changes made and do not apply</li>
 <li><strong>Save and Close</strong> : Will save all current settings and close the window.</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Restart Ásbru</p>
 <p>Some options requiere to close and open Ásrbú, they will be marked with an asterix (*)</p>
+</div>
+<h2 id="export-settings">Export Settings</h2>
+<p>To export your configurations click on the button : "Export config ..."</p>
+<p><img alt="" src="../images/export1.png" /></p>
+<p>This options offers 2 export options</p>
+<h3 id="settings-as-yml">Settings as yml</h3>
+<p>Will let you create a copy of all your configurations, so it can be used in another computer.</p>
+<p>To use copy the file to the new computer in your config directory, located at : <code>/home/user/config/.pac</code></p>
+<h3 id="anonymized-data-for-debug">Anonymized data for DEBUG</h3>
+<p>This creates a configuration file that cleans up all the sensitive information. Is requested and used by the Ásbrú to facilitate the solution of some bug report when we have problems trying to reproduce. Some bugs are related to the combination of settings and only can be reproduced all settings are known.</p>
+<p>When you select this option you will receive a warning similar to the next image, and the option to cancel the process.</p>
+<p><img alt="" src="../images/export2.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Review the file</p>
+<p>The generated file can be reviewed with any text editor, just open the file and search or scroll the file to detect for any personal sensitive data that has remained and remove it.</p>
+<p><strong>If you detect that some data was no properly anonymized, please open an issue at</strong>: <a href="https://github.com/asbru-cm/asbru-cm/issues">asbru-cm/issues</a></p>
+<p>Include in your report:</p>
+<ul>
+<li>The line that was not anonymized (removing the sensitive data).</li>
+<li>An image of the configuration window where this data belongs.</li>
+</ul>
 </div>
               
             </div>
