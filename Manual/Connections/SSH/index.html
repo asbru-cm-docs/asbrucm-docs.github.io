@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ásbrú Connection Manager">
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>SSH - Ásbrú Connection Manager - Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "SSH";
+    var mkdocs_page_input_path = "Manual/Connections/SSH.md";
+    var mkdocs_page_url = "/Manual/Connections/SSH/";
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Ásbrú Connection Manager - Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">1. General</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../General/NEWS/">News</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../General/Installation/">Installation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../General/Changelog/">Changelog</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">2. User's Manual</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../QuickStart/">Quick Start</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Preferences</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Preferences/Preferences/">General</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Main Options</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Preferences/MainOptions/">Behaviour</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Preferences/LookAndFeel/">Look&Feel</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Preferences/MOAdvanced/">Advanced</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Terminal Options</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Preferences/TermOptions/">Behaviour</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Preferences/TermLookAndFeel/">Look&Feel</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Preferences/TermAdvanced/">Advanced</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Preferences/ShellOptions/">Shell Options</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Preferences/Networking/">Networking</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Preferences/GlobalVariables/">Global Variables</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Preferences/LocalCommands/">Local Commands</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Preferences/RemoteCommands/">Remote Commands</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Preferences/KeePassXC/">KeePass</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../CommandLine/">Command Line</a>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Connections</span>
+    <ul class="subnav">
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="./">SSH</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#connection">Connection</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#connection-details">Connection Details</a></li>
+        
+            <li><a class="toctree-l5" href="#advanced-parameters">Advanced Parameters</a></li>
+        
+            <li><a class="toctree-l5" href="#network-settings">Network Settings</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#ssh-options">SSH Options</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#local-remote-port-forwarding">Local / Remote Port Forwarding</a></li>
+        
+            <li><a class="toctree-l5" href="#dynamic-socks-proxy">Dynamic Socks Proxy</a></li>
+        
+            <li><a class="toctree-l5" href="#advanced-options">Advanced Options</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#pre-post-exec">(Pre / Post) Exec</a></li>
+    
+
+    <li class="toctree-l4"><a href="#expect">Expect</a></li>
+    
+
+    <li class="toctree-l4"><a href="#remote-macros">Remote Macros</a></li>
+    
+
+    <li class="toctree-l4"><a href="#local-macros">Local Macros</a></li>
+    
+
+    <li class="toctree-l4"><a href="#user-variables">User Variables</a></li>
+    
+
+    <li class="toctree-l4"><a href="#terminal-options">Terminal Options</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../RDP/">RDP</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">3. Contributed Articles</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../Managing/Clusters/">Clusters</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../Managing/Templates/">Templates</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">4. Contributing</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../Contributing/">Contributing</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../Contributing/CODING_STANDARD/">Coding standards</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../Contributing/CODE_OF_CONDUCT/">Code of conduct</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Ásbrú Connection Manager - Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Connections &raquo;</li>
+        
+      
+        
+          <li>2. User's Manual &raquo;</li>
+        
+      
+    
+    <li>SSH</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/asbru-cm/asbru-cm/edit/master/doc/Manual/Connections/SSH.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="connection">Connection</h2>
+<h3 id="connection-details">Connection Details</h3>
+<p><img alt="" src="../images/ssh1.png" /></p>
+<ul>
+<li><strong>Method</strong> : For this case, we select SSH</li>
+<li><strong>Host</strong> : The IP or Hostname of the machine we want to connect to.</li>
+<li><strong>Port</strong> : Port number to use for this connection.</li>
+<li><strong>Run with sudo</strong> : * Pending</li>
+<li><strong>Use autossh</strong> : * Pending</li>
+<li><strong>TAB/Window Title</strong> : The name will be assigned to this tab or window. (Useful for password managers, that use the window title to execute macros, or to identify each connection on the taskbar).</li>
+<li><strong>Launch on start up</strong> : If this connection should be launched automatically each time Ásbrú starts for the first time.</li>
+<li>
+<p><strong>Reconnecton on disconnection</strong> : If there is a remote disconnection, reconnect automatically.</p>
+</li>
+<li>
+<p><strong>Authentication</strong></p>
+<ul>
+<li>
+<p><strong>KeePass button</strong> : If you have KeePass integration available, the button will be enabled. To see the use of this feature read <a href="../../Preferences/KeePassXC/">KeePass Integration</a></p>
+</li>
+<li>
+<p><strong>User / Password</strong> : Authenticate using the traditional logging sequence of typing a user and password.</p>
+</li>
+<li><strong>Private Key</strong> : Use a public or private key to login into the remote server.<ul>
+<li>Private Key : Select your private key, or leave black if you are going to use your public key.</li>
+<li>User / Passphrase : The user and passphrase that will be used to automate your login.</li>
+</ul>
+</li>
+<li><strong>Manual</strong> : Do not automate login, let me do all the authentication sequence.</li>
+</ul>
+</li>
+</ul>
+<h3 id="advanced-parameters">Advanced Parameters</h3>
+<p><img alt="" src="../images/ssh2.png" /></p>
+<ul>
+<li><strong>Programmatically send a string</strong> : Send a specified regex expression every selected seconds to the terminal.</li>
+<li><strong>Prepend command</strong> : Add this command before the ssh command connection string.</li>
+<li><strong>Start next script when connection is launched</strong> : * Pending</li>
+<li><strong>Auto save session logs</strong> : Save session log at the end of the session. Select the location.<ul>
+<li>Log patter name: Define the pattern to name your session file.</li>
+</ul>
+</li>
+</ul>
+<h3 id="network-settings">Network Settings</h3>
+<p>This networking options override the Global Networking options for this connection.</p>
+<p><img alt="" src="../images/ssh3.png" /></p>
+<ul>
+<li><strong>Use global proxy options</strong> : Use the globally predefined Networking options.</li>
+<li><strong>Use direct connection</strong> : If you declared a Global Proxy and you do not need it for this connection.</li>
+<li><strong>Use SOCKS proxy</strong> : Use a SOCKS proxy to exit the local network.</li>
+<li><strong>Jump Server</strong> : Use a jump server to exit the local network, or connect to an internal machine behind a FireWall.</li>
+</ul>
+<p><img alt="" src="../images/ssh4.png" /></p>
+<p>If your network administrator has added a SOCKS server to the network and grants you access to it, you will have to select and configure the SOCKS Proxy.</p>
+<p><img alt="" src="../images/ssh5.png" /></p>
+<p>If you have SSH access to a remote machine in your network, that has access to the a local machine on the remote network. Then you can use this technique to access to an external machine behind a firewall, that has no public address.</p>
+<p>You need to have a public key installed in your <strong>Jump Server</strong>  to be able to use it as an intermediate machine to access the other network.</p>
+<p>It can be a default public key, or a personal private key that you were assigned.</p>
+<h2 id="ssh-options">SSH Options</h2>
+<p><img alt="" src="../images/ssh6.png" /></p>
+<p>Select any aditional SSH options.</p>
+<h3 id="local-remote-port-forwarding">Local / Remote Port Forwarding</h3>
+<p>Define your local or remote port forwarding rules.</p>
+<p>In the example image above, the connection opens 4 port forwards to access remote SQL Servers behind a Firewall.</p>
+<h3 id="dynamic-socks-proxy">Dynamic Socks Proxy</h3>
+<p>*Pending</p>
+<h3 id="advanced-options">Advanced Options</h3>
+<p>Write any sequence of additional SSH options.</p>
+<p>The command field allows you to right click and have access to known SSH options.</p>
+<h2 id="pre-post-exec">(Pre / Post) Exec</h2>
+<p>This commands will be executed immediately before (Pre) the connection is launched. And after (Post) the connection has been established.</p>
+<p>This commands are executed in the local computer.</p>
+<div class="admonition tip">
+<p class="admonition-title">Possible uses</p>
+<p>Launch : an IDE, a Database Client (DBeaver), start a local scripts that uploads or downloads files, etc.</p>
+</div>
+<p><img alt="" src="../images/ssh9.png" /></p>
+<h2 id="expect">Expect</h2>
+<p><img alt="" src="../images/ssh7.png" /></p>
+<p>You can create and execute a sequence of automated actions that will be executed after you have logged in.</p>
+<ul>
+<li><strong>Expect</strong> : Regular expression that defines what patter to wait from the terminal.<ul>
+<li><strong>Timeout</strong> : How long to wait for the pattern and abort if it does not presents.</li>
+</ul>
+</li>
+<li><strong>Send</strong> : When the pattern has a match, send the next secuence of characters.<ul>
+<li><strong>Return</strong> : Add a CR at the end of the string.</li>
+<li><strong>Hide</strong> : If the content of this box should be treated as a password field. Hide visual information for peering eyes.</li>
+</ul>
+</li>
+<li><strong>On MATCH / Fail</strong> : Execute the next Expect #number in case of MATCH or Fail.</li>
+<li><strong>Delete</strong> : Remove the selected rule.</li>
+</ul>
+<h2 id="remote-macros">Remote Macros</h2>
+<p>Remote Macros have the same principle as the <a href="../../Preferences/RemoteCommands/">Global Remote Commands</a></p>
+<div class="admonition note">
+<p class="admonition-title"> </p>
+<p>But this commands will show on the popup menu for this connection only, and no others.</p>
+</div>
+<h2 id="local-macros">Local Macros</h2>
+<p>Local Macros have the same principle as the <a href="../../Preferences/LocalCommands/">Global Local Commands</a></p>
+<div class="admonition note">
+<p class="admonition-title"> </p>
+<p>But this commands will show on the popup menu for this connection only, and no others.</p>
+</div>
+<h2 id="user-variables">User Variables</h2>
+<p>This have the same principle as the <a href="../Preferences/Global Variables.md">Global Variables</a></p>
+<p>But will be available only for this particular connection.</p>
+<h2 id="terminal-options">Terminal Options</h2>
+<p>You can override the Global Terminal Options and Look&amp;Feel of any particular connection.</p>
+<p>Enable "Use these personal options"</p>
+<p><img alt="" src="../images/ssh8.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Stand out a terminal</p>
+<p>Perhaps you want to add a dark red color to a terminal to note that you are connected to a production server and not to a testing server.</p>
+</div>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../RDP/" class="btn btn-neutral float-right" title="RDP">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../CommandLine/" class="btn btn-neutral" title="Command Line"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/asbru-cm/asbru-cm/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../../CommandLine/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../RDP/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+
+</body>
+</html>

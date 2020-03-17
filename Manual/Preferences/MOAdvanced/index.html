@@ -80,79 +80,105 @@
                     
     <a class="" href="../../QuickStart/">Quick Start</a>
                 </li>
-                <li class="">
-                    
-    <a class="" href="../Preferences/">Preferences</a>
-                </li>
                 <li class=" current">
                     
-    <span class="caption-text">Main Options</span>
+    <span class="caption-text">Preferences</span>
     <ul class="subnav">
                 <li class="toctree-l3">
                     
+    <a class="" href="../Preferences/">General</a>
+                </li>
+                <li class="toctree-l3 current">
+                    
+    <span class="caption-text">Main Options</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
     <a class="" href="../MainOptions/">Behaviour</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="toctree-l4">
                     
     <a class="" href="../LookAndFeel/">Look&Feel</a>
                 </li>
-                <li class="toctree-l3 current">
+                <li class="toctree-l4 current">
                     
     <a class="current" href="./">Advanced</a>
     <ul class="subnav">
             
-    <li class="toctree-l4"><a href="#advanced-options">Advanced Options</a></li>
+    <li class="toctree-l5"><a href="#advanced-options">Advanced Options</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l6" href="#prompts-password-username-etc">Prompts (Password, Username, etc.)</a></li>
+        
+        </ul>
     
 
     </ul>
                 </li>
     </ul>
                 </li>
-                <li class="">
+                <li class="toctree-l3">
                     
     <span class="caption-text">Terminal Options</span>
     <ul class="subnav">
-                <li class="toctree-l3">
+                <li class="toctree-l4">
                     
     <a class="" href="../TermOptions/">Behaviour</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="toctree-l4">
                     
     <a class="" href="../TermLookAndFeel/">Look&Feel</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="toctree-l4">
                     
     <a class="" href="../TermAdvanced/">Advanced</a>
                 </li>
     </ul>
                 </li>
-                <li class="">
+                <li class="toctree-l3">
                     
     <a class="" href="../ShellOptions/">Shell Options</a>
                 </li>
-                <li class="">
+                <li class="toctree-l3">
                     
     <a class="" href="../Networking/">Networking</a>
                 </li>
-                <li class="">
+                <li class="toctree-l3">
                     
     <a class="" href="../GlobalVariables/">Global Variables</a>
                 </li>
-                <li class="">
+                <li class="toctree-l3">
                     
     <a class="" href="../LocalCommands/">Local Commands</a>
                 </li>
-                <li class="">
+                <li class="toctree-l3">
                     
     <a class="" href="../RemoteCommands/">Remote Commands</a>
                 </li>
-                <li class="">
+                <li class="toctree-l3">
                     
     <a class="" href="../KeePassXC/">KeePass</a>
+                </li>
+    </ul>
                 </li>
                 <li class="">
                     
     <a class="" href="../../CommandLine/">Command Line</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Connections</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Connections/SSH/">SSH</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Connections/RDP/">RDP</a>
+                </li>
+    </ul>
                 </li>
     </ul>
 	    </li>
@@ -217,6 +243,10 @@
         
       
         
+          <li>Preferences &raquo;</li>
+        
+      
+        
           <li>2. User's Manual &raquo;</li>
         
       
@@ -260,6 +290,33 @@
 </ul>
 </li>
 </ul>
+<h2 id="prompts-password-username-etc">Prompts (Password, Username, etc.)</h2>
+<p>The original prompt command for detecting a password request could not work for some of your servers, depending on the : language settings, customized distribution prompt changes, etc.</p>
+<p>In this cases you may need to adjust your prompt regex.</p>
+<p>For example, the original prompt regex for password detections is:</p>
+<p><code>([pP]ass|[pP]ass[wW]or[dt](\s+for\s+|\w+@\w+)*|[cC]ontrase.a|Enter passphrase for key '.+')\s*:\s*$</code></p>
+<p>While this prompt work very will in general for english platforms, it has some minor issues in other latin languages where the grammar changes.</p>
+<p>In the above example, the expression expects that immediately after the "password" word detected e ":" should come up. Which is not true for spanish.</p>
+<pre><code># Enlish prompt
+
+(current) UNIX Password:
+
+# Spanish prompt
+
+(actual) Contraseña de UNIX:
+</code></pre>
+
+<p>Below is a more general regular expression (but not complete)</p>
+<p><code>(?mi)(pass(word|phrase)|contraseña).*?:\s*$</code></p>
+<p>But this expression is limited to English and Spanish. You may need to edit the Spanish word <em>contraseña</em> or add more words in different languages to the regular expression.</p>
+<p>For example:</p>
+<p><code>(?mi)(pass(word|phrase)|contraseña|passwort).*?:\s*$</code></p>
+<p>or</p>
+<p><code>(?mi)(pass(wor[dt]|phrase)|contraseña).*?:\s*$</code></p>
+<div class="admonition tip">
+<p class="admonition-title">Recommended Password prompt</p>
+<p><code>(?mi)(pass(word|phrase)|contraseña).*?:\s*$</code></p>
+</div>
               
             </div>
           </div>

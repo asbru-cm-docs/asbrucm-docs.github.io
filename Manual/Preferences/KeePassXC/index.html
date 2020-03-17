@@ -80,102 +80,122 @@
                     
     <a class="" href="../../QuickStart/">Quick Start</a>
                 </li>
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../Preferences/">Preferences</a>
-                </li>
-                <li class="">
-                    
-    <span class="caption-text">Main Options</span>
+    <span class="caption-text">Preferences</span>
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="../MainOptions/">Behaviour</a>
+    <a class="" href="../Preferences/">General</a>
                 </li>
                 <li class="toctree-l3">
                     
+    <span class="caption-text">Main Options</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../MainOptions/">Behaviour</a>
+                </li>
+                <li class="toctree-l4">
+                    
     <a class="" href="../LookAndFeel/">Look&Feel</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="toctree-l4">
                     
     <a class="" href="../MOAdvanced/">Advanced</a>
                 </li>
     </ul>
                 </li>
-                <li class="">
+                <li class="toctree-l3">
                     
     <span class="caption-text">Terminal Options</span>
     <ul class="subnav">
-                <li class="toctree-l3">
+                <li class="toctree-l4">
                     
     <a class="" href="../TermOptions/">Behaviour</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="toctree-l4">
                     
     <a class="" href="../TermLookAndFeel/">Look&Feel</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="toctree-l4">
                     
     <a class="" href="../TermAdvanced/">Advanced</a>
                 </li>
     </ul>
                 </li>
-                <li class="">
+                <li class="toctree-l3">
                     
     <a class="" href="../ShellOptions/">Shell Options</a>
                 </li>
-                <li class="">
+                <li class="toctree-l3">
                     
     <a class="" href="../Networking/">Networking</a>
                 </li>
-                <li class="">
+                <li class="toctree-l3">
                     
     <a class="" href="../GlobalVariables/">Global Variables</a>
                 </li>
-                <li class="">
+                <li class="toctree-l3">
                     
     <a class="" href="../LocalCommands/">Local Commands</a>
                 </li>
-                <li class="">
+                <li class="toctree-l3">
                     
     <a class="" href="../RemoteCommands/">Remote Commands</a>
                 </li>
-                <li class=" current">
+                <li class="toctree-l3 current">
                     
     <a class="current" href="./">KeePass</a>
     <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#keepass-integration">KeePass Integration</a></li>
+    <li class="toctree-l4"><a href="#keepass-integration">KeePass Integration</a></li>
     
 
-    <li class="toctree-l3"><a href="#configure">Configure</a></li>
+    <li class="toctree-l4"><a href="#configure">Configure</a></li>
     
 
-    <li class="toctree-l3"><a href="#how-to-use">How to use</a></li>
+    <li class="toctree-l4"><a href="#how-to-use">How to use</a></li>
     
         <ul>
         
-            <li><a class="toctree-l4" href="#enter-master-password">Enter Master Password</a></li>
+            <li><a class="toctree-l5" href="#enter-master-password">Enter Master Password</a></li>
         
-            <li><a class="toctree-l4" href="#assign-a-user-name-and-password-to-a-connection">Assign a user name and password to a connection.</a></li>
+            <li><a class="toctree-l5" href="#assign-a-user-name-and-password-to-a-connection">Assign a user name and password to a connection.</a></li>
         
         </ul>
     
 
-    <li class="toctree-l3"><a href="#assign-url-or-other-properties-to-other-fields">Assign URL, or other properties to other fields</a></li>
+    <li class="toctree-l4"><a href="#assign-url-or-other-properties-to-other-fields">Assign URL, or other properties to other fields</a></li>
     
 
-    <li class="toctree-l3"><a href="#known-restriction-or-limitations-of-the-current-model">Known restriction or limitations of the current model.</a></li>
+    <li class="toctree-l4"><a href="#known-restriction-or-limitations-of-the-current-model">Known restriction or limitations of the current model.</a></li>
     
 
-    <li class="toctree-l3"><a href="#why-did-you-have-to-rewrite-and-brake-compatibility">Why did you have to rewrite and brake compatibility?</a></li>
+    <li class="toctree-l4"><a href="#why-did-you-have-to-rewrite-and-brake-compatibility">Why did you have to rewrite and brake compatibility?</a></li>
     
 
+    </ul>
+                </li>
     </ul>
                 </li>
                 <li class="">
                     
     <a class="" href="../../CommandLine/">Command Line</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Connections</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Connections/SSH/">SSH</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Connections/RDP/">RDP</a>
+                </li>
+    </ul>
                 </li>
     </ul>
 	    </li>
@@ -236,6 +256,10 @@
     
       
         
+          <li>Preferences &raquo;</li>
+        
+      
+        
           <li>2. User's Manual &raquo;</li>
         
       
@@ -294,7 +318,7 @@ Which means you will have to reconfigure the usernames and passwords fields. Or 
 <p><img alt="" src="../images/kpxc4.png" /></p>
 <div class="admonition tip">
 <p class="admonition-title">Recommendations</p>
-<p><strong>KeyPass pattern</strong> : The pattern is formed as : <code>&lt;[keepass property|keepass entry path&gt;</code>. You can edit and change the text to any valid property and path if your need.</p>
+<p><strong>KeyPass pattern</strong> : The pattern is formed as : <code>&lt;keepass_property|keepass entry path&gt;</code>. You can edit and change the text to any valid property and path if your need.</p>
 <p>Current properties available from keepassxc-cli : username, password, title, url, notes</p>
 <p><img alt="" src="../images/kpxc5.png" /></p>
 <p><strong>I selected the wrong authentication method</strong> before selecting my keepass link. Simply copy paste the entries to your the correct fields, or change the method and select your entry again.</p>

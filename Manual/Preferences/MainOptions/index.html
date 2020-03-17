@@ -80,97 +80,120 @@
                     
     <a class="" href="../../QuickStart/">Quick Start</a>
                 </li>
-                <li class="">
-                    
-    <a class="" href="../Preferences/">Preferences</a>
-                </li>
                 <li class=" current">
+                    
+    <span class="caption-text">Preferences</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Preferences/">General</a>
+                </li>
+                <li class="toctree-l3 current">
                     
     <span class="caption-text">Main Options</span>
     <ul class="subnav">
-                <li class="toctree-l3 current">
+                <li class="toctree-l4 current">
                     
     <a class="current" href="./">Behaviour</a>
     <ul class="subnav">
             
-    <li class="toctree-l4"><a href="#main-window-layout">Main Window Layout</a></li>
+    <li class="toctree-l5"><a href="#main-options">Main Options</a></li>
     
 
-    <li class="toctree-l4"><a href="#icons-theme">Icons Theme</a></li>
+    <li class="toctree-l5"><a href="#main-window-layout">Main Window Layout</a></li>
     
 
-    <li class="toctree-l4"><a href="#actions-at-start-exit-tabs-interaction">Actions at : Start, Exit, Tabs interaction</a></li>
+    <li class="toctree-l5"><a href="#icons-theme">Icons Theme</a></li>
+    
+
+    <li class="toctree-l5"><a href="#actions-at-start-exit-tabs-interaction">Actions at : Start, Exit, Tabs interaction</a></li>
     
         <ul>
         
-            <li><a class="toctree-l5" href="#at-start">At start</a></li>
+            <li><a class="toctree-l6" href="#at-start">At start</a></li>
         
-            <li><a class="toctree-l5" href="#at-exit">At exit</a></li>
+            <li><a class="toctree-l6" href="#at-exit">At exit</a></li>
         
-            <li><a class="toctree-l5" href="#control-tab-goes-to">Control TAB Goes to</a></li>
+            <li><a class="toctree-l6" href="#control-tab-goes-to">Control TAB Goes to</a></li>
         
-            <li><a class="toctree-l5" href="#other-options">Other options</a></li>
+            <li><a class="toctree-l6" href="#other-options">Other options</a></li>
         
         </ul>
     
 
     </ul>
                 </li>
-                <li class="toctree-l3">
+                <li class="toctree-l4">
                     
     <a class="" href="../LookAndFeel/">Look&Feel</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="toctree-l4">
                     
     <a class="" href="../MOAdvanced/">Advanced</a>
                 </li>
     </ul>
                 </li>
-                <li class="">
+                <li class="toctree-l3">
                     
     <span class="caption-text">Terminal Options</span>
     <ul class="subnav">
-                <li class="toctree-l3">
+                <li class="toctree-l4">
                     
     <a class="" href="../TermOptions/">Behaviour</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="toctree-l4">
                     
     <a class="" href="../TermLookAndFeel/">Look&Feel</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="toctree-l4">
                     
     <a class="" href="../TermAdvanced/">Advanced</a>
                 </li>
     </ul>
                 </li>
-                <li class="">
+                <li class="toctree-l3">
                     
     <a class="" href="../ShellOptions/">Shell Options</a>
                 </li>
-                <li class="">
+                <li class="toctree-l3">
                     
     <a class="" href="../Networking/">Networking</a>
                 </li>
-                <li class="">
+                <li class="toctree-l3">
                     
     <a class="" href="../GlobalVariables/">Global Variables</a>
                 </li>
-                <li class="">
+                <li class="toctree-l3">
                     
     <a class="" href="../LocalCommands/">Local Commands</a>
                 </li>
-                <li class="">
+                <li class="toctree-l3">
                     
     <a class="" href="../RemoteCommands/">Remote Commands</a>
                 </li>
-                <li class="">
+                <li class="toctree-l3">
                     
     <a class="" href="../KeePassXC/">KeePass</a>
+                </li>
+    </ul>
                 </li>
                 <li class="">
                     
     <a class="" href="../../CommandLine/">Command Line</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Connections</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Connections/SSH/">SSH</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Connections/RDP/">RDP</a>
+                </li>
+    </ul>
                 </li>
     </ul>
 	    </li>
@@ -235,6 +258,10 @@
         
       
         
+          <li>Preferences &raquo;</li>
+        
+      
+        
           <li>2. User's Manual &raquo;</li>
         
       
@@ -252,7 +279,9 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="main-window-layout">Main Window Layout</h2>
+                <h2 id="main-options">Main Options</h2>
+<p><img alt="" src="../images/pref1.png" /></p>
+<h2 id="main-window-layout">Main Window Layout</h2>
 <p>Ásbrú offers two interface options to interact.</p>
 <p><strong>Traditional</strong></p>
 <p>This is the standard interface and is recommended for users that are "Tabs" driven users and like to have all options and interactions available in the same window.</p>
@@ -321,6 +350,7 @@
 <li><strong>Hide to tray instead of closing</strong> : When clicking in the "Window close button", Ásbrú will hide to the system tray (if available) instead of closing the application.</li>
 <li><strong>Confirm Exit</strong> : Will ask if you really want to close the application</li>
 <li><strong>Auto save on exit</strong> : If there are any settings changes unsaved, will ask if you want to save them permanently before exit the application.</li>
+<li><strong>Automatically save configurations on every change</strong> : This will save your configuration changes on every change you make to your settings.</li>
 </ul>
 <h3 id="control-tab-goes-to">Control TAB Goes to</h3>
 <ul>
@@ -336,7 +366,6 @@
 <li><strong>Auto accept remove offending SSH keys</strong> : Will add, remove, replace your local ssh known hosts keys when they have changed on the remote server.</li>
 <li><strong>Check port status at connect</strong> : Set a timeout and port reachability before trying to connect.</li>
 <li><strong>Automatically append group names to new connection names</strong> : (recommended) when connecting Ásbrú will display a connection message in your terminal, if you use the same name on different connections, this will give you a better hint of where you have connected.</li>
-<li><strong>Automatically save configurations on every change</strong> : This will save your configuration changes on every change you make to your settings.</li>
 </ul>
               
             </div>
@@ -348,7 +377,7 @@
         <a href="../LookAndFeel/" class="btn btn-neutral float-right" title="Look&Feel">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../Preferences/" class="btn btn-neutral" title="Preferences"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Preferences/" class="btn btn-neutral" title="General"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
