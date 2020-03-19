@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ásbrú Connection Manager">
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Terminal - Ásbrú Connection Manager - Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Terminal";
+    var mkdocs_page_input_path = "Manual/Connections/SSH_Terminal.md";
+    var mkdocs_page_url = "/Manual/Connections/SSH_Terminal/";
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Ásbrú Connection Manager - Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">1. General</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../General/NEWS/">News</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../General/Installation/">Installation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../General/Changelog/">Changelog</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">2. User's Manual</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../QuickStart/">Quick Start</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Preferences</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Preferences/Preferences/">General</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Main Options</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Preferences/MainOptions/">Behaviour</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Preferences/LookAndFeel/">Look&Feel</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Preferences/MOAdvanced/">Advanced</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Terminal Options</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Preferences/TermOptions/">Behaviour</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Preferences/TermLookAndFeel/">Look&Feel</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Preferences/TermAdvanced/">Advanced</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Preferences/ShellOptions/">Shell Options</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Preferences/Networking/">Networking</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Preferences/GlobalVariables/">Global Variables</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Preferences/LocalCommands/">Local Commands</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Preferences/RemoteCommands/">Remote Commands</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Preferences/KeePassXC/">KeePass</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../CommandLine/">Command Line</a>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Connections</span>
+    <ul class="subnav">
+                <li class="toctree-l3 current">
+                    
+    <span class="caption-text">SSH</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../SSH/">Configure</a>
+                </li>
+                <li class="toctree-l4 current">
+                    
+    <a class="current" href="./">Terminal</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l5"><a href="#the-ssh-terminal">The SSH Terminal</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l6" href="#the-login-process">The login process</a></li>
+        
+            <li><a class="toctree-l6" href="#mouse-interaction">Mouse Interaction</a></li>
+        
+            <li><a class="toctree-l6" href="#poppup-menu">Poppup Menu</a></li>
+        
+            <li><a class="toctree-l6" href="#keybindings">Keybindings</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../RDP/">RDP</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">3. Contributed Articles</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../Managing/Clusters/">Clusters</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../Managing/Templates/">Templates</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">4. Contributing</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../Contributing/">Contributing</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../Contributing/CODING_STANDARD/">Coding standards</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../Contributing/CODE_OF_CONDUCT/">Code of conduct</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Ásbrú Connection Manager - Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>SSH &raquo;</li>
+        
+      
+        
+          <li>Connections &raquo;</li>
+        
+      
+        
+          <li>2. User's Manual &raquo;</li>
+        
+      
+    
+    <li>Terminal</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/asbru-cm/asbru-cm/edit/master/doc/Manual/Connections/SSH_Terminal.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="the-ssh-terminal">The SSH Terminal</h1>
+<h2 id="the-login-process">The login process</h2>
+<p>If you have configured your connection to have full automation, the login sequence will not require any intervention on your part, and the login process will look as clean as this.</p>
+<p><img alt="" src="../images/ssht1.png" /></p>
+<p>If you have configured your connection not to have a password saved, you will receive a popup window requesting you to type your password.</p>
+<p><img alt="" src="../images/ssht2.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Expired passwords and change password required</p>
+<p>In this cases you may see additional popup windows for each password requested: password, original password, new password, confirmation password.</p>
+</div>
+<h2 id="mouse-interaction">Mouse Interaction</h2>
+<p>Ásbrú uses the gnome vte library, and is a mouse driven terminal.</p>
+<h3 id="copy-paste">Copy / Paste</h3>
+<p>We will begin explaining the concept of copy paste in the terminal, because is the one that confuses many users.</p>
+<p>When you are connected to a remote server, the remote application could request and process mouse events or not.</p>
+<p>If the remote application does not process any mouse events, then the local terminal processes this mouse events locally.</p>
+<p>To distinguish if the remote application is or not processing mouse events, look at the cursor shape. When a remote program is not processing mouse events then the cursor is a text cursor, other wise a traditional mouse pointer.</p>
+<p><strong>No mouse processing</strong></p>
+<p><img alt="" src="../images/ssht3.png" /></p>
+<p><strong>Mouse processing</strong></p>
+<p><img alt="" src="../images/ssht4.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Local Clipboard</p>
+<p>A local selection creates copies to your <strong>local clipboard</strong>, not to the remote clipboard.</p>
+</div>
+<h4 id="remote-application-does-not-process-mouse-events">Remote application does NOT process mouse events.</h4>
+<p><strong>double click</strong> : The terminal will select a "word" the "visible" text on the terminal. The characters used as a word are [a-Z_] plus additional characters that you configured in rule described in the <a href="../../Preferences/MOAdvanced/">Main options Advanced Tab : Select by word characters</a>.</p>
+<p><img alt="" src="../images/ssht5.png" /></p>
+<p><strong>triple click</strong> : The terminal will select the "visible" row of text on the terminal.</p>
+<p><img alt="" src="../images/ssht6.png" /></p>
+<p><strong>Click and drag</strong> : The terminal will select the text from the start point of the mouse drag to the end point in complete sequence, jumping lines and start from the beginning of the line on each new line.</p>
+<p><img alt="" src="../images/ssht10.png" /></p>
+<p><strong><code>&lt;Shift + Ctrl&gt;</code> + drag</strong> : Will create a square selection from the starting drag point to the end.</p>
+<p><img alt="" src="../images/ssht9.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Copy / Paste</p>
+<p>As soon as you select the text and release the mouse, the selected text is copied to the clipboard without any further actions (no need to : right click copy, <code>&lt;crtl-c&gt;</code>)</p>
+<p>To paste text from your local clipboard into the terminal. <code>&lt;Shift + Insert&gt;</code> or <code>right clic and "Paste"</code>.</p>
+<p>You can imagine that the "Paste action", is similar to sending all the characters in the buffer to the terminal. So they will be sent with all the existing tabs, new line characters, etc.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">The terminal is a canvas</p>
+<p>The terminal has no knowledge of the remote application, so when selecting and copying, it selects the text that finds on the visible area, and treats it as a canvas (a paintable area).</p>
+<p>Do not expect the terminal to know that there are : line numbers or drawing characters to ignore, it will copy all the text under the selection.</p>
+</div>
+<h4 id="remote-application-does-process-mouse-events">Remote application does process mouse events.</h4>
+<p>Depending on the application the selection would look and you will fill a difference in the action itself : could be very slow depending on the connection, could it be that the selection is shown when releasing the mouse or that the highlight is delayed.</p>
+<p><strong>Example of a remote double and triple click selection</strong></p>
+<p><img alt="" src="../images/ssht7.png" /></p>
+<p><img alt="" src="../images/ssht8.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Selected text</p>
+<p>When the selection and copy actions take place, they are located in the remote application clipboard, not on your local clipboard.</p>
+<p>To be able to use the terminal actions described above. You will have to use the <code>Shift</code> key during your mouse operations to instruct the terminal "not to pass the mouse event to the remote program".</p>
+</div>
+<h3 id="common-problems-of-copy-paste-text-from-terminal-to-local-application">Common problems of copy paste text from terminal to local application</h3>
+<p><strong>Copy / Paste from editor copies line numbers</strong></p>
+<p><img alt="" src="../images/ssht11.png" /></p>
+<p><strong>Solution</strong></p>
+<p>Use the square selection technic, or hide the number panel in your editor before copying.</p>
+<p><img alt="" src="../images/ssht12.png" /></p>
+<h2 id="poppup-menu">Poppup Menu</h2>
+<p>When you right click on the terminal (<code>&lt;Shift&gt; + right click</code> if the remote application process mouse events)</p>
+<p>You will see a popup menu similar to the next image.</p>
+<p><img alt="" src="../images/ssht13.png" /></p>
+<p><strong>Actions</strong></p>
+<ul>
+<li>Pending</li>
+</ul>
+<h2 id="keybindings">Keybindings</h2>
+<p>This is the list of existing Ásbrú key bindings.</p>
+<table>
+<thead>
+<tr>
+<th>Key binding</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>F4</code></td>
+<td>Close all tabs</td>
+</tr>
+<tr>
+<td><code>F11</code></td>
+<td>Toggle Full screen mode</td>
+</tr>
+<tr>
+<td><code>&lt;Ctrl+Alt-r&gt;</code></td>
+<td>Remove terminal from cluster</td>
+</tr>
+<tr>
+<td><code>&lt;Ctrl+Shift+C&gt;</code></td>
+<td>Copy</td>
+</tr>
+<tr>
+<td><code>&lt;Ctrl+Shift+V&gt;</code></td>
+<td>Paste</td>
+</tr>
+<tr>
+<td><code>&lt;Ctrl+Shift+P&gt;</code></td>
+<td>Paste connection password</td>
+</tr>
+<tr>
+<td><code>&lt;Ctrl+Shift+B&gt;</code></td>
+<td>Apply a regex to clipboard and then Paste</td>
+</tr>
+<tr>
+<td><code>&lt;Ctrl+Shift+X&gt;</code></td>
+<td>Reset terminal</td>
+</tr>
+<tr>
+<td><code>&lt;Ctrl+Shift+G&gt;</code></td>
+<td>Guess hostname and set terminal title</td>
+</tr>
+<tr>
+<td><code>&lt;Ctrl+Shift+W&gt;</code></td>
+<td>Close terminal</td>
+</tr>
+<tr>
+<td><code>&lt;Ctrl+Shift+Q&gt;</code></td>
+<td>Quit Ásbrú</td>
+</tr>
+<tr>
+<td><code>&lt;Ctrl+Shift+F&gt;</code></td>
+<td>Find node in the tree view</td>
+</tr>
+<tr>
+<td><code>&lt;Ctrl+Shift+N&gt;</code></td>
+<td>Close all disconnected session windows or tabs</td>
+</tr>
+<tr>
+<td><code>&lt;Ctrl+Shift+D&gt;</code></td>
+<td>Duplicate connection</td>
+</tr>
+<tr>
+<td><code>&lt;Ctrl+Shift+R&gt;</code></td>
+<td>Disconnect and restart session</td>
+</tr>
+<tr>
+<td><code>&lt;Ctrl-F4&gt;</code></td>
+<td>Close current tab</td>
+</tr>
+<tr>
+<td><code>&lt;Ctrl-F3&gt;</code></td>
+<td>Find text in the text buffer</td>
+</tr>
+<tr>
+<td><code>&lt;Ctrl-Insert&gt;</code></td>
+<td>Copy selection to clipboard</td>
+</tr>
+<tr>
+<td><code>&lt;Shift-Insert&gt;</code></td>
+<td>Insert text into the current cursor position</td>
+</tr>
+<tr>
+<td><code>&lt;Alt-c&gt;</code></td>
+<td>Show main connection window</td>
+</tr>
+<tr>
+<td><code>&lt;Alt-n&gt;</code></td>
+<td>Show main connection window</td>
+</tr>
+<tr>
+<td><code>&lt;Alt-e&gt;</code></td>
+<td>Show main edit connection window</td>
+</tr>
+<tr>
+<td><code>&lt;Ctrl++&gt;</code></td>
+<td>Zoom in : increase terminal font size</td>
+</tr>
+<tr>
+<td><code>&lt;Ctrl+-&gt;</code></td>
+<td>Zoom out: decrease terminal font size</td>
+</tr>
+<tr>
+<td><code>&lt;Ctrl+0&gt;</code></td>
+<td>Zoom reset: set font size to default size</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../RDP/" class="btn btn-neutral float-right" title="RDP">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../SSH/" class="btn btn-neutral" title="Configure"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/asbru-cm/asbru-cm/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../SSH/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../RDP/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+
+</body>
+</html>

@@ -189,7 +189,17 @@
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="../../Connections/SSH/">SSH</a>
+    <span class="caption-text">SSH</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Connections/SSH/">Configure</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Connections/SSH_Terminal/">Terminal</a>
+                </li>
+    </ul>
                 </li>
                 <li class="toctree-l3">
                     
@@ -332,8 +342,8 @@ Which means you will have to reconfigure the usernames and passwords fields. Or 
 <ul>
 <li>The cli access will not allow to have an "unlocked" state.<ul>
 <li>It could be accomplished by opening an interactive session.</li>
-<li>But this would introduce the need to recode most of the logic in keepassxc-browser integration (create a service). Which is quite extensive, and in this case would make no sense to replicate existing work, would be better to implement the browser integration client.</li>
-<li>The cli, offers a very clean, easy and safe access that decouples Ásbrú from becoming a security target for command injections etc.</li>
+<li>But this would introduce the need to replicate most of the logic in keepassxc-browser integration (create a service). Which is quite extensive, and in this case would make no sense to replicate existing work, would be better to implement the browser integration client.</li>
+<li>The <code>cli</code>, offers a very clean, easy and safe access that decouples Ásbrú from becoming a security target for command injections, etc.</li>
 </ul>
 </li>
 <li>The main impact is visible if you decide to setup a keepass database with version 4+ and add a very strong encryption. This will create a delay of up to 5 seconds to unlock the database on every connection.</li>

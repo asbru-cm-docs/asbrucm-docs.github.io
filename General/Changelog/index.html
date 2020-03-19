@@ -202,7 +202,17 @@
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="../../Manual/Connections/SSH/">SSH</a>
+    <span class="caption-text">SSH</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Manual/Connections/SSH/">Configure</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Manual/Connections/SSH_Terminal/">Terminal</a>
+                </li>
+    </ul>
                 </li>
                 <li class="toctree-l3">
                     
@@ -291,6 +301,7 @@
 <p><a href="https://github.com/asbru-cm/asbru-cm/compare/6.1.0rc2...HEAD">Full Changelog</a></p>
 <p><strong>Fixed bugs:</strong></p>
 <ul>
+<li>Loki branch - Copy connection password having the connection set with Keepass <a href="https://github.com/asbru-cm/asbru-cm/issues/475">#475</a></li>
 <li>Loki Branch - Last commit on Preferences help button  <a href="https://github.com/asbru-cm/asbru-cm/issues/455">#455</a></li>
 </ul>
 <p><strong>Closed issues:</strong></p>
@@ -300,6 +311,7 @@
 </ul>
 <p><strong>Merged pull requests:</strong></p>
 <ul>
+<li>Docs 11 <a href="https://github.com/asbru-cm/asbru-cm/pull/482">#482</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
 <li>improved password prompt regex explanation <a href="https://github.com/asbru-cm/asbru-cm/pull/478">#478</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
 </ul>
 <h2 id="610rc2-2020-03-14"><a href="https://github.com/asbru-cm/asbru-cm/tree/6.1.0rc2">6.1.0rc2</a> (2020-03-14)</h2>
@@ -489,7 +501,6 @@
 <li>Disable ssh's X forwarding by default <a href="https://github.com/asbru-cm/asbru-cm/issues/247">#247</a></li>
 <li>not found asbru-cm deb from repository <a href="https://github.com/asbru-cm/asbru-cm/issues/237">#237</a></li>
 <li>Automatic Keyboard Focus <a href="https://github.com/asbru-cm/asbru-cm/issues/148">#148</a></li>
-<li>More compact server-list tree <a href="https://github.com/asbru-cm/asbru-cm/issues/133">#133</a></li>
 <li>Garbage characters in shell logfiles <a href="https://github.com/asbru-cm/asbru-cm/issues/132">#132</a></li>
 <li>Flatpak support <a href="https://github.com/asbru-cm/asbru-cm/issues/83">#83</a></li>
 <li>Add feature to see RDP connection log (especially errors) directly in asbru-cm <a href="https://github.com/asbru-cm/asbru-cm/issues/76">#76</a></li>
@@ -514,7 +525,6 @@
 <li>VNC options empty: Can't call method "_buildGUI" on an undefined value <a href="https://github.com/asbru-cm/asbru-cm/issues/178">#178</a></li>
 <li>Right mouse click on tab title stop working <a href="https://github.com/asbru-cm/asbru-cm/issues/169">#169</a></li>
 <li>Cannot interact with multiple selections in Connection list <a href="https://github.com/asbru-cm/asbru-cm/issues/168">#168</a></li>
-<li>ncurses: showing applications in ncurses is looking very ugly <a href="https://github.com/asbru-cm/asbru-cm/issues/143">#143</a></li>
 <li>Cluster explode: window sizes and placement are incorrect <a href="https://github.com/asbru-cm/asbru-cm/issues/98">#98</a></li>
 <li>"Retab" button in PCC causes asbru-cm to crash <a href="https://github.com/asbru-cm/asbru-cm/issues/52">#52</a></li>
 <li>Pasting long passwords into password prompt doesn't always work <a href="https://github.com/asbru-cm/asbru-cm/issues/49">#49</a></li>
@@ -597,6 +607,7 @@
 <li>Add a free textbox to pass custom options in xfreerdp <a href="https://github.com/asbru-cm/asbru-cm/issues/158">#158</a></li>
 <li>Paste current connection password button <a href="https://github.com/asbru-cm/asbru-cm/issues/152">#152</a></li>
 <li>SSH authenticity of host issue <a href="https://github.com/asbru-cm/asbru-cm/issues/145">#145</a></li>
+<li>More compact server-list tree <a href="https://github.com/asbru-cm/asbru-cm/issues/133">#133</a></li>
 <li>Debian experimental (buster) removed libgnome2... <a href="https://github.com/asbru-cm/asbru-cm/issues/114">#114</a></li>
 <li>Installing on fedora not working <a href="https://github.com/asbru-cm/asbru-cm/issues/106">#106</a></li>
 <li>Unable to install on Linux Mint 19 (LTS Release) <a href="https://github.com/asbru-cm/asbru-cm/issues/96">#96</a></li>
@@ -610,6 +621,7 @@
 <li>"split" misspelled <a href="https://github.com/asbru-cm/asbru-cm/issues/177">#177</a></li>
 <li>Size of embedded xfreerdp <a href="https://github.com/asbru-cm/asbru-cm/issues/153">#153</a></li>
 <li>Cant start SSH session since last update (missing PACUtils.pm) on Fedora <a href="https://github.com/asbru-cm/asbru-cm/issues/147">#147</a></li>
+<li>ncurses: showing applications in ncurses is looking very ugly <a href="https://github.com/asbru-cm/asbru-cm/issues/143">#143</a></li>
 <li>New windows will not get focus <a href="https://github.com/asbru-cm/asbru-cm/issues/142">#142</a></li>
 <li>App freezes when connecting after saving/editing connection <a href="https://github.com/asbru-cm/asbru-cm/issues/139">#139</a></li>
 <li>Forced password change on logon closes connection <a href="https://github.com/asbru-cm/asbru-cm/issues/138">#138</a></li>
