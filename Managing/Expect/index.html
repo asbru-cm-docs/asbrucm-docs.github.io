@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ásbrú Connection Manager">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Expect - Ásbrú Connection Manager - Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Expect";
+    var mkdocs_page_input_path = "Managing/Expect.md";
+    var mkdocs_page_url = "/Managing/Expect/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Ásbrú Connection Manager - Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">1. General</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../General/NEWS/">News</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../General/Installation/">Installation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../General/Changelog/">Changelog</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">2. User's Manual</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Manual/QuickStart/">Quick Start</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Preferences</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Manual/Preferences/Preferences/">General</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Main Options</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Manual/Preferences/MainOptions/">Behaviour</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Manual/Preferences/LookAndFeel/">Look&Feel</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Manual/Preferences/MOAdvanced/">Advanced</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Terminal Options</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Manual/Preferences/TermOptions/">Behaviour</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Manual/Preferences/TermLookAndFeel/">Look&Feel</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Manual/Preferences/TermAdvanced/">Advanced</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Manual/Preferences/ShellOptions/">Shell Options</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Manual/Preferences/Networking/">Networking</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Manual/Preferences/GlobalVariables/">Global Variables</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Manual/Preferences/LocalCommands/">Local Commands</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Manual/Preferences/RemoteCommands/">Remote Commands</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Manual/Preferences/KeePassXC/">KeePass</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Manual/CommandLine/">Command Line</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Connections</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">SSH</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Manual/Connections/SSH/">Configure</a>
+                </li>
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Manual/Connections/SSH_Terminal/">Terminal</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Manual/Connections/RDP/">RDP</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">3. Contributed Articles</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Clusters/">Clusters</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Templates/">Templates</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">4. Contributing</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Contributing/">Contributing</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Contributing/CODING_STANDARD/">Coding standards</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Contributing/CODE_OF_CONDUCT/">Code of conduct</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Ásbrú Connection Manager - Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Expect</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/asbru-cm/asbru-cm/edit/master/doc/Managing/Expect.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>This article has been written by <a href="https://github.com/hanspr">Hans Peyrot</a></p>
+<h1 id="introduction-to-expect">Introduction to Expect</h1>
+<div class="admonition danger">
+<p class="admonition-title">Executed during the login process only</p>
+<p>This expect actions take place only during the login process.</p>
+<p>It helps you to automate a login sequence and a continuous set of actions.</p>
+<p>But they do not work after the complete login sequence ends.</p>
+<p>Ásbrú is not constantly monitoring your typing, so as soon as the login process ends, and the last expect is executed, there will be no more expect detection an execution.</p>
+<p><strong>You must know how to write regular expressions for this to work properly.</strong></p>
+</div>
+<p>There are several regular expressions in different parts of the General Preferences and Connection Preferences that allows you to control of the login sequence.</p>
+<h2 id="introduction-to-user-password-prompt-sequence">Introduction to user, password, prompt sequence.</h2>
+<p>These are the must important configuration regular expressions that will automate your login sequence.</p>
+<h3 id="global-preferences-main-options-advanced-settings">Global Preferences &gt; Main Options &gt; Advanced Settings</h3>
+<p><img alt="" src="../images/expect1.png" /></p>
+<ul>
+<li><strong>PASSWORD prompt</strong>: Regular expression that will detect your password prompt<ul>
+<li>When found will type your terminal password or passphrase for you.</li>
+</ul>
+</li>
+<li><strong>USERNAME prompt</strong>: Regular expression that will detect your username prompt<ul>
+<li>When found will type your terminal username for you.</li>
+</ul>
+</li>
+<li><strong>Command prompt</strong>: Regular expression that will detect your command prompt<ul>
+<li>When found the automated login will pass actions to your configured Expects for the terminal (if there are any configured)</li>
+</ul>
+</li>
+<li><strong>Remote host key changed</strong>: Regular expression that will detect when the process detected a change in the remote host key.<ul>
+<li>When found, the terminal will issue the add and accept sequence and continue.</li>
+</ul>
+</li>
+<li><strong>Host-key verification string</strong>: Regular expression that will detect you are connecting to a new server and to accept the remote key automatically.</li>
+<li><strong>Press any key to continue</strong>: Regular expression that will detect a press any key to continue and send a new line for you.</li>
+</ul>
+<h3 id="terminal-options">Terminal Options</h3>
+<p>You can override some of the previous regular expressions for a particular terminal if they do not fit.</p>
+<p>Is recommended to use a terminal override when the expression you want to add is not common to all your connections or it makes your global option fail if you combine them with the more general one.</p>
+<p>To override the global options on a certain connection activate the <strong><em>Use these personal options</em></strong> in your terminal options tab.</p>
+<p><img alt="" src="../images/expect2.png" /></p>
+<p>The meaning of this options are identical to the global options.</p>
+<h3 id="expect-tab-in-the-terminal-configuration">Expect Tab in the terminal configuration</h3>
+<p>You may add additional expects to your login sequence with this option.</p>
+<p>Each expect will be executed in sequence, one by one.</p>
+<p>The first one to match will <strong>"send"</strong> the configured sequence of characters to the terminal.</p>
+<p><img alt="" src="../images/expect3.png" /></p>
+<p>In the example above the sequence would be:</p>
+<ul>
+<li>Wait for a command prompt with the simbol <code>~</code></li>
+<li>Then send to the terminal : <code>ssh otherbox</code></li>
+<li>Wait then for a string : <code>username</code></li>
+<li>Then send :<code>myuser</code></li>
+<li>Then wait for : <code>password</code></li>
+<li>Then send the string : <code>otherboxpass</code></li>
+</ul>
+<p>This could automate, login to a server, then ssh into another one from this one.</p>
+<h2 id="general-sequence-of-events">General sequence of events</h2>
+<ul>
+<li>Connection Starts</li>
+<li>Expect waits for any of the predefined sequence.<ul>
+<li>Wait for any of: key change, new key, password, username, prompt</li>
+</ul>
+</li>
+<li>If we do <strong>not</strong> get a prompt command or have a timeout during the login process<ul>
+<li>DISCONNECT</li>
+</ul>
+</li>
+<li>If we have a prompt, continue</li>
+<li>Execute user defined EXPECT until timeout, o no more expects detected.</li>
+</ul>
+<h2 id="some-usual-problems">Some usual problems.</h2>
+<div class="admonition tip">
+<p class="admonition-title">Debug your expects</p>
+<p>If your expects do not work as expected, then you must debug your regular expressions to understand why did not work.</p>
+<p>In this case activate the option <strong>Expect debug</strong> in your <strong>Global Settings &gt; Terminal Options &gt; Advanced</strong></p>
+<p><img alt="" src="../images/expect4.png" /></p>
+<p>When doing this all your commands and the communication will be printed on the terminal. Passwords and other sensitive data will be revealed.</p>
+</div>
+<h3 id="prompt-not-detected">Prompt not detected</h3>
+<p>In this case you will receive a <strong>DISCONNECTION</strong> after a successful login sequence.</p>
+<p><a href="https://github.com/asbru-cm/asbru-cm/issues/473#issuecomment-601076625">See issue #473</a></p>
+<p>In this case the admin at the host decided that the prompt should have this non standard format: <code>[hostname:userid:/home/userid:]</code></p>
+<p>So the <strong>prompt regex</strong> for that particular connection had to be changed to : <code>:\]\s+$</code></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/asbru-cm/asbru-cm/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
