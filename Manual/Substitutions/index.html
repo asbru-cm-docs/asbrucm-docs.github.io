@@ -8,7 +8,7 @@
   
   <meta name="author" content="Ásbrú Connection Manager">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Code of conduct - Ásbrú Connection Manager - Docs</title>
+  <title>Substitution - Ásbrú Connection Manager - Docs</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Code of conduct";
-    var mkdocs_page_input_path = "Contributing/CODE_OF_CONDUCT.md";
-    var mkdocs_page_url = "/Contributing/CODE_OF_CONDUCT/";
+    var mkdocs_page_name = "Substitution";
+    var mkdocs_page_input_path = "Manual/Substitutions.md";
+    var mkdocs_page_url = "/Manual/Substitutions/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
@@ -78,7 +78,7 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../Manual/QuickStart/">Quick Start</a>
+    <a class="" href="../QuickStart/">Quick Start</a>
                 </li>
                 <li class="">
                     
@@ -86,7 +86,7 @@
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="../../Manual/Preferences/Preferences/">General</a>
+    <a class="" href="../Preferences/Preferences/">General</a>
                 </li>
                 <li class="toctree-l3">
                     
@@ -94,15 +94,15 @@
     <ul class="subnav">
                 <li class="toctree-l4">
                     
-    <a class="" href="../../Manual/Preferences/MainOptions/">Behaviour</a>
+    <a class="" href="../Preferences/MainOptions/">Behaviour</a>
                 </li>
                 <li class="toctree-l4">
                     
-    <a class="" href="../../Manual/Preferences/LookAndFeel/">Look&Feel</a>
+    <a class="" href="../Preferences/LookAndFeel/">Look&Feel</a>
                 </li>
                 <li class="toctree-l4">
                     
-    <a class="" href="../../Manual/Preferences/MOAdvanced/">Advanced</a>
+    <a class="" href="../Preferences/MOAdvanced/">Advanced</a>
                 </li>
     </ul>
                 </li>
@@ -112,47 +112,47 @@
     <ul class="subnav">
                 <li class="toctree-l4">
                     
-    <a class="" href="../../Manual/Preferences/TermOptions/">Behaviour</a>
+    <a class="" href="../Preferences/TermOptions/">Behaviour</a>
                 </li>
                 <li class="toctree-l4">
                     
-    <a class="" href="../../Manual/Preferences/TermLookAndFeel/">Look&Feel</a>
+    <a class="" href="../Preferences/TermLookAndFeel/">Look&Feel</a>
                 </li>
                 <li class="toctree-l4">
                     
-    <a class="" href="../../Manual/Preferences/TermAdvanced/">Advanced</a>
+    <a class="" href="../Preferences/TermAdvanced/">Advanced</a>
                 </li>
     </ul>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../Manual/Preferences/ShellOptions/">Shell Options</a>
+    <a class="" href="../Preferences/ShellOptions/">Shell Options</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../Manual/Preferences/Networking/">Networking</a>
+    <a class="" href="../Preferences/Networking/">Networking</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../Manual/Preferences/GlobalVariables/">Global Variables</a>
+    <a class="" href="../Preferences/GlobalVariables/">Global Variables</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../Manual/Preferences/LocalCommands/">Local Commands</a>
+    <a class="" href="../Preferences/LocalCommands/">Local Commands</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../Manual/Preferences/RemoteCommands/">Remote Commands</a>
+    <a class="" href="../Preferences/RemoteCommands/">Remote Commands</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../Manual/Preferences/KeePassXC/">KeePass</a>
+    <a class="" href="../Preferences/KeePassXC/">KeePass</a>
                 </li>
     </ul>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../Manual/CommandLine/">Command Line</a>
+    <a class="" href="../CommandLine/">Command Line</a>
                 </li>
                 <li class="">
                     
@@ -164,27 +164,47 @@
     <ul class="subnav">
                 <li class="toctree-l4">
                     
-    <a class="" href="../../Manual/Connections/SSH/">Configure</a>
+    <a class="" href="../Connections/SSH/">Configure</a>
                 </li>
                 <li class="toctree-l4">
                     
-    <a class="" href="../../Manual/Connections/SSH_Terminal/">Terminal</a>
+    <a class="" href="../Connections/SSH_Terminal/">Terminal</a>
                 </li>
     </ul>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../Manual/Connections/RDP/">RDP</a>
+    <a class="" href="../Connections/RDP/">RDP</a>
                 </li>
     </ul>
                 </li>
-                <li class="">
+                <li class=" current">
                     
     <span class="caption-text">References</span>
     <ul class="subnav">
-                <li class="toctree-l3">
+                <li class="toctree-l3 current">
                     
-    <a class="" href="../../Manual/Substitutions/">Substitution</a>
+    <a class="current" href="./">Substitution</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#substitutions">Substitutions</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#internal-variables">Internal Variables</a></li>
+        
+            <li><a class="toctree-l5" href="#environment-variables">Environment Variables</a></li>
+        
+            <li><a class="toctree-l5" href="#ask">ASK</a></li>
+        
+            <li><a class="toctree-l5" href="#cmd">CMD</a></li>
+        
+            <li><a class="toctree-l5" href="#keepass">KeePass</a></li>
+        
+        </ul>
+    
+
+    </ul>
                 </li>
     </ul>
                 </li>
@@ -212,37 +232,15 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../">Contributing</a>
+    <a class="" href="../../Contributing/">Contributing</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../CODING_STANDARD/">Coding standards</a>
+    <a class="" href="../../Contributing/CODING_STANDARD/">Coding standards</a>
                 </li>
-                <li class=" current">
+                <li class="">
                     
-    <a class="current" href="./">Code of conduct</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#contributor-covenant-code-of-conduct">Contributor Covenant Code of Conduct</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#our-pledge">Our Pledge</a></li>
-        
-            <li><a class="toctree-l4" href="#our-standards">Our Standards</a></li>
-        
-            <li><a class="toctree-l4" href="#our-responsibilities">Our Responsibilities</a></li>
-        
-            <li><a class="toctree-l4" href="#scope">Scope</a></li>
-        
-            <li><a class="toctree-l4" href="#enforcement">Enforcement</a></li>
-        
-            <li><a class="toctree-l4" href="#attribution">Attribution</a></li>
-        
-        </ul>
-    
-
-    </ul>
+    <a class="" href="../../Contributing/CODE_OF_CONDUCT/">Code of conduct</a>
                 </li>
     </ul>
 	    </li>
@@ -269,14 +267,18 @@
     
       
         
-          <li>4. Contributing &raquo;</li>
+          <li>References &raquo;</li>
+        
+      
+        
+          <li>2. User's Manual &raquo;</li>
         
       
     
-    <li>Code of conduct</li>
+    <li>Substitution</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/asbru-cm/asbru-cm/edit/master/doc/Contributing/CODE_OF_CONDUCT.md"
+        <a href="https://github.com/asbru-cm/asbru-cm/edit/master/doc/Manual/Substitutions.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -286,36 +288,144 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="contributor-covenant-code-of-conduct">Contributor Covenant Code of Conduct</h1>
-<h2 id="our-pledge">Our Pledge</h2>
-<p>In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.</p>
-<h2 id="our-standards">Our Standards</h2>
-<p>Examples of behavior that contributes to creating a positive environment include:</p>
-<ul>
-<li>Using welcoming and inclusive language</li>
-<li>Being respectful of differing viewpoints and experiences</li>
-<li>Gracefully accepting constructive criticism</li>
-<li>Focusing on what is best for the community</li>
-<li>Showing empathy towards other community members</li>
-</ul>
-<p>Examples of unacceptable behavior by participants include:</p>
-<ul>
-<li>The use of sexualized language or imagery and unwelcome sexual attention or advances</li>
-<li>Trolling, insulting/derogatory comments, and personal or political attacks</li>
-<li>Public or private harassment</li>
-<li>Publishing others' private information, such as a physical or electronic address, without explicit permission</li>
-<li>Other conduct which could reasonably be considered inappropriate in a professional setting</li>
-</ul>
-<h2 id="our-responsibilities">Our Responsibilities</h2>
-<p>Project maintainers are responsible for clarifying the standards of acceptable behavior and are expected to take appropriate and fair corrective action in response to any instances of unacceptable behavior.</p>
-<p>Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, or to ban temporarily or permanently any contributor for other behaviors that they deem inappropriate, threatening, offensive, or harmful.</p>
-<h2 id="scope">Scope</h2>
-<p>This Code of Conduct applies both within project spaces and in public spaces when an individual is representing the project or its community. Examples of representing a project or community include using an official project e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event. Representation of a project may be further defined and clarified by project maintainers.</p>
-<h2 id="enforcement">Enforcement</h2>
-<p>Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at coc@asbru-cm.net. The project team will review and investigate all complaints, and will respond in a way that it deems appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.</p>
-<p>Project maintainers who do not follow or enforce the Code of Conduct in good faith may face temporary or permanent repercussions as determined by other members of the project's leadership.</p>
-<h2 id="attribution">Attribution</h2>
-<p>This Code of Conduct is adapted from the <a href="http://contributor-covenant.org">Contributor Covenant</a>, version 1.4, available at <a href="http://contributor-covenant.org/version/1/4/">http://contributor-covenant.org/version/1/4</a></p>
+                <h1 id="substitutions">Substitutions</h1>
+<p>Inside many fields values can be represented as masks and this masks will be substituted by there real value at the time of a connection.</p>
+<p>These masks can be included in : Global variables, local or remote commands, expects, some connection fields.</p>
+<p>The geneal format of the mask is</p>
+<p><code>&lt;[(Name|Type):]VALUE&gt;</code></p>
+<h2 id="internal-variables">Internal Variables</h2>
+<p><code>&lt;name&gt;</code></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IP</td>
+<td>Connection IP or Host</td>
+</tr>
+<tr>
+<td>PORT</td>
+<td>Connection PORT</td>
+</tr>
+<tr>
+<td>USER</td>
+<td>Connection USER</td>
+</tr>
+<tr>
+<td>PASS</td>
+<td>Connection Password</td>
+</tr>
+<tr>
+<td>UUID</td>
+<td>Connection UUID</td>
+</tr>
+<tr>
+<td>TIMESTAMP</td>
+<td>Elapsed time in seconds since epoch</td>
+</tr>
+<tr>
+<td>DATE_Y</td>
+<td>Year</td>
+</tr>
+<tr>
+<td>DATE_M</td>
+<td>Month</td>
+</tr>
+<tr>
+<td>DATE_D</td>
+<td>Day</td>
+</tr>
+<tr>
+<td>TIME_H</td>
+<td>Hour</td>
+</tr>
+<tr>
+<td>TIME_M</td>
+<td>Minute</td>
+</tr>
+<tr>
+<td>TIME_S</td>
+<td>Seconds</td>
+</tr>
+<tr>
+<td>NAME</td>
+<td>Connection Name</td>
+</tr>
+<tr>
+<td>TITLE</td>
+<td>Connection Title</td>
+</tr>
+<tr>
+<td>command prompt</td>
+<td>Configured command prompt regex</td>
+</tr>
+</tbody>
+</table>
+<h2 id="environment-variables">Environment Variables</h2>
+<p><code>&lt;ENV:name&gt;</code></p>
+<p>Examples</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LANG</td>
+<td>es_MX.UTF-8</td>
+</tr>
+<tr>
+<td>DISPLAY</td>
+<td>:0</td>
+</tr>
+<tr>
+<td>HOME</td>
+<td>/home/user</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ask">ASK</h2>
+<p>Will prompt user to enter data and use that data for substitution</p>
+<p><code>&lt;ASK:parameters&gt;</code></p>
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>description</td>
+<td>opt1</td>
+</tr>
+<tr>
+<td>description</td>
+<td>value</td>
+</tr>
+<tr>
+<td>description</td>
+<td>textbox empty</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cmd">CMD</h2>
+<p>Will execute a command with the shell and use the output of that command for substitution</p>
+<p>Example</p>
+<p><code>&lt;CMD:date&gt;</code></p>
+<p>Will execute date in the shell, and the resulting date will be used for the substitution.</p>
+<h2 id="keepass">KeePass</h2>
+<p>If you need to type a mask in a field where the right click access is not available or you want to pull a value different than the predefined user or password.</p>
+<p><code>&lt;field|path to key&gt;</code></p>
+<p>Example</p>
+<p><code>&lt;title|/banks/tdc/0000&gt;</code></p>
+<p>For a full reference on how to use <a href="../Preferences/KeePassXC/">KeePass Integration </a></p>
               
             </div>
           </div>
@@ -323,8 +433,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../../Managing/Clusters/" class="btn btn-neutral float-right" title="Clusters">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-        <a href="../CODING_STANDARD/" class="btn btn-neutral" title="Coding standards"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+        <a href="../Connections/RDP/" class="btn btn-neutral" title="RDP"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -352,8 +464,10 @@
           <a href="https://github.com/asbru-cm/asbru-cm/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../CODING_STANDARD/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../Connections/RDP/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../../Managing/Clusters/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
