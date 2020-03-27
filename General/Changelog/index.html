@@ -74,7 +74,7 @@
     
         <ul>
         
-            <li><a class="toctree-l4" href="#unreleased">Unreleased</a></li>
+            <li><a class="toctree-l4" href="#610-2020-03-27">6.1.0 (2020-03-27)</a></li>
         
             <li><a class="toctree-l4" href="#610rc2-2020-03-14">6.1.0rc2 (2020-03-14)</a></li>
         
@@ -311,8 +311,8 @@
             <div class="section">
               
                 <h1 id="changelog">Changelog</h1>
-<h2 id="unreleased"><a href="https://github.com/asbru-cm/asbru-cm/tree/HEAD">Unreleased</a></h2>
-<p><a href="https://github.com/asbru-cm/asbru-cm/compare/6.1.0rc2...HEAD">Full Changelog</a></p>
+<h2 id="610-2020-03-27"><a href="https://github.com/asbru-cm/asbru-cm/tree/6.1.0">6.1.0</a> (2020-03-27)</h2>
+<p><a href="https://github.com/asbru-cm/asbru-cm/compare/6.1.0rc2...6.1.0">Full Changelog</a></p>
 <p><strong>Implemented enhancements:</strong></p>
 <ul>
 <li>sftp does not honor jump host setting <a href="https://github.com/asbru-cm/asbru-cm/issues/489">#489</a></li>
@@ -324,17 +324,34 @@
 <li>Proper KeePass support <a href="https://github.com/asbru-cm/asbru-cm/issues/65">#65</a></li>
 <li>Add KeePassx key file support <a href="https://github.com/asbru-cm/asbru-cm/issues/56">#56</a></li>
 <li>Feature to reorganize remote commands <a href="https://github.com/asbru-cm/asbru-cm/issues/50">#50</a></li>
+<li>ssh compression activated by change of other options <a href="https://github.com/asbru-cm/asbru-cm/issues/359">#359</a></li>
+<li>(Snapshot Version 6) Folder appearance <a href="https://github.com/asbru-cm/asbru-cm/issues/306">#306</a></li>
+<li>Invalid scroll position in KDE (gtk3) <a href="https://github.com/asbru-cm/asbru-cm/issues/303">#303</a></li>
+<li>Reverse button order to "Cancel" "OK"? <a href="https://github.com/asbru-cm/asbru-cm/issues/229">#229</a></li>
+<li>Add support for the "jump host" functionality of SSH <a href="https://github.com/asbru-cm/asbru-cm/issues/67">#67</a></li>
 </ul>
 <p><strong>Fixed bugs:</strong></p>
 <ul>
 <li>Loki branch - Copy connection password having the connection set with Keepass <a href="https://github.com/asbru-cm/asbru-cm/issues/475">#475</a></li>
 <li>Loki Branch - Last commit on Preferences help button  <a href="https://github.com/asbru-cm/asbru-cm/issues/455">#455</a></li>
+<li>asbru-cm freeze <a href="https://github.com/asbru-cm/asbru-cm/issues/441">#441</a></li>
+<li>First connection to RDP in compact mode fails <a href="https://github.com/asbru-cm/asbru-cm/issues/426">#426</a></li>
+<li>asbru-cm 6.1.0 rc1 on EL7 does not start <a href="https://github.com/asbru-cm/asbru-cm/issues/417">#417</a></li>
+<li>ssh port number field too small <a href="https://github.com/asbru-cm/asbru-cm/issues/410">#410</a></li>
+<li>SSH connection via SOCKS proxy not working <a href="https://github.com/asbru-cm/asbru-cm/issues/280">#280</a></li>
 </ul>
 <p><strong>Closed issues:</strong></p>
 <ul>
 <li>Loki branch - Keepass integration improvement  <a href="https://github.com/asbru-cm/asbru-cm/issues/474">#474</a></li>
 <li>On release pages the Fedora release notes links are broken <a href="https://github.com/asbru-cm/asbru-cm/issues/472">#472</a></li>
 <li>App crashes (Can't find information for method TreeModel::sort_new_with_model) <a href="https://github.com/asbru-cm/asbru-cm/issues/421">#421</a></li>
+<li>Remove Net::Proxy, replace with ssh option parameters <a href="https://github.com/asbru-cm/asbru-cm/issues/323">#323</a></li>
+<li>libnet-proxy-perl dependency old and deprecated <a href="https://github.com/asbru-cm/asbru-cm/issues/218">#218</a></li>
+<li>[gtk3] VTE history of commands <a href="https://github.com/asbru-cm/asbru-cm/issues/211">#211</a></li>
+<li>[gtk3] VTE bold is bright option <a href="https://github.com/asbru-cm/asbru-cm/issues/210">#210</a></li>
+<li>[gtk3] VTE visible bell <a href="https://github.com/asbru-cm/asbru-cm/issues/208">#208</a></li>
+<li>[gtk3] VTE transparency <a href="https://github.com/asbru-cm/asbru-cm/issues/207">#207</a></li>
+<li>[gtk3] VTE: Remove or rework "Term Emulation" <a href="https://github.com/asbru-cm/asbru-cm/issues/206">#206</a></li>
 </ul>
 <p><strong>Merged pull requests:</strong></p>
 <ul>
@@ -356,9 +373,7 @@
 </ul>
 <p><strong>Fixed bugs:</strong></p>
 <ul>
-<li>asbru-cm freeze <a href="https://github.com/asbru-cm/asbru-cm/issues/441">#441</a></li>
 <li>6.0.4-1 - The tabs are not closed <a href="https://github.com/asbru-cm/asbru-cm/issues/434">#434</a></li>
-<li>First connection to RDP in compact mode fails <a href="https://github.com/asbru-cm/asbru-cm/issues/426">#426</a></li>
 </ul>
 <p><strong>Closed issues:</strong></p>
 <ul>
@@ -377,15 +392,9 @@
 </ul>
 <h2 id="610rc1-2020-03-01"><a href="https://github.com/asbru-cm/asbru-cm/tree/6.1.0rc1">6.1.0rc1</a> (2020-03-01)</h2>
 <p><a href="https://github.com/asbru-cm/asbru-cm/compare/6.0.4...6.1.0rc1">Full Changelog</a></p>
-<p><strong>Implemented enhancements:</strong></p>
-<ul>
-<li>Add support for the "jump host" functionality of SSH <a href="https://github.com/asbru-cm/asbru-cm/issues/67">#67</a></li>
-</ul>
 <p><strong>Fixed bugs:</strong></p>
 <ul>
 <li>UTF8 characters not showing properly <a href="https://github.com/asbru-cm/asbru-cm/issues/423">#423</a></li>
-<li>asbru-cm 6.1.0 rc1 on EL7 does not start <a href="https://github.com/asbru-cm/asbru-cm/issues/417">#417</a></li>
-<li>ssh port number field too small <a href="https://github.com/asbru-cm/asbru-cm/issues/410">#410</a></li>
 </ul>
 <p><strong>Closed issues:</strong></p>
 <ul>
@@ -393,7 +402,6 @@
 <li>6.1.0 rc1 SSH saved connections icon (EL7) <a href="https://github.com/asbru-cm/asbru-cm/issues/418">#418</a></li>
 <li>Debian/Ubuntu 16.04 - Error during installation of package due to unmet dependencies <a href="https://github.com/asbru-cm/asbru-cm/issues/405">#405</a></li>
 <li>Please add support to KeePass 2 Database File <a href="https://github.com/asbru-cm/asbru-cm/issues/400">#400</a></li>
-<li>Remove Net::Proxy, replace with ssh option parameters <a href="https://github.com/asbru-cm/asbru-cm/issues/323">#323</a></li>
 </ul>
 <p><strong>Merged pull requests:</strong></p>
 <ul>
@@ -428,11 +436,6 @@
 </ul>
 <h2 id="604-2020-02-04"><a href="https://github.com/asbru-cm/asbru-cm/tree/6.0.4">6.0.4</a> (2020-02-04)</h2>
 <p><a href="https://github.com/asbru-cm/asbru-cm/compare/6.0.3...6.0.4">Full Changelog</a></p>
-<p><strong>Implemented enhancements:</strong></p>
-<ul>
-<li>ssh compression activated by change of other options <a href="https://github.com/asbru-cm/asbru-cm/issues/359">#359</a></li>
-<li>(Snapshot Version 6) Folder appearance <a href="https://github.com/asbru-cm/asbru-cm/issues/306">#306</a></li>
-</ul>
 <p><strong>Fixed bugs:</strong></p>
 <ul>
 <li>Asbru 6.0.2 does not save text in 'info tab' <a href="https://github.com/asbru-cm/asbru-cm/issues/372">#372</a></li>
@@ -445,7 +448,6 @@
 <li>Some servers disconnected when using clusters <a href="https://github.com/asbru-cm/asbru-cm/issues/373">#373</a></li>
 <li>6.0.2: Select-by-word characters not functioning <a href="https://github.com/asbru-cm/asbru-cm/issues/363">#363</a></li>
 <li>Please correct Debian dependencies entry in wiki <a href="https://github.com/asbru-cm/asbru-cm/issues/361">#361</a></li>
-<li>[gtk3] VTE transparency <a href="https://github.com/asbru-cm/asbru-cm/issues/207">#207</a></li>
 </ul>
 <p><strong>Merged pull requests:</strong></p>
 <ul>
@@ -459,21 +461,15 @@
 <p><strong>Implemented enhancements:</strong></p>
 <ul>
 <li>Port asbru_from_superputty.py to python3 <a href="https://github.com/asbru-cm/asbru-cm/issues/355">#355</a></li>
-<li>Invalid scroll position in KDE (gtk3) <a href="https://github.com/asbru-cm/asbru-cm/issues/303">#303</a></li>
 </ul>
 <p><strong>Fixed bugs:</strong></p>
 <ul>
 <li>Question: Is there a dependency on Python 2? <a href="https://github.com/asbru-cm/asbru-cm/issues/354">#354</a></li>
 </ul>
-<p><strong>Closed issues:</strong></p>
-<ul>
-<li>libnet-proxy-perl dependency old and deprecated <a href="https://github.com/asbru-cm/asbru-cm/issues/218">#218</a></li>
-</ul>
 <h2 id="602-2020-01-11"><a href="https://github.com/asbru-cm/asbru-cm/tree/6.0.2">6.0.2</a> (2020-01-11)</h2>
 <p><a href="https://github.com/asbru-cm/asbru-cm/compare/6.0.1...6.0.2">Full Changelog</a></p>
 <p><strong>Implemented enhancements:</strong></p>
 <ul>
-<li>Reverse button order to "Cancel" "OK"? <a href="https://github.com/asbru-cm/asbru-cm/issues/229">#229</a></li>
 <li>asbru for centos <a href="https://github.com/asbru-cm/asbru-cm/issues/60">#60</a></li>
 <li>Icons and some buttons are small on 4K display <a href="https://github.com/asbru-cm/asbru-cm/issues/55">#55</a></li>
 </ul>
@@ -483,7 +479,6 @@
 <li>local command automated username error. <a href="https://github.com/asbru-cm/asbru-cm/issues/341">#341</a></li>
 <li>RDP keyboard stops to work <a href="https://github.com/asbru-cm/asbru-cm/issues/331">#331</a></li>
 <li>Remote commands in Cluster connections   <a href="https://github.com/asbru-cm/asbru-cm/issues/304">#304</a></li>
-<li>SSH connection via SOCKS proxy not working <a href="https://github.com/asbru-cm/asbru-cm/issues/280">#280</a></li>
 <li>Crash when re-attaching window <a href="https://github.com/asbru-cm/asbru-cm/issues/70">#70</a></li>
 </ul>
 <p><strong>Closed issues:</strong></p>
@@ -494,10 +489,6 @@
 <li>asbru-cm.spec file - minor correction <a href="https://github.com/asbru-cm/asbru-cm/issues/332">#332</a></li>
 <li>Resizing left menu section doesn't repaint the console properly <a href="https://github.com/asbru-cm/asbru-cm/issues/310">#310</a></li>
 <li>2FA under Authentication options <a href="https://github.com/asbru-cm/asbru-cm/issues/300">#300</a></li>
-<li>[gtk3] VTE history of commands <a href="https://github.com/asbru-cm/asbru-cm/issues/211">#211</a></li>
-<li>[gtk3] VTE bold is bright option <a href="https://github.com/asbru-cm/asbru-cm/issues/210">#210</a></li>
-<li>[gtk3] VTE visible bell <a href="https://github.com/asbru-cm/asbru-cm/issues/208">#208</a></li>
-<li>[gtk3] VTE: Remove or rework "Term Emulation" <a href="https://github.com/asbru-cm/asbru-cm/issues/206">#206</a></li>
 </ul>
 <p><strong>Merged pull requests:</strong></p>
 <ul>
