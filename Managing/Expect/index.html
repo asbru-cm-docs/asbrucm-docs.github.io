@@ -288,13 +288,13 @@
 <h1 id="introduction-to-expect">Introduction to Expect</h1>
 <div class="admonition danger">
 <p class="admonition-title">Executed during the login process only</p>
-<p>This expect actions take place only during the login process.</p>
+<p>Expect actions are run only during the login process.</p>
 <p>It helps you to automate a login sequence and a continuous set of actions.</p>
 <p>But they do not work after the complete login sequence ends.</p>
 <p>Ásbrú is not constantly monitoring your typing, so as soon as the login process ends, and the last expect is executed, there will be no more expect detection an execution.</p>
 <p><strong>You must know how to write regular expressions for this to work properly.</strong></p>
 </div>
-<p>There are several regular expressions in different parts of the General Preferences and Connection Preferences that allows you to control of the login sequence.</p>
+<p>There are several regular expressions in different parts of the General Preferences and Connection Preferences that allows you to control the login sequence.</p>
 <h2 id="introduction-to-user-password-prompt-sequence">Introduction to user, password, prompt sequence.</h2>
 <p>These are the must important configuration regular expressions that will automate your login sequence.</p>
 <h3 id="global-preferences-main-options-advanced-settings">Global Preferences &gt; Main Options &gt; Advanced Settings</h3>
@@ -320,7 +320,7 @@
 <li><strong>Press any key to continue</strong>: Regular expression that will detect a press any key to continue and send a new line for you.</li>
 </ul>
 <h3 id="terminal-options">Terminal Options</h3>
-<p>You can override some of the previous regular expressions for a particular terminal if they do not fit.</p>
+<p>You can override some of the previous regular expressions for a particular terminal if they do not work well on a particular connection.</p>
 <p>Is recommended to use a terminal override when the expression you want to add is not common to all your connections or it makes your global option fail if you combine them with the more general one.</p>
 <p>To override the global options on a certain connection activate the <strong><em>Use these personal options</em></strong> in your terminal options tab.</p>
 <p><img alt="" src="../images/expect2.png" /></p>
