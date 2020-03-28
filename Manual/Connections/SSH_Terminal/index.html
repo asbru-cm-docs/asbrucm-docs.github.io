@@ -298,11 +298,17 @@
 <h2 id="the-login-process">The login process</h2>
 <p>If you have configured your connection to have full automation, the login sequence will not require any intervention on your part, and the login process will look as clean as this.</p>
 <p><img alt="" src="../images/ssht1.png" /></p>
-<p>If you have configured your connection not to have a password saved, you will receive a popup window requesting you to type your password.</p>
+<p>If you have configured your connection not to have a saved password, you will receive a popup window requesting you to type your password.</p>
 <p><img alt="" src="../images/ssht2.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">Expired passwords and change password required</p>
 <p>In this cases you may see additional popup windows for each password requested: password, original password, new password, confirmation password.</p>
+<p>If you have problems to complete an expired password process, because the expect regex do not work well for you.</p>
+<ul>
+<li>Edit the connection and set it to <strong>Manual</strong></li>
+<li>Save</li>
+<li>Open the connection and complete the login sequence manually</li>
+</ul>
 </div>
 <h2 id="mouse-interaction">Mouse Interaction</h2>
 <p>Ásbrú uses the gnome vte library, and is a mouse driven terminal.</p>
@@ -310,7 +316,7 @@
 <p>We will begin explaining the concept of copy paste in the terminal, because is the one that confuses many users.</p>
 <p>When you are connected to a remote server, the remote application could request and process mouse events or not.</p>
 <p>If the remote application does not process any mouse events, then the local terminal processes this mouse events locally.</p>
-<p>To distinguish if the remote application is or not processing mouse events, look at the cursor shape. When a remote program is not processing mouse events then the cursor is a text cursor, other wise a traditional mouse pointer.</p>
+<p>To distinguish if the remote application is processing mouse events, look at the cursor shape. When a remote program is not processing mouse events then the cursor is a text caret.</p>
 <p><strong>No mouse processing</strong></p>
 <p><img alt="" src="../images/ssht3.png" /></p>
 <p><strong>Mouse processing</strong></p>
@@ -318,21 +324,27 @@
 <div class="admonition tip">
 <p class="admonition-title">Local Clipboard</p>
 <p>A local selection creates copies to your <strong>local clipboard</strong>, not to the remote clipboard.</p>
+<p>This will let you paste the text in some local application (text editor, IDE, etc.)</p>
 </div>
 <h4 id="remote-application-does-not-process-mouse-events">Remote application does NOT process mouse events.</h4>
-<p><strong>double click</strong> : The terminal will select a "word" the "visible" text on the terminal. The characters used as a word are [a-Z_] plus additional characters that you configured in rule described in the <a href="../../Preferences/MOAdvanced/">Main options Advanced Tab : Select by word characters</a>.</p>
+<p><strong>double click</strong> : The terminal will select a "word" on the "visible" text of the terminal. The characters used as a word are [a-Z_] plus any additional characters that you configured in rule described in the <a href="../../Preferences/MOAdvanced/">Main options Advanced Tab : Select by word characters</a>.</p>
 <p><img alt="" src="../images/ssht5.png" /></p>
-<p><strong>triple click</strong> : The terminal will select the "visible" row of text on the terminal.</p>
+<p><strong>triple click</strong> : The terminal will select the "visible" row of text of the terminal.</p>
 <p><img alt="" src="../images/ssht6.png" /></p>
-<p><strong>Click and drag</strong> : The terminal will select the text from the start point of the mouse drag to the end point in complete sequence, jumping lines and start from the beginning of the line on each new line.</p>
+<p><strong>Click and drag</strong> : The terminal will select the text from the start point of the mouse drag to the end point in a complete sequence, jumping lines and start from the beginning of the next new line.</p>
 <p><img alt="" src="../images/ssht10.png" /></p>
 <p><strong><code>&lt;Shift + Ctrl&gt;</code> + drag</strong> : Will create a square selection from the starting drag point to the end.</p>
 <p><img alt="" src="../images/ssht9.png" /></p>
 <div class="admonition tip">
 <p class="admonition-title">Copy / Paste</p>
-<p>As soon as you select the text and release the mouse, the selected text is copied to the clipboard without any further actions (no need to : right click copy, <code>&lt;crtl-c&gt;</code>)</p>
-<p>To paste text from your local clipboard into the terminal. <code>&lt;Shift + Insert&gt;</code> or <code>right clic and "Paste"</code>.</p>
-<p>You can imagine that the "Paste action", is similar to sending all the characters in the buffer to the terminal. So they will be sent with all the existing tabs, new line characters, etc.</p>
+<p>As soon as you select the text and release the mouse, the selected text is copied to the clipboard without any further actions (no need to : <code>right-click &gt; Copy</code>, <code>&lt;crtl-c&gt;</code>)</p>
+<ul>
+<li>To paste your text into another application <code>&lt;Ctrl-V&gt;</code></li>
+<li>To paste text from your local clipboard into the terminal. <code>&lt;Shift + Insert&gt;</code> or <code>right clic &gt; Paste</code>.<ul>
+<li>You can imagine that the "Paste action", is similar to sending all the characters in the buffer to the terminal. So they will be sent with all the existing tabs, new line characters, etc.</li>
+</ul>
+</li>
+</ul>
 </div>
 <div class="admonition danger">
 <p class="admonition-title">The terminal is a canvas</p>
@@ -340,7 +352,11 @@
 <p>Do not expect the terminal to know that there are : line numbers or drawing characters to ignore, it will copy all the text under the selection.</p>
 </div>
 <h4 id="remote-application-does-process-mouse-events">Remote application does process mouse events.</h4>
-<p>Depending on the application the selection would look and you will fill a difference in the action itself : could be very slow depending on the connection, could it be that the selection is shown when releasing the mouse or that the highlight is delayed.</p>
+<p>Depending on the remote application, the selection process would look and feel different :</p>
+<pre><code>+ could be very slow
++ or that the selection is shown after releasing the mouse
++ or that the highlight is delayed.
+</code></pre>
 <p><strong>Example of a remote double and triple click selection</strong></p>
 <p><img alt="" src="../images/ssht7.png" /></p>
 <p><img alt="" src="../images/ssht8.png" /></p>
@@ -353,10 +369,10 @@
 <p><strong>Copy / Paste from editor copies line numbers</strong></p>
 <p><img alt="" src="../images/ssht11.png" /></p>
 <p><strong>Solution</strong></p>
-<p>Use the square selection technic, or hide the number panel in your editor before copying.</p>
+<p>Use the square selection technique, or hide the number panel in your editor before copying.</p>
 <p><img alt="" src="../images/ssht12.png" /></p>
 <h2 id="poppup-menu">Poppup Menu</h2>
-<p>When you right click on the terminal (<code>&lt;Shift&gt; + right click</code> if the remote application process mouse events)</p>
+<p>When you right click on the terminal or <code>&lt;Shift&gt; + right click</code> (if the remote application process mouse events)</p>
 <p>You will see a popup menu similar to the next image.</p>
 <p><img alt="" src="../images/ssht13.png" /></p>
 <p><strong>Actions</strong></p>
