@@ -152,6 +152,9 @@
     <li class="toctree-l4"><a href="#keepass-integration">KeePass Integration</a></li>
     
 
+    <li class="toctree-l4"><a href="#keepass-organization">KeePass Organization</a></li>
+    
+
     <li class="toctree-l4"><a href="#configure">Configure</a></li>
     
 
@@ -310,6 +313,41 @@ Which means you will have to reconfigure the usernames and passwords fields. Or 
 <p>The current integration uses <code>keepassxc-cli</code> to access the database, <a href="https://keepassxc.org/">https://keepassxc.org/</a>.</p>
 <p>To see the reasons for this hard changes, please read at the end of this documentation page.</p>
 </div>
+<h2 id="keepass-organization">KeePass Organization</h2>
+<p>It is very important to prepare your KeePass database to work with this integration. The database access is done using the command line tool <code>keepassxc-cli</code></p>
+<p>And by design this tool imposes certain restrictions.</p>
+<ul>
+<li>All paths must be unique to be able to retrieve the correct user name and password at the time of the connection</li>
+<li>The cli will not allow to search by <code>uuid</code>, so the only search pattern that guaranties unique entries is the full path to the key</li>
+</ul>
+<p>This means that you must organize your data in groups and subgroups to guaranty unique paths at the time of configuration.</p>
+<p>To explain this better, lets look at the following images.</p>
+<p><strong>You have this password organization</strong></p>
+<p>In keepass, you can visually tell what is the entry you are interested in, by looking at the relationship of Group:Title:Username</p>
+<p><img alt="" src="../images/kpxcc1.png" /></p>
+<p>But when using the CLI, we only have access to Group:Title, and a listing of entries would look like this.</p>
+<p><img alt="" src="../images/kpxcc2.png" /></p>
+<p>This brings 2 problems</p>
+<ul>
+<li>We do not know which entry we want.</li>
+<li>Later when Ásbrú wants to pull the user name and password during a connection, keepassxc-cli will pull the first entry found, it will not return all the entries. So the CLI will not know which entry we want either.</li>
+</ul>
+<p><strong>So, you must make sure all your entries are unique : Group:Subgroup:..:Title</strong></p>
+<p>You can use any technique you like, this are some recommendations of organizations that can produce unique paths.</p>
+<ul>
+<li>/Group/hostname</li>
+<li>/Group/Subgroup/hostname</li>
+<li>/Group/Service/hostname</li>
+<li>/Group/Location/hostname</li>
+</ul>
+<p><strong>Example of unique titles</strong></p>
+<p><img alt="" src="../images/kpxcc3.png" /></p>
+<p><strong>Search result.</strong></p>
+<p><img alt="" src="../images/kpxcc4.png" /></p>
+<p><strong>Another alternative, with subgroups</strong></p>
+<p><img alt="" src="../images/kpxcc5.png" /></p>
+<p><strong>List</strong></p>
+<p><img alt="" src="../images/kpxcc6.png" /></p>
 <h2 id="configure">Configure</h2>
 <p><img alt="" src="../images/kpxc1.png" /></p>
 <ul>
