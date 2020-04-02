@@ -284,7 +284,7 @@
               
                 <h1 id="look-feel">Look &amp; Feel</h1>
 <div class="admonition note">
-<p class="admonition-title"> </p>
+<p class="admonition-title">Global Settings</p>
 <p>This options apply to all terminals. If you need a particular terminal to behave differently is best to configure the look and feel options at the connection level.</p>
 </div>
 <p><img alt="" src="../images/to2.png" /></p>
@@ -334,13 +334,31 @@
 <li><strong>Font</strong> : Set the font and size for all terminals.</li>
 <li><strong>Cursor shape</strong> : Cursor shape to use in the terminal.</li>
 <li><strong>Scrollback lines</strong> : How many lines of history to store to scroll back.</li>
-<li><strong>Transparency</strong> : Set background transparency for the terminal.</li>
+<li><strong>Transparency</strong> : Set background transparency for the terminal.<ul>
+<li>You must enable transparency first to activate the transparency feature.</li>
+</ul>
+</li>
 <li><strong>Colors</strong> : Set your predefined colors to override the basic 16 terminal colors.<ul>
 <li>Top row are the normal text colors.</li>
 <li>Bottom row are the bold text colors.</li>
 </ul>
 </li>
 </ul>
+<div class="admonition danger">
+<p class="admonition-title">Transparency</p>
+<p>Transparency <strong>is not a feature</strong> , the transparency feature was removed from the Vte library.</p>
+<p>And to provide the so desired <strong>visual effect</strong>, a <strong>hack</strong> into the code had to be applied to make it work.</p>
+<p>The conclusion is that it will consume more CPU resources. The reason is that the full window is made transparent, and the the visible areas that have to be visible, repainted.</p>
+<p>Depending on your environment, the impact could be minimal or high.</p>
+<p>There are too many things in an environment to list, but this are some of them:</p>
+<ul>
+<li>screen resolution (the higher the resolution, more pixels to repaint)</li>
+<li>desktop environment performance : gnome-shell, gnome-classic, cinnamon, xfce, etc.</li>
+<li>Additional visual effects used in Ásbrú: show tooltips.</li>
+<li>Number of CPUs, amount of ram, graphics card, etc.</li>
+</ul>
+<p>For a discussion about this you can check this thread: <a href="https://github.com/asbru-cm/asbru-cm/issues/533#issuecomment-607359378">Discussion about CPU usage</a></p>
+</div>
               
             </div>
           </div>
