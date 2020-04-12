@@ -66,6 +66,8 @@
     
         <ul>
         
+            <li><a class="toctree-l4" href="#12042020">12.04.2020</a></li>
+        
             <li><a class="toctree-l4" href="#15022020">15.02.2020</a></li>
         
             <li><a class="toctree-l4" href="#16122019">16.12.2019</a></li>
@@ -288,6 +290,22 @@
               
                 <h1 id="news">NEWS</h1>
 <p>Here you can find important news on the project</p>
+<h2 id="12042020">12.04.2020</h2>
+<p>Dear testers,</p>
+<p>We are about to merge a change (see <a href="https://github.com/asbru-cm/asbru-cm/pull/515">#515</a>) that will require your attention as it may have some impact on your working environment.</p>
+<p>This change is related to <a href="https://github.com/asbru-cm/asbru-cm/issues/518">#182</a> and will basically rename the default configuration file from <code>~/.config/pac</code> to <code>~/.config/asbru</code> to move forward in the rebranding of the forked application.</p>
+<p>As of version 6.2.0, that is under testing in our <a href="https://github.com/asbru-cm/asbru-cm#testing-new-features">"loki" branch</a>, you will be required to migrate your existing configuration to the new file layout.</p>
+<p>At application startup, a warning message will give you the opportunity to think twice about it.</p>
+<p>We believe we did everything to make this as smooth and transparent as possible.</p>
+<p>But what you may want to understand:
+- Nothing will be lost
+- A safe copy of your existing configuration will be done to <code>~/.config/pac.old</code>
+- Older versions of Ásbrú will not be able to read that new configuration
+- When starting an old version (6.0 or higher), you can use <code>--config-dir ~/.config/pac.old</code> to use your old configuration
+- When starting an old version (6.1.x), Ásbrú will propose to downgrade your migrated configuration or recover your old configuration
+- Upgrade and downgrade scripts are available in the <code>utils</code> directory</p>
+<p>Please comme issue <a href="https://github.com/asbru-cm/asbru-cm/issues/569">#569</a> if you have any concern with this change ; or simply thumb it up if you understand what will happen in the next days and are ready to test this to ensure a proper release of 6.2.0.</p>
+<p>Happy Easter testing !</p>
 <h2 id="15022020">15.02.2020</h2>
 <p>Dear testers,</p>
 <p>We have merged the codebase for version 6.1.0 into master. This release will bring some cleanups and a few new features which require testing.</p>
