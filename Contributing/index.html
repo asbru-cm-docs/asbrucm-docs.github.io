@@ -69,6 +69,10 @@
                     
     <a class="" href="../General/Changelog/">Changelog</a>
                 </li>
+                <li class="">
+                    
+    <a class="" href="../General/sensitive-info-notice/">Warning</a>
+                </li>
     </ul>
 	    </li>
           
@@ -229,6 +233,8 @@
         
             <li><a class="toctree-l4" href="#pull-request-title">Pull request title</a></li>
         
+            <li><a class="toctree-l4" href="#pull-request-workflow">Pull request workflow</a></li>
+        
         </ul>
     
 
@@ -310,6 +316,18 @@ information about version, OS tested on and any other relevant info.</p>
 <p>For example some good titles would be:</p>
 <p>[Bugfix] - Fixed connection issue for old SSH versions
 [Doc] - Correct typo in installation docs</p>
+<h2 id="pull-request-workflow">Pull request workflow</h2>
+<ol>
+<li>You clone the original repo to your github account.</li>
+<li>You make changes in cloned repo.</li>
+<li>If you made a pull request inside your cloned repo for your changes the best way is 'Squash and Merge' 
+   (avoids your merge commit appear as separate commit in pull request to original repo later)</li>
+<li>You create pull request to original repo.</li>
+<li>If this is the 1st pull request to the repo the 'CLAassistant' asks you to sign committer agreement.</li>
+<li>The pull request appears on the original repo awaiting someone with write access to the repo to merge it.</li>
+</ol>
+<p>The detailed info on contributing to someones github repository (easy and with screenshots) is available here: 
+https://guides.github.com/activities/forking/ .</p>
               
             </div>
           </div>
