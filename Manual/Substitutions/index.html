@@ -48,6 +48,12 @@
     
       <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
       
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#7e57c2">
       
     
     
@@ -63,13 +69,17 @@
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
+    
     
       
     
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-purple" data-md-color-accent="pink">
   
     <svg class="md-svg">
       <defs>
@@ -251,7 +261,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../General/NEWS/" title="News" class="md-nav__link">
+    <a href="../../General/News/" title="News" class="md-nav__link">
       News
     </a>
   </li>
@@ -984,11 +994,11 @@
                   <a href="https://github.com/asbru-cm/asbru-cm/edit/master/doc/Manual/Substitutions.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="substitutions">Substitutions</h1>
+                <h1 id="substitutions">Substitutions<a class="headerlink" href="#substitutions" title="Permanent link">&para;</a></h1>
 <p>Inside many fields, values can be represented as masks. And this masks will be substituted by their real value at the time of a connection.</p>
 <p>These masks can be included in fields like : Global variables, local or remote commands, expects, some connection parameters.</p>
 <p>The general format of the mask is <code>&lt;[(Name|Type):]VALUE&gt;</code></p>
-<h2 id="internal-variables">Internal Variables</h2>
+<h2 id="internal-variables">Internal Variables<a class="headerlink" href="#internal-variables" title="Permanent link">&para;</a></h2>
 <p><code>&lt;name&gt;</code></p>
 <table>
 <thead>
@@ -1060,7 +1070,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="environment-variables">Environment Variables</h2>
+<h2 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h2>
 <p><code>&lt;ENV:name&gt;</code></p>
 <p>Examples</p>
 <table>
@@ -1085,10 +1095,10 @@
 </tr>
 </tbody>
 </table>
-<h2 id="global-variables">Global Variables</h2>
+<h2 id="global-variables">Global Variables<a class="headerlink" href="#global-variables" title="Permanent link">&para;</a></h2>
 <p>These are created in you General Preferences &gt; Global Variables</p>
 <p><code>&lt;GV:variable name&gt;</code></p>
-<h2 id="ask">ASK</h2>
+<h2 id="ask">ASK<a class="headerlink" href="#ask" title="Permanent link">&para;</a></h2>
 <p>Will prompt user to enter data and use that data for substitution</p>
 <p><code>&lt;ASK:parameters&gt;</code></p>
 <table>
@@ -1120,12 +1130,12 @@
 <p><img alt="" src="../images/subst1.png" /></p>
 <p>When you connect the terminal will prompt you to select an IP from the previous list that you created.</p>
 <p><img alt="" src="../images/subst2.png" /></p>
-<h2 id="cmd">CMD</h2>
+<h2 id="cmd">CMD<a class="headerlink" href="#cmd" title="Permanent link">&para;</a></h2>
 <p>Will execute a command with the shell and use the output of that command for substitution</p>
 <p>Example</p>
 <p><code>&lt;CMD:date&gt;</code></p>
 <p>Will execute date in the shell, and the resulting date will be used for the substitution.</p>
-<h2 id="keepass">KeePass</h2>
+<h2 id="keepass">KeePass<a class="headerlink" href="#keepass" title="Permanent link">&para;</a></h2>
 <p>If you need to type a mask in a field where the right click access is not available or you want to pull a value different than the predefined user or password.</p>
 <p><code>&lt;field|path to key&gt;</code></p>
 <p>Example</p>

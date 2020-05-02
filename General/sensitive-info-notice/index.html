@@ -48,6 +48,12 @@
     
       <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
       
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#7e57c2">
       
     
     
@@ -63,13 +69,17 @@
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
+    
     
       
     
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-purple" data-md-color-accent="pink">
   
     <svg class="md-svg">
       <defs>
@@ -253,7 +263,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../NEWS/" title="News" class="md-nav__link">
+    <a href="../News/" title="News" class="md-nav__link">
       News
     </a>
   </li>
@@ -962,14 +972,14 @@
                 
                   <h1>Warning</h1>
                 
-                <h2 id="sensitive-information">Sensitive information</h2>
-<h3 id="using-hidden-flag-in-gui">Using 'hidden' flag in GUI</h3>
+                <h2 id="sensitive-information">Sensitive information<a class="headerlink" href="#sensitive-information" title="Permanent link">&para;</a></h2>
+<h3 id="using-hidden-flag-in-gui">Using 'hidden' flag in GUI<a class="headerlink" href="#using-hidden-flag-in-gui" title="Permanent link">&para;</a></h3>
 <p>When a user sets a string as 'hidden' in 'EXPECT', then in config or in backups of config (i.e. $HOME/.config/pac/bak/pac.yml.0) there're
 strings like '53616c7-omited-848993645' inplace. These strings represent user input encoded, not encrypted.</p>
-<h3 id="gui-password">GUI password</h3>
+<h3 id="gui-password">GUI password<a class="headerlink" href="#gui-password" title="Permanent link">&para;</a></h3>
 <p>GUI password does NOT encrypts your config entries - it alters only GUI window &amp; startup - GUI window asks for a password.</p>
 <p>There is no real protection of your sensitive data provided by Ásbrú. It is simply encoded but can be decoded easily.</p>
-<h3 id="keep-config-files-safe-and-better-use-keepassxc">Keep config files safe (and better use KeePassXC)</h3>
+<h3 id="keep-config-files-safe-and-better-use-keepassxc">Keep config files safe (and better use KeePassXC)<a class="headerlink" href="#keep-config-files-safe-and-better-use-keepassxc" title="Permanent link">&para;</a></h3>
 <p>We strongly discourage you from storing any sensitive data in 'EXPECT' fields. And if you do, you should consider the .yml configuration (and the backup copies) with adequate care.</p>
 <p>For sensitive data, we recommend to store them into KeePass and retrieve the information you need using the new (6.2) KeePass integration module, see https://docs.asbru-cm.net/Manual/Preferences/KeePassXC/.</p>
                 

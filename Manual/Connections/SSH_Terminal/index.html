@@ -48,6 +48,12 @@
     
       <link rel="stylesheet" href="../../../assets/stylesheets/application.adb8469c.css">
       
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#7e57c2">
       
     
     
@@ -63,13 +69,17 @@
     <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
     
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+    
     
       
     
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-purple" data-md-color-accent="pink">
   
     <svg class="md-svg">
       <defs>
@@ -251,7 +261,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../General/NEWS/" title="News" class="md-nav__link">
+    <a href="../../../General/News/" title="News" class="md-nav__link">
       News
     </a>
   </li>
@@ -1120,22 +1130,22 @@
                   <a href="https://github.com/asbru-cm/asbru-cm/edit/master/doc/Manual/Connections/SSH_Terminal.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="the-ssh-terminal">The SSH Terminal</h1>
-<h3 id="connection-details">Connection Details</h3>
+                <h1 id="the-ssh-terminal">The SSH Terminal<a class="headerlink" href="#the-ssh-terminal" title="Permanent link">&para;</a></h1>
+<h3 id="connection-details">Connection Details<a class="headerlink" href="#connection-details" title="Permanent link">&para;</a></h3>
 <p><strong>Method</strong> : For this case we select <strong>SSH</strong></p>
 <p><img alt="" src="../images/ssh1.png" /></p>
-<h2 id="ssh-options-tab">SSH Options Tab</h2>
+<h2 id="ssh-options-tab">SSH Options Tab<a class="headerlink" href="#ssh-options-tab" title="Permanent link">&para;</a></h2>
 <p><img alt="" src="../images/ssh6.png" /></p>
 <p>Select any additional SSH options.</p>
-<h3 id="local-remote-port-forwarding">Local / Remote Port Forwarding</h3>
+<h3 id="local-remote-port-forwarding">Local / Remote Port Forwarding<a class="headerlink" href="#local-remote-port-forwarding" title="Permanent link">&para;</a></h3>
 <p>Define your local or remote port forwarding rules.</p>
 <p>In the example image above, the connection opens 4 port forwards to access remote SQL Servers behind a Firewall.</p>
-<h3 id="dynamic-socks-proxy">Dynamic Socks Proxy</h3>
+<h3 id="dynamic-socks-proxy">Dynamic Socks Proxy<a class="headerlink" href="#dynamic-socks-proxy" title="Permanent link">&para;</a></h3>
 <p>*Pending</p>
-<h3 id="advanced-options">Advanced Options</h3>
+<h3 id="advanced-options">Advanced Options<a class="headerlink" href="#advanced-options" title="Permanent link">&para;</a></h3>
 <p>Write any sequence of additional SSH options.</p>
 <p>The command field allows you to right click and have access to known SSH options.</p>
-<h2 id="the-login-process">The login process</h2>
+<h2 id="the-login-process">The login process<a class="headerlink" href="#the-login-process" title="Permanent link">&para;</a></h2>
 <p>If you have configured your connection to have full automation, the login sequence will not require any intervention on your part, and the login process will look as clean as this.</p>
 <p><img alt="" src="../images/ssht1.png" /></p>
 <p>If you have configured your connection not to have a saved password, you will receive a popup window requesting you to type your password.</p>
@@ -1150,9 +1160,9 @@
 <li>Open the connection and complete the login sequence manually</li>
 </ul>
 </div>
-<h2 id="mouse-interaction">Mouse Interaction</h2>
+<h2 id="mouse-interaction">Mouse Interaction<a class="headerlink" href="#mouse-interaction" title="Permanent link">&para;</a></h2>
 <p>Ásbrú uses the gnome vte library, and is a mouse driven terminal.</p>
-<h3 id="copy-paste">Copy / Paste</h3>
+<h3 id="copy-paste">Copy / Paste<a class="headerlink" href="#copy-paste" title="Permanent link">&para;</a></h3>
 <p>We will begin explaining the concept of copy paste in the terminal, because is the one that confuses many users.</p>
 <p>When you are connected to a remote server, the remote application could request and process mouse events or not.</p>
 <p>If the remote application does not process any mouse events, then the local terminal processes this mouse events locally.</p>
@@ -1166,7 +1176,7 @@
 <p>A local selection creates copies to your <strong>local clipboard</strong>, not to the remote clipboard.</p>
 <p>This will let you paste the text in some local application (text editor, IDE, etc.)</p>
 </div>
-<h4 id="remote-application-does-not-process-mouse-events">Remote application does NOT process mouse events.</h4>
+<h4 id="remote-application-does-not-process-mouse-events">Remote application does NOT process mouse events.<a class="headerlink" href="#remote-application-does-not-process-mouse-events" title="Permanent link">&para;</a></h4>
 <p><strong>double click</strong> : The terminal will select a "word" on the "visible" text of the terminal. The characters used as a word are [a-Z_] plus any additional characters that you configured in rule described in the <a href="../../Preferences/MOAdvanced/">Main options Advanced Tab : Select by word characters</a>.</p>
 <p><img alt="" src="../images/ssht5.png" /></p>
 <p><strong>triple click</strong> : The terminal will select the "visible" row of text of the terminal.</p>
@@ -1191,12 +1201,14 @@
 <p>The terminal has no knowledge of the remote application, so when selecting and copying, it selects the text that finds on the visible area, and treats it as a canvas (a paintable area).</p>
 <p>Do not expect the terminal to know that there are : line numbers or drawing characters to ignore, it will copy all the text under the selection.</p>
 </div>
-<h4 id="remote-application-does-process-mouse-events">Remote application does process mouse events.</h4>
+<h4 id="remote-application-does-process-mouse-events">Remote application does process mouse events.<a class="headerlink" href="#remote-application-does-process-mouse-events" title="Permanent link">&para;</a></h4>
 <p>Depending on the remote application, the selection process would look and feel different :</p>
-<pre><code>+ could be very slow
+<div class="codehilite"><pre><span></span><code>+ could be very slow
 + or that the selection is shown after releasing the mouse
 + or that the highlight is delayed.
-</code></pre>
+</code></pre></div>
+
+
 <p><strong>Example of a remote double and triple click selection</strong></p>
 <p><img alt="" src="../images/ssht7.png" /></p>
 <p><img alt="" src="../images/ssht8.png" /></p>
@@ -1205,13 +1217,13 @@
 <p>When the selection and copy actions take place, they are located in the remote application clipboard, not on your local clipboard.</p>
 <p>To be able to use the terminal actions described above. You will have to use the <code>Shift</code> key during your mouse operations to instruct the terminal "not to pass the mouse event to the remote program".</p>
 </div>
-<h3 id="common-problems-of-copy-paste-text-from-terminal-to-local-application">Common problems of copy paste text from terminal to local application</h3>
+<h3 id="common-problems-of-copy-paste-text-from-terminal-to-local-application">Common problems of copy paste text from terminal to local application<a class="headerlink" href="#common-problems-of-copy-paste-text-from-terminal-to-local-application" title="Permanent link">&para;</a></h3>
 <p><strong>Copy / Paste from editor copies line numbers</strong></p>
 <p><img alt="" src="../images/ssht11.png" /></p>
 <p><strong>Solution</strong></p>
 <p>Use the square selection technique, or hide the number panel in your editor before copying.</p>
 <p><img alt="" src="../images/ssht12.png" /></p>
-<h2 id="poppup-menu">Poppup Menu</h2>
+<h2 id="poppup-menu">Poppup Menu<a class="headerlink" href="#poppup-menu" title="Permanent link">&para;</a></h2>
 <p>When you right click on the terminal or <code>&lt;Shift&gt; + right click</code> (if the remote application process mouse events)</p>
 <p>You will see a popup menu similar to the next image.</p>
 <p><img alt="" src="../images/ssht13.png" /></p>
@@ -1219,7 +1231,7 @@
 <ul>
 <li>Pending</li>
 </ul>
-<h2 id="keybindings">Keybindings</h2>
+<h2 id="keybindings">Keybindings<a class="headerlink" href="#keybindings" title="Permanent link">&para;</a></h2>
 <p>This is the list of existing Ásbrú key bindings.</p>
 <table>
 <thead>

@@ -48,6 +48,12 @@
     
       <link rel="stylesheet" href="../../../assets/stylesheets/application.adb8469c.css">
       
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#7e57c2">
       
     
     
@@ -63,13 +69,17 @@
     <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
     
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+    
     
       
     
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-purple" data-md-color-accent="pink">
   
     <svg class="md-svg">
       <defs>
@@ -251,7 +261,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../General/NEWS/" title="News" class="md-nav__link">
+    <a href="../../../General/News/" title="News" class="md-nav__link">
       News
     </a>
   </li>
@@ -928,17 +938,17 @@
                   <a href="https://github.com/asbru-cm/asbru-cm/edit/master/doc/Manual/Preferences/Networking.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="networking-options">Networking Options</h1>
+                <h1 id="networking-options">Networking Options<a class="headerlink" href="#networking-options" title="Permanent link">&para;</a></h1>
 <p><img alt="" src="../images/network1.png" /></p>
 <p>If you are behind a firewall and have no direct access to the external network, you may need an intermediate machine to get outside of your network.</p>
 <p>There are 2 technologies that can help you connect to a machine outside your network.</p>
-<h2 id="socks-proxy">SOCKS Proxy</h2>
+<h2 id="socks-proxy">SOCKS Proxy<a class="headerlink" href="#socks-proxy" title="Permanent link">&para;</a></h2>
 <p>If your network administrator has added a SOCKS server to the network and grants you access to it, you will have to select and configure the SOCKS Proxy.</p>
 <ul>
 <li><strong>IP/Host</strong> : Address of your SOCKS Server</li>
 <li><strong>User / Password</strong> : Should be set if your administration assigns you one.</li>
 </ul>
-<h2 id="jump-server">Jump Server</h2>
+<h2 id="jump-server">Jump Server<a class="headerlink" href="#jump-server" title="Permanent link">&para;</a></h2>
 <p>If you have access to a local machine in your network, that has access to the outside. And you have <strong><em>SSH</em></strong> access to this machine. Then you can use this technique to access to an external machine.</p>
 <p>You need to have a public key installed in your <strong>Jump Server</strong>  to be able to use it as an intermediate machine to access the external network.</p>
 <p>It can be a default public key, or a personal private key that you were assigned.</p>

@@ -48,6 +48,12 @@
     
       <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
       
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#7e57c2">
       
     
     
@@ -63,13 +69,17 @@
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
+    
     
       
     
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-purple" data-md-color-accent="pink">
   
     <svg class="md-svg">
       <defs>
@@ -251,7 +261,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../General/NEWS/" title="News" class="md-nav__link">
+    <a href="../../General/News/" title="News" class="md-nav__link">
       News
     </a>
   </li>
@@ -868,7 +878,7 @@
                 
                 
                 <p>This article has been written by <a href="https://github.com/hanspr">Hans Peyrot</a></p>
-<h1 id="why-do-you-need-a-cluster">Why do you need a cluster ?</h1>
+<h1 id="why-do-you-need-a-cluster">Why do you need a cluster ?<a class="headerlink" href="#why-do-you-need-a-cluster" title="Permanent link">&para;</a></h1>
 <p>This is more an admin tool than programmers, you can use it to type common commands to servers that are identical or at least very similar, this allows you to:</p>
 <ul>
 <li>update several servers</li>
@@ -877,7 +887,7 @@
 <p><strong>From a programmer point of view</strong></p>
 <p>As an example, I program remote Raspeberri Pi that are connected to electronic scales, etc. And have a very unique code that is similar across them, but I do not have a development environment because I do not have the interest in buying expensive scales or robot arms, to be able to develop. So I connect to all of them simultaneously, they all have exactly the same code; then I edit the code on one terminal and I'm patching on real time the others. Of course I could work on one and then copy the file to the others, but for small adjustments this has been always more practical.</p>
 <p>And there are some other more complicated uses when add to the terminals tunnels, expect, etc. All those tunnels will open simultaneously too.</p>
-<h1 id="create-a-cluster">Create a cluster</h1>
+<h1 id="create-a-cluster">Create a cluster<a class="headerlink" href="#create-a-cluster" title="Permanent link">&para;</a></h1>
 <p>In <code>Clusters</code>, click on the <code>Add</code> button a provide the name of your new cluster:</p>
 <p><img alt="imagen" src="https://user-images.githubusercontent.com/1572396/67621669-81d8a900-f7d7-11e9-9587-140c838d9f0f.png" /></p>
 <p>Select the connections from the left list and add them to the cluster using button <code>Add to cluster</code>:</p>
@@ -886,13 +896,13 @@
 <p><img alt="imagen" src="https://user-images.githubusercontent.com/1572396/67621678-a2086800-f7d7-11e9-996a-39692b22c9fc.png" /></p>
 <p>The new cluster will be available in the menu or the cluster list on the main window.</p>
 <p><img alt="imagen" src="https://user-images.githubusercontent.com/1572396/67621680-b5b3ce80-f7d7-11e9-85c3-54b9726d5447.png" /></p>
-<h1 id="using-an-existing-cluster">Using an existing cluster</h1>
+<h1 id="using-an-existing-cluster">Using an existing cluster<a class="headerlink" href="#using-an-existing-cluster" title="Permanent link">&para;</a></h1>
 <p>Either from the system bar menu or from the <code>Clusters</code> menu in the left side bar of Ásbrú Connection Manager, run your cluster:</p>
 <p><img alt="imagen" src="https://user-images.githubusercontent.com/1572396/67621685-c5cbae00-f7d7-11e9-8946-010a863ccf57.png" /></p>
 <p>This will open all terminals <strong>simultaneously*<em> and link the keyboard to </em></strong>all terminals*** in the cluster.
 So anything you write on one will be simultaneously typed in the others.</p>
 <p><img alt="imagen" src="https://user-images.githubusercontent.com/1572396/67621699-fa3f6a00-f7d7-11e9-8bca-1cdde9285516.png" /></p>
-<h1 id="power-cluster-management">Power Cluster Management</h1>
+<h1 id="power-cluster-management">Power Cluster Management<a class="headerlink" href="#power-cluster-management" title="Permanent link">&para;</a></h1>
 <p>The Power Cluster Management (aka PCC), is used on 2 conditions:</p>
 <ul>
 <li>You open several terminals that have no cluster</li>

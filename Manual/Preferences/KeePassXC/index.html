@@ -48,6 +48,12 @@
     
       <link rel="stylesheet" href="../../../assets/stylesheets/application.adb8469c.css">
       
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#7e57c2">
       
     
     
@@ -63,13 +69,17 @@
     <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
     
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+    
     
       
     
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-purple" data-md-color-accent="pink">
   
     <svg class="md-svg">
       <defs>
@@ -251,7 +261,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../General/NEWS/" title="News" class="md-nav__link">
+    <a href="../../../General/News/" title="News" class="md-nav__link">
       News
     </a>
   </li>
@@ -1034,7 +1044,7 @@
                 
                   <h1>KeePass</h1>
                 
-                <h2 id="keepass-integration">KeePass Integration</h2>
+                <h2 id="keepass-integration">KeePass Integration<a class="headerlink" href="#keepass-integration" title="Permanent link">&para;</a></h2>
 <div class="admonition danger">
 <p class="admonition-title">Important</p>
 <p>This documentation corresponds to Ásbrú 6.2+</p>
@@ -1043,7 +1053,7 @@ Which means you will have to reconfigure the usernames and passwords fields. Or 
 <p>The current integration uses <code>keepassxc-cli</code> to access the database, <a href="https://keepassxc.org/">https://keepassxc.org/</a>.</p>
 <p>To see the reasons for this hard changes, please read at the end of this documentation page.</p>
 </div>
-<h2 id="keepass-organization">KeePass Organization</h2>
+<h2 id="keepass-organization">KeePass Organization<a class="headerlink" href="#keepass-organization" title="Permanent link">&para;</a></h2>
 <p>It is very important to prepare your KeePass database to work with this integration. The database access is done using the command line tool <code>keepassxc-cli</code></p>
 <p>And by design this tool imposes certain restrictions.</p>
 <ul>
@@ -1078,7 +1088,7 @@ Which means you will have to reconfigure the usernames and passwords fields. Or 
 <p><img alt="" src="../images/kpxcc5.png" /></p>
 <p><strong>List</strong></p>
 <p><img alt="" src="../images/kpxcc6.png" /></p>
-<h2 id="configure">Configure</h2>
+<h2 id="configure">Configure<a class="headerlink" href="#configure" title="Permanent link">&para;</a></h2>
 <p><img alt="" src="../images/kpxc1.png" /></p>
 <ul>
 <li><strong>Activate use of KeePass database file</strong> : Activate KeePass functionality.</li>
@@ -1100,13 +1110,13 @@ Which means you will have to reconfigure the usernames and passwords fields. Or 
 </ul>
 </li>
 </ul>
-<h2 id="how-to-use">How to use</h2>
-<h3 id="enter-master-password">Enter Master Password</h3>
+<h2 id="how-to-use">How to use<a class="headerlink" href="#how-to-use" title="Permanent link">&para;</a></h2>
+<h3 id="enter-master-password">Enter Master Password<a class="headerlink" href="#enter-master-password" title="Permanent link">&para;</a></h3>
 <p>If you decided not to save the Master Password, when access to the database is needed you will see a prompt similar to this one.</p>
 <p><img alt="" src="../images/kpxc2.png" /></p>
 <p>Type your password and clic on "Accept". If the application can not unlock the database will prompt again.</p>
 <p>You can type cancel if you do not want to unlock the database, or the password you are entering is not working.</p>
-<h3 id="assign-a-user-name-and-password-to-a-connection">Assign a user name and password to a connection.</h3>
+<h3 id="assign-a-user-name-and-password-to-a-connection">Assign a user name and password to a connection.<a class="headerlink" href="#assign-a-user-name-and-password-to-a-connection" title="Permanent link">&para;</a></h3>
 <p><img alt="" src="../images/kpxc3.png" /></p>
 <p>Click on the "KeyPass" icon to open the KeePassXC search, this window will allow you to search keepass entries and list the results.</p>
 <p>Locate the entry you want to use as a reference and then double click on that entry.</p>
@@ -1119,11 +1129,11 @@ Which means you will have to reconfigure the usernames and passwords fields. Or 
 <p><img alt="" src="../images/kpxc5.png" /></p>
 <p><strong>I selected the wrong authentication method</strong> before selecting my keepass link. Simply copy paste the entries to your the correct fields, or change the method and select your entry again.</p>
 </div>
-<h2 id="assign-url-or-other-properties-to-other-fields">Assign URL, or other properties to other fields</h2>
+<h2 id="assign-url-or-other-properties-to-other-fields">Assign URL, or other properties to other fields<a class="headerlink" href="#assign-url-or-other-properties-to-other-fields" title="Permanent link">&para;</a></h2>
 <p>Some fields gives you access to keepass list search to add an entry to : expects, variables, local commands, etc.</p>
 <p><img alt="" src="../images/kpxc6.png" /></p>
 <p><img alt="" src="../images/kpxc7.png" /></p>
-<h2 id="known-restriction-or-limitations-of-the-current-model">Known restriction or limitations of the current model.</h2>
+<h2 id="known-restriction-or-limitations-of-the-current-model">Known restriction or limitations of the current model.<a class="headerlink" href="#known-restriction-or-limitations-of-the-current-model" title="Permanent link">&para;</a></h2>
 <p>This are known limitations of the current model.</p>
 <ul>
 <li>The cli access will not allow to have an "unlocked" state.<ul>
@@ -1144,7 +1154,7 @@ Which means you will have to reconfigure the usernames and passwords fields. Or 
 <p>But as of this date (2020-03-12), the Ásbrú project, is still recovering from the hard migration to gkt3 and there are many features and stability issues that need to be addressed.</p>
 <p>This was the must balanced path to deliver a good integration and attend all other issues.</p>
 </div>
-<h2 id="why-did-you-have-to-rewrite-and-brake-compatibility">Why did you have to rewrite and brake compatibility?</h2>
+<h2 id="why-did-you-have-to-rewrite-and-brake-compatibility">Why did you have to rewrite and brake compatibility?<a class="headerlink" href="#why-did-you-have-to-rewrite-and-brake-compatibility" title="Permanent link">&para;</a></h2>
 <p>The functionality was completely rewritten to address several related requests and additional issues detected in the previous implementation.</p>
 <p><strong>Current Implementation</strong></p>
 <ul>

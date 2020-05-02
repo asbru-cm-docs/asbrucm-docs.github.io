@@ -48,6 +48,12 @@
     
       <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
       
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#7e57c2">
       
     
     
@@ -63,13 +69,17 @@
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
+    
     
       
     
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-purple" data-md-color-accent="pink">
   
     <svg class="md-svg">
       <defs>
@@ -251,7 +261,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../General/NEWS/" title="News" class="md-nav__link">
+    <a href="../../General/News/" title="News" class="md-nav__link">
       News
     </a>
   </li>
@@ -1008,19 +1018,19 @@
                   <a href="https://github.com/asbru-cm/asbru-cm/edit/master/doc/Manual/CommandLine.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="command-line">Command Line</h1>
+                <h1 id="command-line">Command Line<a class="headerlink" href="#command-line" title="Permanent link">&para;</a></h1>
 <p>This section explains how to start Ásbrú from the command line and the available options.</p>
 <div class="admonition tip">
 <p class="admonition-title">start from the command line</p>
 <p>Starting asbru-cm from the command line helps you to detect possible errors if the application:  crashes, freezed or behaves in un expected ways.</p>
 <p>This messages will be help full at the time to report a bug.</p>
 </div>
-<h2 id="asbru-cm">asbru-cm</h2>
+<h2 id="asbru-cm">asbru-cm<a class="headerlink" href="#asbru-cm" title="Permanent link">&para;</a></h2>
 <p>To start execute : <code>./asbru-cm</code> or <code>perl asbru-cm</code></p>
-<pre><code>Usage: asbru-cm [options]
+<div class="codehilite"><pre><span></span><code>Usage: asbru-cm [options]
 Options:
     --help : show this message
-    --config-dir=path : absolute '/path' or relative 'path' to ~/.config/
+    --config-dir=path : absolute &#39;/path&#39; or relative &#39;path&#39; to ~/.config/
     --no-backup : do no create alternative config files as a backup (faster shutdown)
     --start-shell : start a local terminal
     --password=&lt;pwd&gt; : automatically logon with given password without prompting user
@@ -1037,13 +1047,13 @@ Options:
     --readonly : start in read only mode (no config changes allowed)
     --verbose : display more debugging information
 
-See 'man asbru' for additional information.
+See &#39;man asbru&#39; for additional information.
+</code></pre></div>
 
-</code></pre>
 
-<h2 id="options">Options</h2>
+<h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
 <p>We will detail options that might need additional detail or have some useful uses.</p>
-<h3 id="-config-dir">--config-dir</h3>
+<h3 id="-config-dir">--config-dir<a class="headerlink" href="#-config-dir" title="Permanent link">&para;</a></h3>
 <p>Let's you start asrbu-cm using a different configuration path.</p>
 <p>This path could be a shared directory or it can be used to creates tests etc.</p>
 <p>Path can be a relative or absolute path</p>
@@ -1058,42 +1068,42 @@ See 'man asbru' for additional information.
 <p>Start asru-cm with a set of completely new settings</p>
 <p><code>perl asbru-cm --config-dir=/home/user/asbru.new</code></p>
 <p>Will open or create a complete config directory in : <code>/home/user/asbru.new</code></p>
-<h3 id="-start-shell">--start-shell</h3>
+<h3 id="-start-shell">--start-shell<a class="headerlink" href="#-start-shell" title="Permanent link">&para;</a></h3>
 <p>Start asbru-cm and launch a shell after loading.</p>
-<h3 id="-password">--password</h3>
+<h3 id="-password">--password<a class="headerlink" href="#-password" title="Permanent link">&para;</a></h3>
 <p>If you defined a lock password for asbru-cm, this option allows you to pass that password to asbru-cm so it does not asks for it.</p>
-<h3 id="-verbose">--verbose</h3>
+<h3 id="-verbose">--verbose<a class="headerlink" href="#-verbose" title="Permanent link">&para;</a></h3>
 <p>Display more information to help debug an issue.</p>
-<h2 id="execution-example">Execution example</h2>
+<h2 id="execution-example">Execution example<a class="headerlink" href="#execution-example" title="Permanent link">&para;</a></h2>
 <p><strong>Use default configuration</strong></p>
-<pre><code>perl asbru-cm
+<div class="codehilite"><pre><span></span><code>perl asbru-cm
 
 INFO: Ásbrú Connection Manager 6.2.0 (asbru-cm) started with PID 2247
 INFO: Desktop environment detected : cinnamon
-INFO: Config directory is '/home/xxxx/.config/asbru'
-INFO: Used config file '/home/xxxx/.config/asbru/asbru.nfreeze'
+INFO: Config directory is &#39;/home/xxxx/.config/asbru&#39;
+INFO: Used config file &#39;/home/xxxx/.config/asbru/asbru.nfreeze&#39;
 INFO: Virtual terminal emulator (VTE) version is 0.52
-INFO: Theme directory is '/home/xxxx/asbru-cm/res/themes/default'
+INFO: Theme directory is &#39;/home/xxxx/asbru-cm/res/themes/default&#39;
 INFO: Using Gnome tray icon
-</code></pre>
+</code></pre></div>
+
 
 <p><strong>Use test configuration</strong></p>
-<pre><code>perl asbru-cm --verbose --config-dir=asbru.test
+<div class="codehilite"><pre><span></span><code>perl asbru-cm --verbose --config-dir=asbru.test
 
 INFO: Ásbrú Connection Manager 6.2.0 (asbru-cm) started with PID 4522
 INFO: Desktop environment detected : cinnamon
-INFO: Config directory is '/home/xxxx/.config/asbru.test'
-INFO: Used config file '/home/xxxx/.config/asbru.test/asbru.nfreeze'
+INFO: Config directory is &#39;/home/xxxx/.config/asbru.test&#39;
+INFO: Used config file &#39;/home/xxxx/.config/asbru.test/asbru.nfreeze&#39;
 INFO: Virtual terminal emulator (VTE) version is 0.52
        - has_bright = 1
        - major_version = 0
        - minor_version = 52
        - vte_feed_binary = 1
        - vte_feed_child = 0
-INFO: Theme directory is '/home/xxxx/asbru-cm/res/themes/asbru-color'
+INFO: Theme directory is &#39;/home/xxxx/asbru-cm/res/themes/asbru-color&#39;
 INFO: Using Gnome tray icon
-
-</code></pre>
+</code></pre></div>
                 
                   
                 

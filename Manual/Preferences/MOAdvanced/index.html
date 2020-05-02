@@ -48,6 +48,12 @@
     
       <link rel="stylesheet" href="../../../assets/stylesheets/application.adb8469c.css">
       
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#7e57c2">
       
     
     
@@ -63,13 +69,17 @@
     <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
     
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+    
     
       
     
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-purple" data-md-color-accent="pink">
   
     <svg class="md-svg">
       <defs>
@@ -251,7 +261,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../General/NEWS/" title="News" class="md-nav__link">
+    <a href="../../../General/News/" title="News" class="md-nav__link">
       News
     </a>
   </li>
@@ -916,7 +926,7 @@
                   <a href="https://github.com/asbru-cm/asbru-cm/edit/master/doc/Manual/Preferences/MOAdvanced.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="advanced-options">Advanced Options</h1>
+                <h1 id="advanced-options">Advanced Options<a class="headerlink" href="#advanced-options" title="Permanent link">&para;</a></h1>
 <p><img alt="" src="../images/advs1.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">Customize to your language</p>
@@ -942,21 +952,22 @@
 </ul>
 </li>
 </ul>
-<h2 id="prompts-password-username-etc">Prompts (Password, Username, etc.)</h2>
+<h2 id="prompts-password-username-etc">Prompts (Password, Username, etc.)<a class="headerlink" href="#prompts-password-username-etc" title="Permanent link">&para;</a></h2>
 <p>The original prompt command for detecting a password request could not work for some of your servers, depending on the : language settings, customized distribution prompt changes, etc.</p>
 <p>In this cases you may need to adjust your prompt regex.</p>
 <p>For example, the original prompt regex for password detections is:</p>
 <p><code>([pP]ass|[pP]ass[wW]or[dt](\s+for\s+|\w+@\w+)*|[cC]ontrase.a|Enter passphrase for key '.+')\s*:\s*$</code></p>
 <p>While this prompt work very will in general for english platforms, it has some minor issues in other latin languages where the grammar changes.</p>
 <p>In the above example, the expression expects that immediately after the "password" word detected e ":" should come up. Which is not true for spanish.</p>
-<pre><code># Enlish prompt
+<div class="codehilite"><pre><span></span><code># Enlish prompt
 
 (current) UNIX Password:
 
 # Spanish prompt
 
 (actual) Contraseña de UNIX:
-</code></pre>
+</code></pre></div>
+
 
 <p>Below is a more general regular expression (but not complete)</p>
 <p><code>(?mi)(pass(word|phrase)|contraseña).*?:\s*$</code></p>

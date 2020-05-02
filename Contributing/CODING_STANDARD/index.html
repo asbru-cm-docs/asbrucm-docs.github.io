@@ -48,6 +48,12 @@
     
       <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
       
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#7e57c2">
       
     
     
@@ -63,13 +69,17 @@
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
+    
     
       
     
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-purple" data-md-color-accent="pink">
   
     <svg class="md-svg">
       <defs>
@@ -251,7 +261,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../General/NEWS/" title="News" class="md-nav__link">
+    <a href="../../General/News/" title="News" class="md-nav__link">
       News
     </a>
   </li>
@@ -966,9 +976,9 @@
                   <a href="https://github.com/asbru-cm/asbru-cm/edit/master/doc/Contributing/CODING_STANDARD.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="coding-standard">Coding Standard</h1>
+                <h1 id="coding-standard">Coding Standard<a class="headerlink" href="#coding-standard" title="Permanent link">&para;</a></h1>
 <p>This coding standard consists of recommendations when contributing to the Ásbrú Connection Manager project.  Recommendations are meant to provide guidance that, when followed, should improve the safety, reliability, and security of the project.</p>
-<h2 id="coding-guidelines">Coding guidelines</h2>
+<h2 id="coding-guidelines">Coding guidelines<a class="headerlink" href="#coding-guidelines" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Use spaces as indentation (no tabs).</li>
 <li>Use 4 spaces per indentation level.</li>
@@ -999,14 +1009,14 @@
 </ul>
 </li>
 </ul>
-<h2 id="documentation-guidelines">Documentation guidelines</h2>
+<h2 id="documentation-guidelines">Documentation guidelines<a class="headerlink" href="#documentation-guidelines" title="Permanent link">&para;</a></h2>
 <ul>
 <li>At the end of each script the <code>__END__</code> marker should be added</li>
 <li>This marker will tell the compiler to stop processing the file from that point onward.</li>
 <li>Allowing to write extensive documentation without being processed by the compiler.</li>
 <li>After the end marker, documentation can be added in pod format, to allow perldoc to format and present information on the screen or to export to other formats.</li>
 </ul>
-<h3 id="basic-pod-plain-old-documentation">Basic pod (Plain Old Documentation)</h3>
+<h3 id="basic-pod-plain-old-documentation">Basic pod (Plain Old Documentation)<a class="headerlink" href="#basic-pod-plain-old-documentation" title="Permanent link">&para;</a></h3>
 <p><strong>Common Sections</strong>, as found in all CPAN documentation</p>
 <ul>
 <li><strong>NAME</strong> module or script name, a dash and a short description.</li>
@@ -1019,9 +1029,9 @@
 <li>AUTHOR who made it.</li>
 </ul>
 <p>The bold sections should be the minimum to Document. Other sections already exist in the repository or could not apply to this particular project.</p>
-<h3 id="pod-markup-summary">Pod markup summary</h3>
+<h3 id="pod-markup-summary">Pod markup summary<a class="headerlink" href="#pod-markup-summary" title="Permanent link">&para;</a></h3>
 <p><strong>This is a reduced set</strong>, if anyone is interested on the full description, follow this reference: https://perldoc.perl.org/perlpod.html</p>
-<pre><code class="pod">=encoding utf8
+<div class="codehilite"><pre><span></span><code>=encoding utf8
 
 =head1 NAME
 
@@ -1040,18 +1050,19 @@ Indent one level with a tab to document code and create a verbatim sections wher
     sub myFunction {
         print &quot;Something&quot;;
     }
+</code></pre></div>
 
-</code></pre>
 
 <p>Basic styles not all available in terminal</p>
-<pre><code class="pod">B&lt;bold text&gt;
+<div class="codehilite"><pre><span></span><code>B&lt;bold text&gt;
 I&lt;Italic text, shown as underline text in terminal&gt;
 C&lt;code text&gt;
 B&lt;tags can be I&lt;nested&gt;&gt;
-</code></pre>
+</code></pre></div>
+
 
 <p><strong>Example pod file in asbru-cm</strong></p>
-<pre><code>__END___
+<div class="codehilite"><pre><span></span><code>__END___
 =encoding utf8
 
 =head1 NAME
@@ -1093,8 +1104,8 @@ You may run different versions of Ásbru and each have different configuration s
 C&lt;sub config_migration&gt; (no parameters) (no return values)
 
 Function normally empty unless there is a migration of the configuration files.
+</code></pre></div>
 
-</code></pre>
 
 <p><strong>See result executing</strong> <code>perldoc asbru-cm</code></p>
                 

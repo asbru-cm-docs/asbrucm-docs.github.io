@@ -48,6 +48,12 @@
     
       <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
       
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#7e57c2">
       
     
     
@@ -63,13 +69,17 @@
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
+    
     
       
     
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-purple" data-md-color-accent="pink">
   
     <svg class="md-svg">
       <defs>
@@ -251,7 +261,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../General/NEWS/" title="News" class="md-nav__link">
+    <a href="../../General/News/" title="News" class="md-nav__link">
       News
     </a>
   </li>
@@ -1021,7 +1031,7 @@
                 
                 
                 <p>This article has been written by <a href="https://github.com/hanspr">Hans Peyrot</a></p>
-<h1 id="introduction-to-expect">Introduction to Expect</h1>
+<h1 id="introduction-to-expect">Introduction to Expect<a class="headerlink" href="#introduction-to-expect" title="Permanent link">&para;</a></h1>
 <div class="admonition danger">
 <p class="admonition-title">Executed during the login process only</p>
 <p>Expect actions are run only during the login process.</p>
@@ -1031,9 +1041,9 @@
 <p><strong>You must know how to write regular expressions for this to work properly.</strong></p>
 </div>
 <p>There are several regular expressions in different parts of the General Preferences and Connection Preferences that allows you to control the login sequence.</p>
-<h2 id="introduction-to-user-password-prompt-sequence">Introduction to user, password, prompt sequence.</h2>
+<h2 id="introduction-to-user-password-prompt-sequence">Introduction to user, password, prompt sequence.<a class="headerlink" href="#introduction-to-user-password-prompt-sequence" title="Permanent link">&para;</a></h2>
 <p>These are the must important configuration regular expressions that will automate your login sequence.</p>
-<h3 id="global-preferences-main-options-advanced-settings">Global Preferences &gt; Main Options &gt; Advanced Settings</h3>
+<h3 id="global-preferences-main-options-advanced-settings">Global Preferences &gt; Main Options &gt; Advanced Settings<a class="headerlink" href="#global-preferences-main-options-advanced-settings" title="Permanent link">&para;</a></h3>
 <p><img alt="" src="../images/expect1.png" /></p>
 <ul>
 <li><strong>PASSWORD prompt</strong>: Regular expression that will detect your password prompt<ul>
@@ -1055,13 +1065,13 @@
 <li><strong>Host-key verification string</strong>: Regular expression that will detect you are connecting to a new server and to accept the remote key automatically.</li>
 <li><strong>Press any key to continue</strong>: Regular expression that will detect a press any key to continue and send a new line for you.</li>
 </ul>
-<h3 id="terminal-options">Terminal Options</h3>
+<h3 id="terminal-options">Terminal Options<a class="headerlink" href="#terminal-options" title="Permanent link">&para;</a></h3>
 <p>You can override some of the previous regular expressions for a particular terminal if they do not work well on a particular connection.</p>
 <p>Is recommended to use a terminal override when the expression you want to add is not common to all your connections or it makes your global option fail if you combine them with the more general one.</p>
 <p>To override the global options on a certain connection activate the <strong><em>Use these personal options</em></strong> in your terminal options tab.</p>
 <p><img alt="" src="../images/expect2.png" /></p>
 <p>The meaning of this options are identical to the global options.</p>
-<h3 id="expect-tab-in-the-terminal-configuration">Expect Tab in the terminal configuration</h3>
+<h3 id="expect-tab-in-the-terminal-configuration">Expect Tab in the terminal configuration<a class="headerlink" href="#expect-tab-in-the-terminal-configuration" title="Permanent link">&para;</a></h3>
 <p>You may add additional expects to your login sequence with this option.</p>
 <p>Each expect will be executed in sequence, one by one.</p>
 <p>The first one to match will <strong>"send"</strong> the configured sequence of characters to the terminal.</p>
@@ -1076,7 +1086,7 @@
 <li>Then send the string : <code>otherboxpass</code></li>
 </ul>
 <p>This could automate, login to a server, then ssh into another one from this one.</p>
-<h2 id="general-sequence-of-events">General sequence of events</h2>
+<h2 id="general-sequence-of-events">General sequence of events<a class="headerlink" href="#general-sequence-of-events" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Connection Starts</li>
 <li>Expect waits for any of the predefined sequence.<ul>
@@ -1090,7 +1100,7 @@
 <li>If we have a prompt, continue</li>
 <li>Execute user defined EXPECT until timeout, o no more expects detected.</li>
 </ul>
-<h2 id="some-usual-problems">Some usual problems.</h2>
+<h2 id="some-usual-problems">Some usual problems.<a class="headerlink" href="#some-usual-problems" title="Permanent link">&para;</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Debug your expects</p>
 <p>If your expects do not work as expected, then you must debug your regular expressions to understand why did not work.</p>
@@ -1098,7 +1108,7 @@
 <p><img alt="" src="../images/expect4.png" /></p>
 <p>When doing this all your commands and the communication will be printed on the terminal. Passwords and other sensitive data will be revealed.</p>
 </div>
-<h3 id="prompt-not-detected">Prompt not detected</h3>
+<h3 id="prompt-not-detected">Prompt not detected<a class="headerlink" href="#prompt-not-detected" title="Permanent link">&para;</a></h3>
 <p>In this case you will receive a <strong>DISCONNECTION</strong> after a successful login sequence.</p>
 <p><a href="https://github.com/asbru-cm/asbru-cm/issues/473#issuecomment-601076625">See issue #473</a></p>
 <p>In this case the admin at the host decided that the prompt should have this non standard format: <code>[hostname:userid:/home/userid:]</code></p>

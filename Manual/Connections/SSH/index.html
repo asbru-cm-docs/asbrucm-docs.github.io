@@ -48,6 +48,12 @@
     
       <link rel="stylesheet" href="../../../assets/stylesheets/application.adb8469c.css">
       
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#7e57c2">
       
     
     
@@ -63,13 +69,17 @@
     <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
     
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+    
     
       
     
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-purple" data-md-color-accent="pink">
   
     <svg class="md-svg">
       <defs>
@@ -251,7 +261,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../General/NEWS/" title="News" class="md-nav__link">
+    <a href="../../../General/News/" title="News" class="md-nav__link">
       News
     </a>
   </li>
@@ -1026,8 +1036,8 @@
                   <a href="https://github.com/asbru-cm/asbru-cm/edit/master/doc/Manual/Connections/SSH.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="common-configuration-options">Common configuration options</h1>
-<h2 id="connection-details">Connection Details</h2>
+                <h1 id="common-configuration-options">Common configuration options<a class="headerlink" href="#common-configuration-options" title="Permanent link">&para;</a></h1>
+<h2 id="connection-details">Connection Details<a class="headerlink" href="#connection-details" title="Permanent link">&para;</a></h2>
 <p><img alt="" src="../images/ssh1.png" /></p>
 <ul>
 <li><strong>Method</strong> : Select any of the selection methods available</li>
@@ -1079,7 +1089,7 @@
 </ul>
 <p>If you are aiming for the highest level of security and automation at the same time, you need to use <a href="../../Preferences/KeePassXC/">KeePass Integration</a></p>
 </div>
-<h2 id="advanced-parameters">Advanced Parameters</h2>
+<h2 id="advanced-parameters">Advanced Parameters<a class="headerlink" href="#advanced-parameters" title="Permanent link">&para;</a></h2>
 <p><img alt="" src="../images/ssh2.png" /></p>
 <ul>
 <li><strong>Programmatically send a string</strong> : Send a specified regex expression every selected seconds to the terminal.</li>
@@ -1090,7 +1100,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="network-settings">Network Settings</h2>
+<h2 id="network-settings">Network Settings<a class="headerlink" href="#network-settings" title="Permanent link">&para;</a></h2>
 <p>This networking options override the Global Networking options for this connection.</p>
 <p><img alt="" src="../images/ssh3.png" /></p>
 <ul>
@@ -1105,7 +1115,7 @@
 <p>If you have SSH access to a remote machine in your network, that has access to the a local machine on the remote network. Then you can use this technique to access to an external machine behind a firewall, that has no public address.</p>
 <p>You need to have a public key installed in your <strong>Jump Server</strong>  to be able to use it as an intermediate machine to access the other network.</p>
 <p>It can be a default public key, or a personal private key that you were assigned.</p>
-<h2 id="pre-post-exec">(Pre / Post) Exec</h2>
+<h2 id="pre-post-exec">(Pre / Post) Exec<a class="headerlink" href="#pre-post-exec" title="Permanent link">&para;</a></h2>
 <p>This commands will be executed immediately <strong>before</strong> (Pre) the connection is launched. And after (Post) the connection has been <strong>closed</strong>.</p>
 <p><img alt="" src="../images/ssh9.png" /></p>
 <p>This commands are executed in the local computer, not on the remote terminal.</p>
@@ -1129,7 +1139,7 @@
 <p class="admonition-title">Possible uses</p>
 <p>Launch : an IDE, a Database Client (DBeaver), start a local scripts that uploads or downloads files, etc.</p>
 </div>
-<h2 id="expect">Expect</h2>
+<h2 id="expect">Expect<a class="headerlink" href="#expect" title="Permanent link">&para;</a></h2>
 <p><img alt="" src="../images/ssh7.png" /></p>
 <p>You can create and execute a sequence of automated actions that will be executed during your login process.</p>
 <ul>
@@ -1156,25 +1166,25 @@
 <p class="admonition-title">More detailed information</p>
 <p>For a more detailed information on Expect read : <a href="../../../Managing/Expect/">Introduction to Expect</a></p>
 </div>
-<h2 id="remote-macros">Remote Macros</h2>
+<h2 id="remote-macros">Remote Macros<a class="headerlink" href="#remote-macros" title="Permanent link">&para;</a></h2>
 <p>Remote Macros have the same principle as the <a href="../../Preferences/RemoteCommands/">Global Remote Commands</a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This commands will show on the popup menu for this connection only, and no others.</p>
 </div>
-<h2 id="local-macros">Local Macros</h2>
+<h2 id="local-macros">Local Macros<a class="headerlink" href="#local-macros" title="Permanent link">&para;</a></h2>
 <p>Local Macros have the same principle as the <a href="../../Preferences/LocalCommands/">Global Local Commands</a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This commands will show on the popup menu for this connection only, and no others.</p>
 </div>
-<h2 id="user-variables">User Variables</h2>
+<h2 id="user-variables">User Variables<a class="headerlink" href="#user-variables" title="Permanent link">&para;</a></h2>
 <p>This have the same principle as the <a href="../../Preferences/GlobalVariables/">Global Variables</a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Will be available only for this particular connection.</p>
 </div>
-<h2 id="terminal-options">Terminal Options</h2>
+<h2 id="terminal-options">Terminal Options<a class="headerlink" href="#terminal-options" title="Permanent link">&para;</a></h2>
 <p>You can override the Global Terminal Options and Look&amp;Feel of any particular connection.</p>
 <p>Enable "Use these personal options"</p>
 <p><img alt="" src="../images/ssh8.png" /></p>
