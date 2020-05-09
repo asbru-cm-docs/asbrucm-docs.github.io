@@ -570,6 +570,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../Preferences/KeyBindings/" title="KeyBindings" class="md-nav__link">
+      KeyBindings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../Preferences/SytemTrayExtensions/" title="Systemtray Extensions" class="md-nav__link">
       Systemtray Extensions
     </a>
@@ -777,13 +789,6 @@
         <li class="md-nav__item">
   <a href="#poppup-menu" class="md-nav__link">
     Poppup Menu
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#keybindings" class="md-nav__link">
-    Keybindings
   </a>
   
 </li>
@@ -1104,13 +1109,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#keybindings" class="md-nav__link">
-    Keybindings
-  </a>
-  
-</li>
-      
       
       
       
@@ -1166,10 +1164,11 @@
 <p>We will begin explaining the concept of copy paste in the terminal, because is the one that confuses many users.</p>
 <p>When you are connected to a remote server, the remote application could request and process mouse events or not.</p>
 <p>If the remote application does not process any mouse events, then the local terminal processes this mouse events locally.</p>
-<p>To distinguish if the remote application is processing mouse events, look at the cursor shape. When a remote program is not processing mouse events then the cursor is a text caret.</p>
+<p>To distinguish if the remote application is processing mouse events, look at the mouse pointer shape. When a remote program is not processing mouse events then the mouse pointer is a text caret.</p>
 <p><strong>No mouse processing</strong></p>
 <p><img alt="" src="../images/ssht3.png" /></p>
 <p><strong>Mouse processing</strong></p>
+<p>The mouse pointer looks as your default pointer.</p>
 <p><img alt="" src="../images/ssht4.png" /></p>
 <div class="admonition tip">
 <p class="admonition-title">Local Clipboard</p>
@@ -1202,13 +1201,12 @@
 <p>Do not expect the terminal to know that there are : line numbers or drawing characters to ignore, it will copy all the text under the selection.</p>
 </div>
 <h4 id="remote-application-does-process-mouse-events">Remote application does process mouse events.<a class="headerlink" href="#remote-application-does-process-mouse-events" title="Permanent link">&para;</a></h4>
-<p>Depending on the remote application, the selection process would look and feel different :</p>
-<div class="codehilite"><pre><span></span><code>+ could be very slow
-+ or that the selection is shown after releasing the mouse
-+ or that the highlight is delayed.
-</code></pre></div>
-
-
+<p>Depending on the remote application and connection speed, the selection process would look and feel different :</p>
+<ul>
+<li>could be very slow</li>
+<li>or the selection is shown after releasing the mouse</li>
+<li>or the highlight is delayed.</li>
+</ul>
 <p><strong>Example of a remote double and triple click selection</strong></p>
 <p><img alt="" src="../images/ssht7.png" /></p>
 <p><img alt="" src="../images/ssht8.png" /></p>
@@ -1231,118 +1229,6 @@
 <ul>
 <li>Pending</li>
 </ul>
-<h2 id="keybindings">Keybindings<a class="headerlink" href="#keybindings" title="Permanent link">&para;</a></h2>
-<p>This is the list of existing Ásbrú key bindings.</p>
-<table>
-<thead>
-<tr>
-<th>Key binding</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>F4</code></td>
-<td>Close all tabs</td>
-</tr>
-<tr>
-<td><code>F11</code></td>
-<td>Toggle Full screen mode</td>
-</tr>
-<tr>
-<td><code>&lt;Ctrl+Alt-r&gt;</code></td>
-<td>Remove terminal from cluster</td>
-</tr>
-<tr>
-<td><code>&lt;Ctrl+Shift+C&gt;</code></td>
-<td>Copy</td>
-</tr>
-<tr>
-<td><code>&lt;Ctrl+Shift+V&gt;</code></td>
-<td>Paste</td>
-</tr>
-<tr>
-<td><code>&lt;Ctrl+Shift+P&gt;</code></td>
-<td>Paste connection password</td>
-</tr>
-<tr>
-<td><code>&lt;Ctrl+Shift+B&gt;</code></td>
-<td>Apply a regex to clipboard and then Paste</td>
-</tr>
-<tr>
-<td><code>&lt;Ctrl+Shift+X&gt;</code></td>
-<td>Reset terminal</td>
-</tr>
-<tr>
-<td><code>&lt;Ctrl+Shift+G&gt;</code></td>
-<td>Guess hostname and set terminal title</td>
-</tr>
-<tr>
-<td><code>&lt;Ctrl+Shift+W&gt;</code></td>
-<td>Close terminal</td>
-</tr>
-<tr>
-<td><code>&lt;Ctrl+Shift+Q&gt;</code></td>
-<td>Quit Ásbrú</td>
-</tr>
-<tr>
-<td><code>&lt;Ctrl+Shift+F&gt;</code></td>
-<td>Find node in the tree view</td>
-</tr>
-<tr>
-<td><code>&lt;Ctrl+Shift+N&gt;</code></td>
-<td>Close all disconnected session windows or tabs</td>
-</tr>
-<tr>
-<td><code>&lt;Ctrl+Shift+D&gt;</code></td>
-<td>Duplicate connection</td>
-</tr>
-<tr>
-<td><code>&lt;Ctrl+Shift+R&gt;</code></td>
-<td>Disconnect and restart session</td>
-</tr>
-<tr>
-<td><code>&lt;Ctrl-F4&gt;</code></td>
-<td>Close current tab</td>
-</tr>
-<tr>
-<td><code>&lt;Ctrl-F3&gt;</code></td>
-<td>Find text in the text buffer</td>
-</tr>
-<tr>
-<td><code>&lt;Ctrl-Insert&gt;</code></td>
-<td>Copy selection to clipboard</td>
-</tr>
-<tr>
-<td><code>&lt;Shift-Insert&gt;</code></td>
-<td>Insert text into the current cursor position</td>
-</tr>
-<tr>
-<td><code>&lt;Alt-c&gt;</code></td>
-<td>Show main connection window</td>
-</tr>
-<tr>
-<td><code>&lt;Alt-n&gt;</code></td>
-<td>Show main connection window</td>
-</tr>
-<tr>
-<td><code>&lt;Alt-e&gt;</code></td>
-<td>Show main edit connection window</td>
-</tr>
-<tr>
-<td><code>&lt;Ctrl++&gt;</code></td>
-<td>Zoom in : increase terminal font size</td>
-</tr>
-<tr>
-<td><code>&lt;Ctrl+-&gt;</code></td>
-<td>Zoom out: decrease terminal font size</td>
-</tr>
-<tr>
-<td><code>&lt;Ctrl+0&gt;</code></td>
-<td>Zoom reset: set font size to default size</td>
-</tr>
-</tbody>
-</table>
                 
                   
                 

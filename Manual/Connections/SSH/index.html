@@ -570,6 +570,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../Preferences/KeyBindings/" title="KeyBindings" class="md-nav__link">
+      KeyBindings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../Preferences/SytemTrayExtensions/" title="Systemtray Extensions" class="md-nav__link">
       Systemtray Extensions
     </a>
@@ -664,6 +676,33 @@
   <a href="#network-settings" class="md-nav__link">
     Network Settings
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#socks-server" class="md-nav__link">
+    Socks Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jump-server" class="md-nav__link">
+    Jump Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pseudo-jump-server" class="md-nav__link">
+    Pseudo Jump Server
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -973,6 +1012,33 @@
     Network Settings
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#socks-server" class="md-nav__link">
+    Socks Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jump-server" class="md-nav__link">
+    Jump Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pseudo-jump-server" class="md-nav__link">
+    Pseudo Jump Server
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1109,12 +1175,40 @@
 <li><strong>Use SOCKS proxy</strong> : Use a SOCKS proxy to exit the local network.</li>
 <li><strong>Jump Server</strong> : Use a jump server to exit the local network, or connect to an internal machine behind a FireWall.</li>
 </ul>
+<h3 id="socks-server">Socks Server<a class="headerlink" href="#socks-server" title="Permanent link">&para;</a></h3>
 <p><img alt="" src="../images/ssh4.png" /></p>
 <p>If your network administrator has added a SOCKS server to the network and grants you access to it, you will have to select and configure the SOCKS Proxy.</p>
+<h3 id="jump-server">Jump Server<a class="headerlink" href="#jump-server" title="Permanent link">&para;</a></h3>
 <p><img alt="" src="../images/ssh5.png" /></p>
 <p>If you have SSH access to a remote machine in your network, that has access to the a local machine on the remote network. Then you can use this technique to access to an external machine behind a firewall, that has no public address.</p>
-<p>You need to have a public key installed in your <strong>Jump Server</strong>  to be able to use it as an intermediate machine to access the other network.</p>
-<p>It can be a default public key, or a personal private key that you were assigned.</p>
+<p>Rules for connections</p>
+<ul>
+<li>Certificate is set<ul>
+<li>Username is required</li>
+<li>Password will be used as a passphrase</li>
+</ul>
+</li>
+<li>Certificate is <strong>not</strong> set<ul>
+<li>User name and password will be used to login.</li>
+<li>They are not required will be asked during the login process if they are not set</li>
+</ul>
+</li>
+</ul>
+<h3 id="pseudo-jump-server">Pseudo Jump Server<a class="headerlink" href="#pseudo-jump-server" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../images/js1.png" /></p>
+<p>If you activate the checkbox <strong>Pseudo jump server</strong>.</p>
+<p>The connection <strong>will not</strong> use the <code>-J</code> option from ssh. Instead, it will do the following actions:</p>
+<ul>
+<li>SSH into the jump server</li>
+<li>Send an SSH connection string based on your connection settings</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important for this to work</p>
+<p>Because the connection now is stablished in the <strong>Jump Server</strong> any keys, hostnames, etc. Has to be available in the Jump server environment for the destination connection to take place.</p>
+<p>So if you use a private key in your server, you need to provide the key in the destination server. And the path to that key has to be the connection.</p>
+<p>Because the keys are selected locally in your computer, you need to have the same key and path in the destination server.</p>
+<p>Or to easy the situation, create an entry in the on user ssh config file  <code>~/ssh/.config</code> with the corresponding paths to your key and the user name. And use the connection name as your Host name.</p>
+</div>
 <h2 id="pre-post-exec">(Pre / Post) Exec<a class="headerlink" href="#pre-post-exec" title="Permanent link">&para;</a></h2>
 <p>This commands will be executed immediately <strong>before</strong> (Pre) the connection is launched. And after (Post) the connection has been <strong>closed</strong>.</p>
 <p><img alt="" src="../images/ssh9.png" /></p>

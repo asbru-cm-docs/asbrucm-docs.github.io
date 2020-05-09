@@ -617,6 +617,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../KeyBindings/" title="KeyBindings" class="md-nav__link">
+      KeyBindings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../SytemTrayExtensions/" title="Systemtray Extensions" class="md-nav__link">
       Systemtray Extensions
     </a>
@@ -946,19 +958,19 @@
 <ul>
 <li><strong>Confirm</strong> : If Ásbrú should launch a confirmation dialog before executing the command. This is useful if your command has instructions that could remove data.</li>
 <li><strong>Command</strong> : The command to be executed. It can contain global variables in it.</li>
-<li><strong>Send <code>&lt;INTRO&gt;</code> at the end</strong> : Will send or not a \n at the end of the command string. Uncheck if you command requires you to type some extra information before sending the <code>&lt;Enter&gt;</code> key.</li>
+<li><strong>Send <code>&lt;INTRO&gt;</code> at the end</strong> : Will send or not a \n at the end of the command string. Uncheck if your command requires you to type some extra information before sending the <code>&lt;Enter&gt;</code> key.</li>
 <li><strong>Description</strong> : The name that will be displayed in the pop up menu.<ul>
-<li>Description has a pattern that you can use to group common commands. The patterns is : <code>Group:Name</code></li>
-<li>Descriptions with "no" group. Will be shown in after all grouped commands</li>
+<li>Description has a pattern that you can use to group common commands. The patterns is <code>Group:Name</code></li>
+<li>Descriptions with "no" group. Will be shown after all grouped commands.</li>
 <li>If you omit giving a Description to your command, the command will become the description.</li>
-<li>All commands are listed sorted alphabetically by Description.</li>
+<li>All commands are sorted alphabetically by Description.</li>
 </ul>
 </li>
 </ul>
 <h2 id="execution">Execution<a class="headerlink" href="#execution" title="Permanent link">&para;</a></h2>
-<p>Example of the list generated of commands when you right click on the terminal and hover over the "Remote Commands" entry.</p>
+<p>Example of the generated list of commands when you right click on the terminal and hover over the "Remote Commands" entry.</p>
 <p><img alt="" src="../images/rc2.png" /></p>
-<p>You will see all Bash commands grouped under the "Bash" group, followed by the "Git Commands" group, that were grouped and at the end you will see the list of all the commands that had no group.</p>
+<p>You will see all Bash commands grouped under the "Bash" group, followed by the "Git Commands" group and at the end you will see the list of all the commands that had no group.</p>
 <p>If we select and execute the "List all" command, that has a global variable assigned in it, the command will be executed in the terminal (on the remote server), as shown in the next 2 images.</p>
 <p><img alt="" src="../images/rc3.png" /></p>
 <p><img alt="" src="../images/rc4.png" /></p>
