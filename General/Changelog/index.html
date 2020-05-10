@@ -1203,11 +1203,19 @@
                 <h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h1>
 <h2 id="unreleased"><a href="https://github.com/asbru-cm/asbru-cm/tree/HEAD">Unreleased</a><a class="headerlink" href="#unreleased" title="Permanent link">&para;</a></h2>
 <p><a href="https://github.com/asbru-cm/asbru-cm/compare/6.1.3...HEAD">Full Changelog</a></p>
+<p><strong>Implemented enhancements:</strong></p>
+<ul>
+<li>a checkbox to lock Expect GUI 'goto' settings <a href="https://github.com/asbru-cm/asbru-cm/issues/564">#564</a></li>
+</ul>
 <p><strong>Fixed bugs:</strong></p>
 <ul>
+<li>Remote commands: Send \&lt;INTRO> at the end always working <a href="https://github.com/asbru-cm/asbru-cm/issues/605">#605</a></li>
+<li>"Select key bindings to disable from TABs Window" not working for  "alt-p". <a href="https://github.com/asbru-cm/asbru-cm/issues/590">#590</a></li>
 <li>Loki - EL7 - More messages in terminal  <a href="https://github.com/asbru-cm/asbru-cm/issues/588">#588</a></li>
+<li>Connection panel resizes on terminal selection open <a href="https://github.com/asbru-cm/asbru-cm/issues/581">#581</a></li>
 <li>Loki - EL7 - Can't select text from the begining of a line on ssh terminal <a href="https://github.com/asbru-cm/asbru-cm/issues/560">#560</a></li>
 <li>Loki - EL7 - Messages while closing some ssh sessions <a href="https://github.com/asbru-cm/asbru-cm/issues/557">#557</a></li>
+<li>Add to cluster menu no longer shows new cluster name <a href="https://github.com/asbru-cm/asbru-cm/issues/408">#408</a></li>
 </ul>
 <p><strong>Closed issues:</strong></p>
 <ul>
@@ -1216,8 +1224,36 @@
 </ul>
 <p><strong>Merged pull requests:</strong></p>
 <ul>
+<li>set window title in detached tab <a href="https://github.com/asbru-cm/asbru-cm/pull/611">#611</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>fix #408 <a href="https://github.com/asbru-cm/asbru-cm/pull/610">#610</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
 <li>[Doc] - Correct typo in installation docs <a href="https://github.com/asbru-cm/asbru-cm/pull/609">#609</a> (<a href="https://github.com/detvan">detvan</a>)</li>
 <li>Docs keybinds jumpserver <a href="https://github.com/asbru-cm/asbru-cm/pull/602">#602</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Fix 590 <a href="https://github.com/asbru-cm/asbru-cm/pull/591">#591</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>verify terminal exists before hiding <a href="https://github.com/asbru-cm/asbru-cm/pull/589">#589</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>disable scroll over spin buttons in expect fix564 <a href="https://github.com/asbru-cm/asbru-cm/pull/586">#586</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Fix #581 redesigned statistics to avoid jumps <a href="https://github.com/asbru-cm/asbru-cm/pull/583">#583</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Cluster terminals <a href="https://github.com/asbru-cm/asbru-cm/pull/578">#578</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>added warning unable to open session log <a href="https://github.com/asbru-cm/asbru-cm/pull/577">#577</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Fix569 <a href="https://github.com/asbru-cm/asbru-cm/pull/576">#576</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Keepass improvements <a href="https://github.com/asbru-cm/asbru-cm/pull/553">#553</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Fix533 2 <a href="https://github.com/asbru-cm/asbru-cm/pull/547">#547</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Fix warning keepass <a href="https://github.com/asbru-cm/asbru-cm/pull/546">#546</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Possible Fix533 <a href="https://github.com/asbru-cm/asbru-cm/pull/545">#545</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Rdp window <a href="https://github.com/asbru-cm/asbru-cm/pull/541">#541</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>537 <a href="https://github.com/asbru-cm/asbru-cm/pull/539">#539</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Fix530 <a href="https://github.com/asbru-cm/asbru-cm/pull/536">#536</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Fix518 2 <a href="https://github.com/asbru-cm/asbru-cm/pull/527">#527</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Link docs tray <a href="https://github.com/asbru-cm/asbru-cm/pull/526">#526</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Fix warning unite <a href="https://github.com/asbru-cm/asbru-cm/pull/523">#523</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Fix518 <a href="https://github.com/asbru-cm/asbru-cm/pull/521">#521</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Fix ask protected <a href="https://github.com/asbru-cm/asbru-cm/pull/520">#520</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Fix182 <a href="https://github.com/asbru-cm/asbru-cm/pull/515">#515</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Fix294 <a href="https://github.com/asbru-cm/asbru-cm/pull/513">#513</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Wenter socket fix <a href="https://github.com/asbru-cm/asbru-cm/pull/512">#512</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Fix debug export <a href="https://github.com/asbru-cm/asbru-cm/pull/508">#508</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Anonimyse utility <a href="https://github.com/asbru-cm/asbru-cm/pull/507">#507</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Fix499 2 <a href="https://github.com/asbru-cm/asbru-cm/pull/503">#503</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Fix414 <a href="https://github.com/asbru-cm/asbru-cm/pull/495">#495</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
 </ul>
 <h2 id="613-2020-04-28"><a href="https://github.com/asbru-cm/asbru-cm/tree/6.1.3">6.1.3</a> (2020-04-28)<a class="headerlink" href="#613-2020-04-28" title="Permanent link">&para;</a></h2>
 <p><a href="https://github.com/asbru-cm/asbru-cm/compare/6.1.2...6.1.3">Full Changelog</a></p>
@@ -1353,10 +1389,10 @@
 <ul>
 <li>Doc 8 <a href="https://github.com/asbru-cm/asbru-cm/pull/471">#471</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
 <li>KeePass Manual 2 <a href="https://github.com/asbru-cm/asbru-cm/pull/466">#466</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>added new keypass integration help docs <a href="https://github.com/asbru-cm/asbru-cm/pull/464">#464</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
 <li>Docs 6 <a href="https://github.com/asbru-cm/asbru-cm/pull/461">#461</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
 <li>Doc 5 <a href="https://github.com/asbru-cm/asbru-cm/pull/456">#456</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
 <li>more typos fixed <a href="https://github.com/asbru-cm/asbru-cm/pull/453">#453</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
-<li>Docs 3 <a href="https://github.com/asbru-cm/asbru-cm/pull/451">#451</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
 <li>Docs 2 <a href="https://github.com/asbru-cm/asbru-cm/pull/449">#449</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
 </ul>
 <h2 id="610rc1-2020-03-01"><a href="https://github.com/asbru-cm/asbru-cm/tree/6.1.0rc1">6.1.0rc1</a> (2020-03-01)<a class="headerlink" href="#610rc1-2020-03-01" title="Permanent link">&para;</a></h2>
