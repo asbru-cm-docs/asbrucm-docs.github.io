@@ -855,6 +855,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#when-a-key-fingerprint-has-changed-the-terminal-can-not-connect" class="md-nav__link">
+    When a key fingerprint has changed, the terminal can not connect.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#prompt-not-detected" class="md-nav__link">
     Prompt not detected
   </a>
@@ -1012,6 +1019,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#when-a-key-fingerprint-has-changed-the-terminal-can-not-connect" class="md-nav__link">
+    When a key fingerprint has changed, the terminal can not connect.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#prompt-not-detected" class="md-nav__link">
     Prompt not detected
   </a>
@@ -1060,22 +1074,32 @@
 <ul>
 <li><strong>PASSWORD prompt</strong>: Regular expression that will detect your password prompt<ul>
 <li>When found will type your terminal password or passphrase for you.</li>
+<li>Regex : <code>(?mi)(pass(word|phrase)|contraseña).*?:\s*$</code></li>
 </ul>
 </li>
 <li><strong>USERNAME prompt</strong>: Regular expression that will detect your username prompt<ul>
 <li>When found will type your terminal username for you.</li>
+<li>Regex : <code>([lL]ogin|[uU]suario|([uU]ser-?)*[nN]ame.*|[uU]ser)\s*:\s*$</code></li>
 </ul>
 </li>
 <li><strong>Command prompt</strong>: Regular expression that will detect your command prompt<ul>
 <li>When found the automated login will pass actions to your configured Expects for the terminal (if there are any configured)</li>
+<li>Regex : <code>[#%\$&gt;]|\:\/\s*$</code></li>
 </ul>
 </li>
 <li><strong>Remote host key changed</strong>: Regular expression that will detect when the process detected a change in the remote host key.<ul>
 <li>When found, the terminal will issue the add and accept sequence and continue.</li>
+<li>Regex : <code>.*ffending .*key in (.+?)\:(\d+).*</code></li>
 </ul>
 </li>
-<li><strong>Host-key verification string</strong>: Regular expression that will detect you are connecting to a new server and to accept the remote key automatically.</li>
-<li><strong>Press any key to continue</strong>: Regular expression that will detect a press any key to continue and send a new line for you.</li>
+<li><strong>Host-key verification string</strong>: Regular expression that will detect you are connecting to a new server and to accept the remote key automatically.<ul>
+<li>Regex : <code>^.+ontinue connecting \(([^/]+)\/([^/]+)(?:[^)]+)?\)\?\s*$</code></li>
+</ul>
+</li>
+<li><strong>Press any key to continue</strong>: Regular expression that will detect a press any key to continue and send a new line for you.<ul>
+<li>Regex : <code>.*(any key to continue|tecla para continuar).*</code></li>
+</ul>
+</li>
 </ul>
 <h3 id="terminal-options">Terminal Options<a class="headerlink" href="#terminal-options" title="Permanent link">&para;</a></h3>
 <p>You can override some of the previous regular expressions for a particular terminal if they do not work well on a particular connection.</p>
@@ -1113,6 +1137,23 @@
 <li>Execute user defined EXPECT until timeout, o no more expects detected.</li>
 </ul>
 <h2 id="some-usual-problems">Some usual problems.<a class="headerlink" href="#some-usual-problems" title="Permanent link">&para;</a></h2>
+<h3 id="when-a-key-fingerprint-has-changed-the-terminal-can-not-connect">When a key fingerprint has changed, the terminal can not connect.<a class="headerlink" href="#when-a-key-fingerprint-has-changed-the-terminal-can-not-connect" title="Permanent link">&para;</a></h3>
+<p>Users that have been using the same configuration file since the original project PAC Manger. Could have out dated regex for the login process.</p>
+<p>The issue manifests as :</p>
+<ol>
+<li>SSH to new host</li>
+<li>Wait for the warning with the prompt <br />
+<code>Are you sure you want to continue connecting (yes/no/[fingerprint])? yes/no</code> <br />
+<code>Please type 'yes', 'no' or the fingerprint:</code></li>
+<li><strong>DISCONNECTED</strong></li>
+</ol>
+<p>Check your configuration regex against the ones published here. Copy paste the ones that look different to update.</p>
+<p><a href="https://github.com/asbru-cm/asbru-cm/issues/145">See issue #145</a></p>
+<h3 id="prompt-not-detected">Prompt not detected<a class="headerlink" href="#prompt-not-detected" title="Permanent link">&para;</a></h3>
+<p>In this case you will receive a <strong>DISCONNECTION</strong> after a successful login sequence.</p>
+<p><a href="https://github.com/asbru-cm/asbru-cm/issues/473#issuecomment-601076625">See issue #473</a></p>
+<p>In this case the admin at the host decided that the prompt should have this non standard format: <code>[hostname:userid:/home/userid:]</code></p>
+<p>So the <strong>prompt regex</strong> for that particular connection had to be changed to : <code>:\]\s+$</code></p>
 <div class="admonition tip">
 <p class="admonition-title">Debug your expects</p>
 <p>If your expects do not work as expected, then you must debug your regular expressions to understand why did not work.</p>
@@ -1120,11 +1161,6 @@
 <p><img alt="" src="../images/expect4.png" /></p>
 <p>When doing this all your commands and the communication will be printed on the terminal. Passwords and other sensitive data will be revealed.</p>
 </div>
-<h3 id="prompt-not-detected">Prompt not detected<a class="headerlink" href="#prompt-not-detected" title="Permanent link">&para;</a></h3>
-<p>In this case you will receive a <strong>DISCONNECTION</strong> after a successful login sequence.</p>
-<p><a href="https://github.com/asbru-cm/asbru-cm/issues/473#issuecomment-601076625">See issue #473</a></p>
-<p>In this case the admin at the host decided that the prompt should have this non standard format: <code>[hostname:userid:/home/userid:]</code></p>
-<p>So the <strong>prompt regex</strong> for that particular connection had to be changed to : <code>:\]\s+$</code></p>
                 
                   
                 
