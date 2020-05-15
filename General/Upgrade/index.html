@@ -13,7 +13,7 @@
         <meta name="description" content="Ásbrú Connection Manager user and developer documentation">
       
       
-        <link rel="canonical" href="https://docs.asbru-cm.net/Manual/Connections/RDP/">
+        <link rel="canonical" href="https://docs.asbru-cm.net/General/Upgrade/">
       
       
         <meta name="author" content="Ásbrú Connection Manager">
@@ -37,18 +37,18 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
-        <title>RDP - Ásbrú Connection Manager - Docs</title>
+        <title>Upgrade - Ásbrú Connection Manager - Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/application.adb8469c.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
       
-        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -57,7 +57,7 @@
       
     
     
-      <script src="../../../assets/javascripts/modernizr.86422ebf.js"></script>
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
@@ -66,10 +66,10 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
-      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
     
     
       
@@ -93,7 +93,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#connection" tabindex="0" class="md-skip">
+      <a href="#how-do-i-upgrade-or-downgrade-asbru-connection-manager" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -119,7 +119,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                RDP
+                Upgrade
               
             </span>
           
@@ -230,7 +230,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../.." title="Home" class="md-nav__link">
+    <a href="../.." title="Home" class="md-nav__link">
       Home
     </a>
   </li>
@@ -240,10 +240,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       1. General
@@ -261,7 +263,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../General/News/" title="News" class="md-nav__link">
+    <a href="../News/" title="News" class="md-nav__link">
       News
     </a>
   </li>
@@ -273,7 +275,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../General/Installation/" title="Installation" class="md-nav__link">
+    <a href="../Installation/" title="Installation" class="md-nav__link">
       Installation
     </a>
   </li>
@@ -283,11 +285,117 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../../General/Upgrade/" title="Upgrade" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Upgrade
+      </label>
+    
+    <a href="./" title="Upgrade" class="md-nav__link md-nav__link--active">
       Upgrade
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#software" class="md-nav__link">
+    Software
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#official-packages" class="md-nav__link">
+    Official packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manually-from-sources" class="md-nav__link">
+    Manually from sources
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-file" class="md-nav__link">
+    Configuration file
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#upgradedowngrade-of-configuation-file" class="md-nav__link">
+    Upgrade/downgrade of configuation file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-rename" class="md-nav__link">
+    File rename
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specific-configuration" class="md-nav__link">
+    Specific configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#downgrade" class="md-nav__link">
+    Downgrade
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migration-scripts" class="md-nav__link">
+    Migration scripts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -297,7 +405,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../General/Changelog/" title="Changelog" class="md-nav__link">
+    <a href="../Changelog/" title="Changelog" class="md-nav__link">
       Changelog
     </a>
   </li>
@@ -309,7 +417,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../General/sensitive-info-notice/" title="Warning" class="md-nav__link">
+    <a href="../sensitive-info-notice/" title="Warning" class="md-nav__link">
       Warning
     </a>
   </li>
@@ -324,12 +432,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       2. User's Manual
@@ -347,7 +453,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../QuickStart/" title="Quick Start" class="md-nav__link">
+    <a href="../../Manual/QuickStart/" title="Quick Start" class="md-nav__link">
       Quick Start
     </a>
   </li>
@@ -378,7 +484,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Preferences/Preferences/" title="General" class="md-nav__link">
+    <a href="../../Manual/Preferences/Preferences/" title="General" class="md-nav__link">
       General
     </a>
   </li>
@@ -409,7 +515,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Preferences/MainOptions/" title="Behaviour" class="md-nav__link">
+    <a href="../../Manual/Preferences/MainOptions/" title="Behaviour" class="md-nav__link">
       Behaviour
     </a>
   </li>
@@ -421,7 +527,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Preferences/LookAndFeel/" title="Look&Feel" class="md-nav__link">
+    <a href="../../Manual/Preferences/LookAndFeel/" title="Look&Feel" class="md-nav__link">
       Look&Feel
     </a>
   </li>
@@ -433,7 +539,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Preferences/MOAdvanced/" title="Advanced" class="md-nav__link">
+    <a href="../../Manual/Preferences/MOAdvanced/" title="Advanced" class="md-nav__link">
       Advanced
     </a>
   </li>
@@ -469,7 +575,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Preferences/TermOptions/" title="Behaviour" class="md-nav__link">
+    <a href="../../Manual/Preferences/TermOptions/" title="Behaviour" class="md-nav__link">
       Behaviour
     </a>
   </li>
@@ -481,7 +587,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Preferences/TermLookAndFeel/" title="Look&Feel" class="md-nav__link">
+    <a href="../../Manual/Preferences/TermLookAndFeel/" title="Look&Feel" class="md-nav__link">
       Look&Feel
     </a>
   </li>
@@ -493,7 +599,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Preferences/TermAdvanced/" title="Advanced" class="md-nav__link">
+    <a href="../../Manual/Preferences/TermAdvanced/" title="Advanced" class="md-nav__link">
       Advanced
     </a>
   </li>
@@ -510,7 +616,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Preferences/ShellOptions/" title="Shell Options" class="md-nav__link">
+    <a href="../../Manual/Preferences/ShellOptions/" title="Shell Options" class="md-nav__link">
       Shell Options
     </a>
   </li>
@@ -522,7 +628,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Preferences/Networking/" title="Networking" class="md-nav__link">
+    <a href="../../Manual/Preferences/Networking/" title="Networking" class="md-nav__link">
       Networking
     </a>
   </li>
@@ -534,7 +640,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Preferences/GlobalVariables/" title="Global Variables" class="md-nav__link">
+    <a href="../../Manual/Preferences/GlobalVariables/" title="Global Variables" class="md-nav__link">
       Global Variables
     </a>
   </li>
@@ -546,7 +652,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Preferences/LocalCommands/" title="Local Commands" class="md-nav__link">
+    <a href="../../Manual/Preferences/LocalCommands/" title="Local Commands" class="md-nav__link">
       Local Commands
     </a>
   </li>
@@ -558,7 +664,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Preferences/RemoteCommands/" title="Remote Commands" class="md-nav__link">
+    <a href="../../Manual/Preferences/RemoteCommands/" title="Remote Commands" class="md-nav__link">
       Remote Commands
     </a>
   </li>
@@ -570,7 +676,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Preferences/KeePassXC/" title="KeePass" class="md-nav__link">
+    <a href="../../Manual/Preferences/KeePassXC/" title="KeePass" class="md-nav__link">
       KeePass
     </a>
   </li>
@@ -582,7 +688,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Preferences/KeyBindings/" title="KeyBindings" class="md-nav__link">
+    <a href="../../Manual/Preferences/KeyBindings/" title="KeyBindings" class="md-nav__link">
       KeyBindings
     </a>
   </li>
@@ -594,7 +700,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Preferences/SytemTrayExtensions/" title="Systemtray Extensions" class="md-nav__link">
+    <a href="../../Manual/Preferences/SytemTrayExtensions/" title="Systemtray Extensions" class="md-nav__link">
       Systemtray Extensions
     </a>
   </li>
@@ -611,7 +717,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../CommandLine/" title="Command Line" class="md-nav__link">
+    <a href="../../Manual/CommandLine/" title="Command Line" class="md-nav__link">
       Command Line
     </a>
   </li>
@@ -621,12 +727,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
     
     <label class="md-nav__link" for="nav-3-4">
       Connections
@@ -644,7 +748,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../SSH/" title="Configure" class="md-nav__link">
+    <a href="../../Manual/Connections/SSH/" title="Configure" class="md-nav__link">
       Configure
     </a>
   </li>
@@ -654,12 +758,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4-2" type="checkbox" id="nav-3-4-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4-2" type="checkbox" id="nav-3-4-2">
     
     <label class="md-nav__link" for="nav-3-4-2">
       Methods
@@ -677,7 +779,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../SSH_Terminal/" title="SSH" class="md-nav__link">
+    <a href="../../Manual/Connections/SSH_Terminal/" title="SSH" class="md-nav__link">
       SSH
     </a>
   </li>
@@ -687,65 +789,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        RDP
-      </label>
-    
-    <a href="./" title="RDP" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../Manual/Connections/RDP/" title="RDP" class="md-nav__link">
       RDP
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#connection" class="md-nav__link">
-    Connection
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#connection-details" class="md-nav__link">
-    Connection Details
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rdp-settings" class="md-nav__link">
-    RDP Settings
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -784,7 +832,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Substitutions/" title="Substitution" class="md-nav__link">
+    <a href="../../Manual/Substitutions/" title="Substitution" class="md-nav__link">
       Substitution
     </a>
   </li>
@@ -825,7 +873,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Managing/Clusters/" title="Clusters" class="md-nav__link">
+    <a href="../../Managing/Clusters/" title="Clusters" class="md-nav__link">
       Clusters
     </a>
   </li>
@@ -837,7 +885,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Managing/Templates/" title="Templates" class="md-nav__link">
+    <a href="../../Managing/Templates/" title="Templates" class="md-nav__link">
       Templates
     </a>
   </li>
@@ -849,7 +897,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Managing/Expect/" title="Expect" class="md-nav__link">
+    <a href="../../Managing/Expect/" title="Expect" class="md-nav__link">
       Expect
     </a>
   </li>
@@ -885,7 +933,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Contributing/" title="Contributing" class="md-nav__link">
+    <a href="../../Contributing/" title="Contributing" class="md-nav__link">
       Contributing
     </a>
   </li>
@@ -897,7 +945,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Contributing/CODING_STANDARD/" title="Coding standards" class="md-nav__link">
+    <a href="../../Contributing/CODING_STANDARD/" title="Coding standards" class="md-nav__link">
       Coding standards
     </a>
   </li>
@@ -909,7 +957,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Contributing/CODE_OF_CONDUCT/" title="Code of conduct" class="md-nav__link">
+    <a href="../../Contributing/CODE_OF_CONDUCT/" title="Code of conduct" class="md-nav__link">
       Code of conduct
     </a>
   </li>
@@ -934,21 +982,30 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#connection" class="md-nav__link">
-    Connection
+  <a href="#software" class="md-nav__link">
+    Software
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#connection-details" class="md-nav__link">
-    Connection Details
+  <a href="#official-packages" class="md-nav__link">
+    Official packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manually-from-sources" class="md-nav__link">
+    Manually from sources
   </a>
   
 </li>
@@ -959,9 +1016,50 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rdp-settings" class="md-nav__link">
-    RDP Settings
+  <a href="#configuration-file" class="md-nav__link">
+    Configuration file
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#upgradedowngrade-of-configuation-file" class="md-nav__link">
+    Upgrade/downgrade of configuation file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-rename" class="md-nav__link">
+    File rename
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specific-configuration" class="md-nav__link">
+    Specific configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#downgrade" class="md-nav__link">
+    Downgrade
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migration-scripts" class="md-nav__link">
+    Migration scripts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -981,27 +1079,69 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/asbru-cm/asbru-cm/edit/master/doc/Manual/Connections/RDP.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/asbru-cm/asbru-cm/edit/master/doc/General/Upgrade.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>RDP</h1>
-                
-                <h2 id="connection">Connection<a class="headerlink" href="#connection" title="Permanent link">&para;</a></h2>
-<h3 id="connection-details">Connection Details<a class="headerlink" href="#connection-details" title="Permanent link">&para;</a></h3>
+                <h1 id="how-do-i-upgrade-or-downgrade-asbru-connection-manager">How do I upgrade or downgrade Ásbrú Connection Manager ?<a class="headerlink" href="#how-do-i-upgrade-or-downgrade-asbru-connection-manager" title="Permanent link">&para;</a></h1>
+<h2 id="software">Software<a class="headerlink" href="#software" title="Permanent link">&para;</a></h2>
+<h3 id="official-packages">Official packages<a class="headerlink" href="#official-packages" title="Permanent link">&para;</a></h3>
+<p>If you installed Ásbrú Connection Manager from our packages prepared for most of the popular distributions, you simply need to upgrade or downgrade the package according to the procedure of your favorite distribution.</p>
+<p>For Debian-based distributions, it would typically be:</p>
+<div class="codehilite"><pre><span></span><code>sudo apt-get install asbru-cm=6.1.2
+</code></pre></div>
+
+
+<p>to list all past versions available for your distribution, you can typically use:</p>
+<div class="codehilite"><pre><span></span><code>apt-cache madison asbru-cm
+</code></pre></div>
+
+
+<p>For Fedora-based distributions, it would typically be:</p>
+<div class="codehilite"><pre><span></span><code>sudo dnf install asbru-cm-6.0.4-1.fc31
+</code></pre></div>
+
+
+<p>to list all past versions available for your distribution, you can typically use:</p>
+<div class="codehilite"><pre><span></span><code>dnf --showduplicate list asbru-cm
+</code></pre></div>
+
+
+<h3 id="manually-from-sources">Manually from sources<a class="headerlink" href="#manually-from-sources" title="Permanent link">&para;</a></h3>
+<p>If you installed Ásbrú Connection Manager manually from our git repository, you will need to pull the desired versions to your local copy.</p>
+<p>Here is an example to upgrade to version 6.2:</p>
+<div class="codehilite"><pre><span></span><code>$ cd /path/to/asbru-cm
+$ git fetch --tags
+$ git checkout 6.2.0
+</code></pre></div>
+
+
+<h2 id="configuration-file">Configuration file<a class="headerlink" href="#configuration-file" title="Permanent link">&para;</a></h2>
+<p>Even if we believe we did everything to avoid data loss, we cannot guarantee the upgrade/downgrade process is 100% safe so before proceeding to any major changes, please make a safe backup copy of your configuration directory (that is by default <code>~/.config/asbru</code>).</p>
+<h3 id="upgradedowngrade-of-configuation-file">Upgrade/downgrade of configuation file<a class="headerlink" href="#upgradedowngrade-of-configuation-file" title="Permanent link">&para;</a></h3>
+<p>At startup, <strong>Ásbrú Connection Manager</strong> is proceeding with the necessary steps to upgrade your configuration, and, to some extent, downgrade, files to the currently running version.</p>
+<h3 id="file-rename">File rename<a class="headerlink" href="#file-rename" title="Permanent link">&para;</a></h3>
+<p>Please note that files have been renamed in version 6.2 ; the main directory is now <code>~/.config/asbru</code> (instead of <code>~/.config/pac</code>).  Files inside the directory have also be renamed (as an example: <code>pac.yml</code> is now <code>asbru.yml</code>)</p>
+<p>Again, at startup, <strong>Ásbrú Connection Manager</strong> will make the necessary changes automatically; a warning message will give you the opportunity to think twice about it:</p>
+<p><img alt="Upgrade warning" src="../images/upgrade1.png" /></p>
+<p>As stated in the message, to minimize risks of data loss, during the upgrade process, a safe copy of your existing configuration will be done to <code>~/.config/pac.old</code>.</p>
+<h3 id="specific-configuration">Specific configuration<a class="headerlink" href="#specific-configuration" title="Permanent link">&para;</a></h3>
+<p>When starting an old version (6.0 or higher), you can use the option <code>--config-dir</code> to start with a specific configuration directory (instead of the default one).  Which means you can start from any backup copy, as an example:</p>
+<div class="codehilite"><pre><span></span><code>asbru-cm --config-dir ~/.config/pac.old
+</code></pre></div>
+
+
+<h3 id="downgrade">Downgrade<a class="headerlink" href="#downgrade" title="Permanent link">&para;</a></h3>
+<p>When starting an old version (6.1.x), Ásbrú will propose to downgrade your migrated configuration:</p>
+<p><img alt="Downgrade warning" src="../images/upgrade2.png" /></p>
+<p>Please note that, as for the upgrade, a copy of your existing configuration will be done before processed with the downgrade.</p>
+<p>If you don't want to downgrade your files, you will be offered to create a new configuration directory:</p>
+<p><img alt="Downgrade warning" src="../images/upgrade3.png" /></p>
+<h3 id="migration-scripts">Migration scripts<a class="headerlink" href="#migration-scripts" title="Permanent link">&para;</a></h3>
+<p>Upgrade and downgrade scripts are available in the <code>utils</code> directory, the last versions are:</p>
 <ul>
-<li><strong>Method</strong> : For this case, we select<ul>
-<li>freerdp</li>
-<li>rdesktop</li>
+<li>Upgrade script: <a href="https://github.com/asbru-cm/asbru-cm/blob/master/utils/pac2asbru.pl">pac2asbru.pl</a></li>
+<li>Downgrade script: <a href="https://github.com/asbru-cm/asbru-cm/blob/master/utils/asbru2pac.pl">asbru2pac.pl</a></li>
 </ul>
-</li>
-</ul>
-<p><img alt="" src="../images/rdp1.png" /></p>
-<h2 id="rdp-settings">RDP Settings<a class="headerlink" href="#rdp-settings" title="Permanent link">&para;</a></h2>
-<p><img alt="" src="../images/rdp4.png" /></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Looking for help to finish this</p>
-</div>
                 
                   
                 
@@ -1023,7 +1163,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../SSH_Terminal/" title="SSH" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Installation/" title="Installation" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1032,19 +1172,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                SSH
+                Installation
               </span>
             </div>
           </a>
         
         
-          <a href="../../Substitutions/" title="Substitution" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Changelog/" title="Changelog" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Substitution
+                Changelog
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -1072,9 +1212,9 @@
       
     </div>
     
-      <script src="../../../assets/javascripts/application.c33a9706.js"></script>
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.1",url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
       
     
   </body>
