@@ -1087,6 +1087,12 @@
 <h3 id="official-packages">Official packages<a class="headerlink" href="#official-packages" title="Permanent link">&para;</a></h3>
 <p>If you installed Ásbrú Connection Manager from our packages prepared for most of the popular distributions, you simply need to upgrade or downgrade the package according to the procedure of your favorite distribution.</p>
 <p>For Debian-based distributions, it would typically be:</p>
+<div class="codehilite"><pre><span></span><code>sudo apt-get update
+sudo apt-get install --only-upgrade asbru-cm
+</code></pre></div>
+
+
+<p>to downgrade to a specific version:</p>
 <div class="codehilite"><pre><span></span><code>sudo apt-get install asbru-cm=6.1.2
 </code></pre></div>
 
@@ -1097,6 +1103,11 @@
 
 
 <p>For Fedora-based distributions, it would typically be:</p>
+<div class="codehilite"><pre><span></span><code>sudo dnf update asbru-cm -y
+</code></pre></div>
+
+
+<p>to downgrade to a specific version:</p>
 <div class="codehilite"><pre><span></span><code>sudo dnf install asbru-cm-6.0.4-1.fc31
 </code></pre></div>
 
