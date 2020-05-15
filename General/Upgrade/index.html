@@ -1126,12 +1126,22 @@ $ git checkout 6.2.0
 </code></pre></div>
 
 
+<p>To downgrade to a previous version:</p>
+<div class="codehilite"><pre><span></span><code>$ git checkout 6.1.1
+</code></pre></div>
+
+
+<p>To get back to latest version (that might not be released):</p>
+<div class="codehilite"><pre><span></span><code>$ git checkout master
+</code></pre></div>
+
+
 <h2 id="configuration-file">Configuration file<a class="headerlink" href="#configuration-file" title="Permanent link">&para;</a></h2>
-<p>Even if we believe we did everything to avoid data loss, we cannot guarantee the upgrade/downgrade process is 100% safe so before proceeding to any major changes, please make a safe backup copy of your configuration directory (that is by default <code>~/.config/asbru</code>).</p>
+<p>Even if we believe we did everything to avoid data loss, we cannot guarantee the upgrade/downgrade process is 100% safe so before proceeding with any major changes, please make a safe backup copy of your configuration directory (that is by default <code>~/.config/asbru</code>).</p>
 <h3 id="upgradedowngrade-of-configuation-file">Upgrade/downgrade of configuation file<a class="headerlink" href="#upgradedowngrade-of-configuation-file" title="Permanent link">&para;</a></h3>
 <p>At startup, <strong>Ásbrú Connection Manager</strong> is proceeding with the necessary steps to upgrade your configuration, and, to some extent, downgrade, files to the currently running version.</p>
 <h3 id="file-rename">File rename<a class="headerlink" href="#file-rename" title="Permanent link">&para;</a></h3>
-<p>Please note that files have been renamed in version 6.2 ; the main directory is now <code>~/.config/asbru</code> (instead of <code>~/.config/pac</code>).  Files inside the directory have also be renamed (as an example: <code>pac.yml</code> is now <code>asbru.yml</code>)</p>
+<p>Please note that some configuration files have been renamed in version 6.2 ; the main directory is now <code>~/.config/asbru</code> (instead of <code>~/.config/pac</code>).  Files inside the directory have also be renamed (as an example: <code>pac.yml</code> is now <code>asbru.yml</code>)</p>
 <p>Again, at startup, <strong>Ásbrú Connection Manager</strong> will make the necessary changes automatically; a warning message will give you the opportunity to think twice about it:</p>
 <p><img alt="Upgrade warning" src="../images/upgrade1.png" /></p>
 <p>As stated in the message, to minimize risks of data loss, during the upgrade process, a safe copy of your existing configuration will be done to <code>~/.config/pac.old</code>.</p>
@@ -1144,7 +1154,7 @@ $ git checkout 6.2.0
 <h3 id="downgrade">Downgrade<a class="headerlink" href="#downgrade" title="Permanent link">&para;</a></h3>
 <p>When starting an old version (6.1.x), Ásbrú will propose to downgrade your migrated configuration:</p>
 <p><img alt="Downgrade warning" src="../images/upgrade2.png" /></p>
-<p>Please note that, as for the upgrade, a copy of your existing configuration will be done before processed with the downgrade.</p>
+<p>Please note that, as for the upgrade, a copy of your existing configuration will be done before processing with the downgrade.</p>
 <p>If you don't want to downgrade your files, you will be offered to create a new configuration directory:</p>
 <p><img alt="Downgrade warning" src="../images/upgrade3.png" /></p>
 <h3 id="migration-scripts">Migration scripts<a class="headerlink" href="#migration-scripts" title="Permanent link">&para;</a></h3>
