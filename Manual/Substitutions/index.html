@@ -1032,8 +1032,10 @@
                 
                 <h1 id="substitutions">Substitutions<a class="headerlink" href="#substitutions" title="Permanent link">&para;</a></h1>
 <p>Inside many fields, values can be represented as masks. And this masks will be substituted by their real value at the time of a connection.</p>
-<p>These masks can be included in fields like : Global variables, local or remote commands, expects, some connection parameters.</p>
-<p>The general format of the mask is <code>&lt;[(Name|Type):]VALUE&gt;</code></p>
+<p>These masks can be included in fields like : Global variables, local or remote commands, pre- and post execution commands, expects, some connection parameters.</p>
+<p>By right clicking on the input field, a wizard will help you building the substitution mask:
+<img alt="Wizard for variable substitution" src="../images/subst3.png" /></p>
+<p>The general format of the mask is <code>&lt;[(Name|Type):]VALUE&gt;</code>.</p>
 <h2 id="internal-variables">Internal Variables<a class="headerlink" href="#internal-variables" title="Permanent link">&para;</a></h2>
 <p><code>&lt;name&gt;</code></p>
 <table>
@@ -1159,13 +1161,13 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Example:</strong></p>
+<p><strong>Example</strong></p>
 <p>Lets say that you want to use a connection configuration with 2 different servers, but you do not want to have 2 separate configurations for this.</p>
 <p>The only thing that changes is the IP</p>
-<p>Create an ASK Mask in your Host entry like this : <code>&lt;ASK:Select host|destination1.com|destination2.com|...&gt;</code></p>
-<p><img alt="" src="../images/subst1.png" /></p>
+<p>Create an ASK mask in your host entry like this : <code>&lt;ASK:Select host|destination1.com|destination2.com|...&gt;</code></p>
+<p><img alt="Create an ASK mask" src="../images/subst1.png" /></p>
 <p>When you connect the terminal will prompt you to select an IP from the previous list that you created.</p>
-<p><img alt="" src="../images/subst2.png" /></p>
+<p><img alt="Ask mask prompt" src="../images/subst2.png" /></p>
 <h2 id="cmd">CMD<a class="headerlink" href="#cmd" title="Permanent link">&para;</a></h2>
 <p>Will execute a command with the shell and use the output of that command for substitution</p>
 <p>Example</p>
