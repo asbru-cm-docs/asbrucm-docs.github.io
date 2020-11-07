@@ -326,6 +326,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#622-2020-11-07" class="md-nav__link">
+    6.2.2 (2020-11-07)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#621-2020-06-06" class="md-nav__link">
     6.2.1 (2020-06-06)
   </a>
@@ -1073,6 +1080,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#622-2020-11-07" class="md-nav__link">
+    6.2.2 (2020-11-07)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#621-2020-06-06" class="md-nav__link">
     6.2.1 (2020-06-06)
   </a>
@@ -1239,6 +1253,56 @@
                 
                 
                 <h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h1>
+<h2 id="622-2020-11-07"><a href="https://github.com/asbru-cm/asbru-cm/tree/6.2.2">6.2.2</a> (2020-11-07)<a class="headerlink" href="#622-2020-11-07" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/asbru-cm/asbru-cm/compare/6.2.1...6.2.2">Full Changelog</a></p>
+<p><strong>Implemented enhancements:</strong></p>
+<ul>
+<li>Cluster session detach/re-attach toggle <a href="https://github.com/asbru-cm/asbru-cm/issues/680">#680</a></li>
+<li>Remove unimplemented option "Check port status at connect" <a href="https://github.com/asbru-cm/asbru-cm/issues/677">#677</a></li>
+<li>Improve show/hide of the connections list using the Alt+n shortcut key <a href="https://github.com/asbru-cm/asbru-cm/issues/649">#649</a></li>
+<li>Do not allow modification in protected folders <a href="https://github.com/asbru-cm/asbru-cm/issues/648">#648</a></li>
+<li>Suggest packages to create all supported types of connections <a href="https://github.com/asbru-cm/asbru-cm/issues/647">#647</a></li>
+<li>Add dependency check for ncat <a href="https://github.com/asbru-cm/asbru-cm/issues/643">#643</a></li>
+<li>Handle untrusted certificates with rdesktop connection <a href="https://github.com/asbru-cm/asbru-cm/issues/629">#629</a></li>
+<li>Close dialog box make "ok" the default button <a href="https://github.com/asbru-cm/asbru-cm/issues/592">#592</a></li>
+</ul>
+<p><strong>Fixed bugs:</strong></p>
+<ul>
+<li>Syntax error at /usr/share/asbru-cm/lib/PACKeyBindings.pm line 360 (Loki on EL 7.8) <a href="https://github.com/asbru-cm/asbru-cm/issues/714">#714</a></li>
+<li>Use of uninitialized value in string eq at /opt/asbru/lib/asbru_conn line 175. <a href="https://github.com/asbru-cm/asbru-cm/issues/711">#711</a></li>
+<li>Icon is not shown in tray bar anymore (Loki on EL8.2) <a href="https://github.com/asbru-cm/asbru-cm/issues/709">#709</a></li>
+<li>print() on closed filehandle $CMD at /opt/asbru/lib/asbru_conn line 1320. <a href="https://github.com/asbru-cm/asbru-cm/issues/700">#700</a></li>
+<li>KeePass password asked every time it is required <a href="https://github.com/asbru-cm/asbru-cm/issues/694">#694</a></li>
+<li>'show GLOBAL commands' covers bottom of RDP session screen <a href="https://github.com/asbru-cm/asbru-cm/issues/687">#687</a></li>
+<li>Loki EL7 - Paste copied Password from node context menu. <a href="https://github.com/asbru-cm/asbru-cm/issues/664">#664</a></li>
+<li>Close All terminals doesn't work <a href="https://github.com/asbru-cm/asbru-cm/issues/660">#660</a></li>
+<li>vertical split wrongly aligned when tabs are on right side <a href="https://github.com/asbru-cm/asbru-cm/issues/646">#646</a></li>
+<li>asbru crash after manual RDP session disconnection <a href="https://github.com/asbru-cm/asbru-cm/issues/538">#538</a></li>
+<li>Be able to drag and drop connections into groups <a href="https://github.com/asbru-cm/asbru-cm/issues/167">#167</a></li>
+<li>Another issue in generated autostart file <a href="https://github.com/asbru-cm/asbru-cm/issues/718">#718</a></li>
+<li>FreeBSD login error again <a href="https://github.com/asbru-cm/asbru-cm/issues/708">#708</a></li>
+<li>$TERMINAL{expect} Not Picking Up Anything <a href="https://github.com/asbru-cm/asbru-cm/issues/656">#656</a></li>
+<li>Copy and paste Cyrillic text <a href="https://github.com/asbru-cm/asbru-cm/issues/652">#652</a></li>
+<li>Error in generated autostart file <a href="https://github.com/asbru-cm/asbru-cm/issues/651">#651</a></li>
+</ul>
+<p><strong>Closed issues:</strong></p>
+<ul>
+<li>"Get Command line" button open a socket <a href="https://github.com/asbru-cm/asbru-cm/issues/716">#716</a></li>
+<li>Fedora 33 Support <a href="https://github.com/asbru-cm/asbru-cm/issues/713">#713</a></li>
+<li>perl-X11-GUITest and Fedora 33 - unable to install the Asbru-CM <a href="https://github.com/asbru-cm/asbru-cm/issues/707">#707</a></li>
+<li>add more options for the pre exec feature <a href="https://github.com/asbru-cm/asbru-cm/issues/704">#704</a></li>
+<li>Startup script to run Ásbrú on Windows 10 ? <a href="https://github.com/asbru-cm/asbru-cm/issues/695">#695</a></li>
+<li>ssvnc integration <a href="https://github.com/asbru-cm/asbru-cm/issues/684">#684</a></li>
+<li>Option for cluster to open each connection in their own window <a href="https://github.com/asbru-cm/asbru-cm/issues/679">#679</a></li>
+<li>Show/hide button for side pane (MyConnections etc.) <a href="https://github.com/asbru-cm/asbru-cm/issues/675">#675</a></li>
+<li>Right click menu not working <a href="https://github.com/asbru-cm/asbru-cm/issues/668">#668</a></li>
+<li>File transfer functions like SecureCRT are required <a href="https://github.com/asbru-cm/asbru-cm/issues/632">#632</a></li>
+</ul>
+<p><strong>Merged pull requests:</strong></p>
+<ul>
+<li>Add 'env GDK_BACKEND=x11' to generated .desktop files <a href="https://github.com/asbru-cm/asbru-cm/pull/722">#722</a> (<a href="https://github.com/ErikTerwan">ErikTerwan</a>)</li>
+<li>Add win10 instructions to docs <a href="https://github.com/asbru-cm/asbru-cm/pull/703">#703</a> (<a href="https://github.com/SegiH">SegiH</a>)</li>
+</ul>
 <h2 id="621-2020-06-06"><a href="https://github.com/asbru-cm/asbru-cm/tree/6.2.1">6.2.1</a> (2020-06-06)<a class="headerlink" href="#621-2020-06-06" title="Permanent link">&para;</a></h2>
 <p><a href="https://github.com/asbru-cm/asbru-cm/compare/6.2.0...6.2.1">Full Changelog</a></p>
 <p><strong>Implemented enhancements:</strong></p>
