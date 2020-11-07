@@ -1134,6 +1134,7 @@
 </ul>
 <p>Our master and the snapshots are being kept as stable as possible. New features for new major releases are being developed inside the "loki" branch.</p>
 <p>Beware that <a href="https://en.wikipedia.org/wiki/Loki">Loki</a> can sometimes behave in an unexpected manner to you.  This is somehow the same concept as the "<a href="https://www.debian.org/releases/sid/">Debian sid</a>" release.</p>
+<p>If you do not wish to run third party scripts on your system, you are able to find manual install instructions for every repository on: https://cloudsmith.io/~asbru-cm/repos/</p>
 <h2 id="windows-10">Windows 10<a class="headerlink" href="#windows-10" title="Permanent link">&para;</a></h2>
 <p>It is possible to run Asbru-CM on Windows 10 by enabling WSL and installing <a href="http://www.straightrunning.com/XmingNotes/">Xming</a>. The application <a href="https://github.com/SegiH/Asbru-CM-Runner">Asbru-CM Runner</a> has detailed instructions on how to do this and allows you to run Asbru-CM on Windows 10 without a console window open in the background.</p>
 <h2 id="ubuntu">Ubuntu<a class="headerlink" href="#ubuntu" title="Permanent link">&para;</a></h2>
@@ -1141,7 +1142,7 @@
 <p>To install the latest release on a fresh <a href="https://www.ubuntu.com/">Ubuntu</a> system, use the following instructions:</p>
 <div class="codehilite"><pre><span></span><code>sudo apt-add-repository multiverse
 sudo apt install curl
-curl -s https://packagecloud.io/install/repositories/asbru-cm/asbru-cm/script.deb.sh | sudo bash
+curl -1sLf &#39;https://dl.cloudsmith.io/public/asbru-cm/release/cfg/setup/bash.deb.sh&#39; | sudo -E bash
 sudo apt install asbru-cm
 </code></pre></div>
 
@@ -1150,7 +1151,7 @@ sudo apt install asbru-cm
 <p>To install the latest snapshot for testing, use the following instructions:</p>
 <div class="codehilite"><pre><span></span><code>sudo apt-add-repository multiverse
 sudo apt install curl
-curl -s https://packagecloud.io/install/repositories/asbru-cm/snapshots/script.deb.sh | sudo bash
+curl -1sLf &#39;https://dl.cloudsmith.io/public/asbru-cm/snapshots/cfg/setup/bash.deb.sh&#39; | sudo -E bash
 sudo apt install asbru-cm
 </code></pre></div>
 
@@ -1159,7 +1160,7 @@ sudo apt install asbru-cm
 <p>To test the latest development package, use the following instructions:</p>
 <div class="codehilite"><pre><span></span><code>sudo apt-add-repository multiverse
 sudo apt install curl
-curl -s https://packagecloud.io/install/repositories/asbru-cm/loki/script.deb.sh | sudo bash
+curl -1sLf &#39;https://dl.cloudsmith.io/public/asbru-cm/loki/cfg/setup/bash.deb.sh&#39; | sudo -E bash
 sudo apt install asbru-cm
 </code></pre></div>
 
@@ -1167,22 +1168,27 @@ sudo apt install asbru-cm
 <h2 id="mint">Mint<a class="headerlink" href="#mint" title="Permanent link">&para;</a></h2>
 <p><strong>Master release</strong></p>
 <p>To install the latest release on a fresh <a href="https://linuxmint.com/">Mint</a> system, use the following instructions:</p>
-<div class="codehilite"><pre><span></span><code>curl -s https://packagecloud.io/install/repositories/asbru-cm/asbru-cm/script.deb.sh | sudo bash
+<div class="codehilite"><pre><span></span><code>sudo apt update
+sudo apt install curl
+curl -1sLf &#39;https://dl.cloudsmith.io/public/asbru-cm/release/cfg/setup/bash.deb.sh&#39; | sudo -E bash
 sudo apt install asbru-cm
 </code></pre></div>
 
 
 <p><strong>Snapshot release</strong></p>
 <p>To install the latest snapshot for testing, use the following instructions:</p>
-<div class="codehilite"><pre><span></span><code>curl -s https://packagecloud.io/install/repositories/asbru-cm/asbru-cm/script.deb.sh | sudo bash
-curl -s https://packagecloud.io/install/repositories/asbru-cm/snapshots/script.deb.sh | sudo bash
+<div class="codehilite"><pre><span></span><code>sudo apt update
+sudo apt install curl
+curl -1sLf &#39;https://dl.cloudsmith.io/public/asbru-cm/snapshots/cfg/setup/bash.deb.sh&#39; | sudo -E bash
 sudo apt install asbru-cm
 </code></pre></div>
 
 
 <p><strong>Loki</strong></p>
 <p>To test the latest development package, use the following instructions:</p>
-<div class="codehilite"><pre><span></span><code>curl -s https://packagecloud.io/install/repositories/asbru-cm/loki/script.deb.sh | sudo bash
+<div class="codehilite"><pre><span></span><code>sudo apt update
+sudo apt install curl
+curl -1sLf &#39;https://dl.cloudsmith.io/public/asbru-cm/loki/cfg/setup/bash.deb.sh&#39; | sudo -E bash
 sudo apt install asbru-cm
 </code></pre></div>
 
@@ -1192,7 +1198,7 @@ sudo apt install asbru-cm
 <p>To install the latest release on a fresh <a href="https://www.debian.org/">Debian</a> system, use the following instructions:</p>
 <div class="codehilite"><pre><span></span><code>sudo apt update
 sudo apt install curl
-curl -s https://packagecloud.io/install/repositories/asbru-cm/asbru-cm/script.deb.sh | sudo bash
+curl -1sLf &#39;https://dl.cloudsmith.io/public/asbru-cm/release/cfg/setup/bash.deb.sh&#39; | sudo -E bash
 sudo apt install asbru-cm
 </code></pre></div>
 
@@ -1201,7 +1207,7 @@ sudo apt install asbru-cm
 <p>To install the latest snapshot for testing, use the following instructions:</p>
 <div class="codehilite"><pre><span></span><code>sudo apt update
 sudo apt install curl
-curl -s https://packagecloud.io/install/repositories/asbru-cm/snapshots/script.deb.sh | sudo bash
+curl -1sLf &#39;https://dl.cloudsmith.io/public/asbru-cm/snapshots/cfg/setup/bash.deb.sh&#39; | sudo -E bash
 sudo apt install asbru-cm
 </code></pre></div>
 
@@ -1210,7 +1216,7 @@ sudo apt install asbru-cm
 <p>To test the latest development package, use the following instructions:</p>
 <div class="codehilite"><pre><span></span><code>sudo apt update
 sudo apt install curl
-curl -s https://packagecloud.io/install/repositories/asbru-cm/loki/script.deb.sh | sudo bash
+ curl -1sLf &#39;https://dl.cloudsmith.io/public/asbru-cm/loki/cfg/setup/bash.deb.sh&#39; | sudo -E bash
 sudo apt install asbru-cm
 </code></pre></div>
 
@@ -1218,21 +1224,21 @@ sudo apt install asbru-cm
 <h2 id="fedora">Fedora<a class="headerlink" href="#fedora" title="Permanent link">&para;</a></h2>
 <p><strong>Master release</strong></p>
 <p>To install the latest release on a fresh <a href="https://getfedora.org/">Fedora</a> system, use the following instructions:</p>
-<div class="codehilite"><pre><span></span><code>curl -s https://packagecloud.io/install/repositories/asbru-cm/asbru-cm/script.rpm.sh | sudo bash
+<div class="codehilite"><pre><span></span><code>curl -1sLf &#39;https://dl.cloudsmith.io/public/asbru-cm/release/cfg/setup/bash.rpm.sh&#39; | sudo -E bash
 sudo dnf install asbru-cm
 </code></pre></div>
 
 
 <p><strong>Snapshot release</strong></p>
 <p>To install the latest snapshot for testing, use the following instructions:</p>
-<div class="codehilite"><pre><span></span><code>curl -s https://packagecloud.io/install/repositories/asbru-cm/snapshots/script.rpm.sh | sudo bash
+<div class="codehilite"><pre><span></span><code>curl -1sLf &#39;https://dl.cloudsmith.io/public/asbru-cm/snapshots/cfg/setup/bash.rpm.sh&#39; | sudo -E bash
 sudo dnf install asbru-cm
 </code></pre></div>
 
 
 <p><strong>Loki</strong></p>
 <p>To test the latest development package, use the following instructions:</p>
-<div class="codehilite"><pre><span></span><code>curl -s https://packagecloud.io/install/repositories/asbru-cm/loki/script.rpm.sh | sudo bash
+<div class="codehilite"><pre><span></span><code>curl -1sLf &#39;https://dl.cloudsmith.io/public/asbru-cm/loki/cfg/setup/bash.rpm.sh&#39; | sudo -E bash
 sudo dnf install asbru-cm
 </code></pre></div>
 
