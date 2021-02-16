@@ -326,6 +326,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#630-2021-02-16" class="md-nav__link">
+    6.3.0 (2021-02-16)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#622-2020-11-07" class="md-nav__link">
     6.2.2 (2020-11-07)
   </a>
@@ -1080,6 +1087,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#630-2021-02-16" class="md-nav__link">
+    6.3.0 (2021-02-16)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#622-2020-11-07" class="md-nav__link">
     6.2.2 (2020-11-07)
   </a>
@@ -1253,16 +1267,86 @@
                 
                 
                 <h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h1>
+<h2 id="630-2021-02-16"><a href="https://github.com/asbru-cm/asbru-cm/tree/6.3.0">6.3.0</a> (2021-02-16)<a class="headerlink" href="#630-2021-02-16" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/asbru-cm/asbru-cm/compare/6.2.2...6.3.0">Full Changelog</a></p>
+<p><strong>Implemented enhancements:</strong></p>
+<ul>
+<li>Conecction Type: https/http <a href="https://github.com/asbru-cm/asbru-cm/issues/731">#731</a></li>
+<li>Fedora 33 Support - (PackageCloud) / obsoleted perl-X11-GUITest <a href="https://github.com/asbru-cm/asbru-cm/issues/719">#719</a></li>
+<li>Support default prompt of VMware ESXi (and avoid connection is not detected and automatically closed after 40 seconds timeout) <a href="https://github.com/asbru-cm/asbru-cm/issues/757">#757</a></li>
+<li>Make port number optional (to support for ~/.ssh/config defined hosts) <a href="https://github.com/asbru-cm/asbru-cm/issues/754">#754</a></li>
+<li>Ásbrú's terminal uses X11 PRIMARY clipboard, ignores CLIPBOARD <a href="https://github.com/asbru-cm/asbru-cm/issues/746">#746</a></li>
+<li>Support for infinite scrollback lines <a href="https://github.com/asbru-cm/asbru-cm/issues/739">#739</a></li>
+<li>A /tls-secure level option menu is required for freerdp connection. <a href="https://github.com/asbru-cm/asbru-cm/issues/688">#688</a></li>
+<li>Remove unimplemented option "Check port status at connect" <a href="https://github.com/asbru-cm/asbru-cm/issues/677">#677</a></li>
+<li>Copy and paste from wine to terminal <a href="https://github.com/asbru-cm/asbru-cm/issues/673">#673</a></li>
+<li>Improve show/hide of the connections list using the Alt+n shortcut key <a href="https://github.com/asbru-cm/asbru-cm/issues/649">#649</a></li>
+<li>Do not allow modification in protected folders <a href="https://github.com/asbru-cm/asbru-cm/issues/648">#648</a></li>
+<li>Suggest packages to create all supported types of connections <a href="https://github.com/asbru-cm/asbru-cm/issues/647">#647</a></li>
+<li>Add dependency check for ncat <a href="https://github.com/asbru-cm/asbru-cm/issues/643">#643</a></li>
+<li>Global Network Settings - KeepassXC integration <a href="https://github.com/asbru-cm/asbru-cm/issues/639">#639</a></li>
+<li>"CTRL+TAB goes to" setting is now obsolete <a href="https://github.com/asbru-cm/asbru-cm/issues/630">#630</a></li>
+<li>Copy password not working properly after password change <a href="https://github.com/asbru-cm/asbru-cm/issues/626">#626</a></li>
+<li>Right click in a terminal should switch the focus to that terminal  <a href="https://github.com/asbru-cm/asbru-cm/issues/604">#604</a></li>
+<li>An option to include time info in the session logs <a href="https://github.com/asbru-cm/asbru-cm/issues/603">#603</a></li>
+<li>Customize Keybindings <a href="https://github.com/asbru-cm/asbru-cm/issues/556">#556</a></li>
+<li>search function : Ctrl-F only works when focus is on connections pane <a href="https://github.com/asbru-cm/asbru-cm/issues/543">#543</a></li>
+<li>Open all connection of one folder <a href="https://github.com/asbru-cm/asbru-cm/issues/534">#534</a></li>
+<li>Jump Server authentication <a href="https://github.com/asbru-cm/asbru-cm/issues/490">#490</a></li>
+<li>Loki branch - Pseudo-jump server <a href="https://github.com/asbru-cm/asbru-cm/issues/470">#470</a></li>
+<li>Enable port range for mosh connections <a href="https://github.com/asbru-cm/asbru-cm/issues/424">#424</a></li>
+<li>Add hotkeys to commands <a href="https://github.com/asbru-cm/asbru-cm/issues/285">#285</a></li>
+<li>Add custom hotkeys for scripts and commands <a href="https://github.com/asbru-cm/asbru-cm/issues/43">#43</a></li>
+</ul>
+<p><strong>Fixed bugs:</strong></p>
+<ul>
+<li>Can't close tabbed terminal with its keybind <a href="https://github.com/asbru-cm/asbru-cm/issues/769">#769</a></li>
+<li>Issue with Vte::Terminal::feed_child version <a href="https://github.com/asbru-cm/asbru-cm/issues/723">#723</a></li>
+<li>Connection fails without any error <a href="https://github.com/asbru-cm/asbru-cm/issues/767">#767</a></li>
+<li>GLOBAL commands doesn't work in cluster when triggered from button bar <a href="https://github.com/asbru-cm/asbru-cm/issues/758">#758</a></li>
+<li>Two clicks are sometimes required to untray <a href="https://github.com/asbru-cm/asbru-cm/issues/756">#756</a></li>
+<li>asbru asks me to type keepassxc password everytimes when I run connection. However master password already set in global settings. <a href="https://github.com/asbru-cm/asbru-cm/issues/750">#750</a></li>
+<li>VTE version not correctly detected on F33 <a href="https://github.com/asbru-cm/asbru-cm/issues/749">#749</a></li>
+<li>Cant enter User / Password for new SSH-Connection <a href="https://github.com/asbru-cm/asbru-cm/issues/735">#735</a></li>
+<li>'show GLOBAL commands' covers bottom of RDP session screen <a href="https://github.com/asbru-cm/asbru-cm/issues/687">#687</a></li>
+<li>How do I select row from a start symbol with hiding connection tree? <a href="https://github.com/asbru-cm/asbru-cm/issues/683">#683</a></li>
+<li>Close All terminals doesn't work <a href="https://github.com/asbru-cm/asbru-cm/issues/660">#660</a></li>
+<li>vertical split wrongly aligned when tabs are on right side <a href="https://github.com/asbru-cm/asbru-cm/issues/646">#646</a></li>
+<li>Remove unwanted GLib message "Source ID 1234 was not found when attempting to remove it" when closing a RDP connection <a href="https://github.com/asbru-cm/asbru-cm/issues/633">#633</a></li>
+<li>Left click on several selected connections deselcts selection befores popup shows <a href="https://github.com/asbru-cm/asbru-cm/issues/617">#617</a></li>
+<li>asbru crash after manual RDP session disconnection <a href="https://github.com/asbru-cm/asbru-cm/issues/538">#538</a></li>
+<li>Be able to drag and drop connections into groups <a href="https://github.com/asbru-cm/asbru-cm/issues/167">#167</a></li>
+</ul>
+<p><strong>Closed issues:</strong></p>
+<ul>
+<li>sftp> Connection to [...] closed by remote host. Connection closed. <a href="https://github.com/asbru-cm/asbru-cm/issues/717">#717</a></li>
+<li>Maximum number of clients reached (asbru_conn:5864): Gtk-WARNING **: 14:45:53.545: cannot open display: :0.0 <a href="https://github.com/asbru-cm/asbru-cm/issues/712">#712</a></li>
+<li>setenv()/putenv() are not thread-safe <a href="https://github.com/asbru-cm/asbru-cm/issues/432">#432</a></li>
+</ul>
+<p><strong>Merged pull requests:</strong></p>
+<ul>
+<li>Change max baud rate for using above 1 Mbps on serial(using cu) <a href="https://github.com/asbru-cm/asbru-cm/pull/772">#772</a> (<a href="https://github.com/nlimbo76">nlimbo76</a>)</li>
+<li>Fix bug clipboard utf8 <a href="https://github.com/asbru-cm/asbru-cm/pull/743">#743</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>update vte_feed_child detection <a href="https://github.com/asbru-cm/asbru-cm/pull/726">#726</a> (<a href="https://github.com/syco">syco</a>)</li>
+<li>do not close socket on disconnect only at the time of a full stop <a href="https://github.com/asbru-cm/asbru-cm/pull/706">#706</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Fix694 b <a href="https://github.com/asbru-cm/asbru-cm/pull/702">#702</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>reset environment keepassword if not set and available <a href="https://github.com/asbru-cm/asbru-cm/pull/697">#697</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Fix #502 Destroy windows after full disconnection <a href="https://github.com/asbru-cm/asbru-cm/pull/693">#693</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Copy and paste cleanup <a href="https://github.com/asbru-cm/asbru-cm/pull/685">#685</a> (<a href="https://github.com/gfrenoy">gfrenoy</a>)</li>
+<li>Fix #617  <a href="https://github.com/asbru-cm/asbru-cm/pull/623">#623</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Fix603 <a href="https://github.com/asbru-cm/asbru-cm/pull/621">#621</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Fix regression logcleanup <a href="https://github.com/asbru-cm/asbru-cm/pull/620">#620</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Pseudojump keepassxc <a href="https://github.com/asbru-cm/asbru-cm/pull/616">#616</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>fix change method, properties not visible <a href="https://github.com/asbru-cm/asbru-cm/pull/615">#615</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Fix470 490 424 psuedo jump server <a href="https://github.com/asbru-cm/asbru-cm/pull/601">#601</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Fix556 keybindings <a href="https://github.com/asbru-cm/asbru-cm/pull/600">#600</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+<li>Restyle modal windows <a href="https://github.com/asbru-cm/asbru-cm/pull/574">#574</a> (<a href="https://github.com/hanspr">hanspr</a>)</li>
+</ul>
 <h2 id="622-2020-11-07"><a href="https://github.com/asbru-cm/asbru-cm/tree/6.2.2">6.2.2</a> (2020-11-07)<a class="headerlink" href="#622-2020-11-07" title="Permanent link">&para;</a></h2>
 <p><a href="https://github.com/asbru-cm/asbru-cm/compare/6.2.1...6.2.2">Full Changelog</a></p>
 <p><strong>Implemented enhancements:</strong></p>
 <ul>
 <li>Cluster session detach/re-attach toggle <a href="https://github.com/asbru-cm/asbru-cm/issues/680">#680</a></li>
-<li>Remove unimplemented option "Check port status at connect" <a href="https://github.com/asbru-cm/asbru-cm/issues/677">#677</a></li>
-<li>Improve show/hide of the connections list using the Alt+n shortcut key <a href="https://github.com/asbru-cm/asbru-cm/issues/649">#649</a></li>
-<li>Do not allow modification in protected folders <a href="https://github.com/asbru-cm/asbru-cm/issues/648">#648</a></li>
-<li>Suggest packages to create all supported types of connections <a href="https://github.com/asbru-cm/asbru-cm/issues/647">#647</a></li>
-<li>Add dependency check for ncat <a href="https://github.com/asbru-cm/asbru-cm/issues/643">#643</a></li>
 <li>Handle untrusted certificates with rdesktop connection <a href="https://github.com/asbru-cm/asbru-cm/issues/629">#629</a></li>
 <li>Close dialog box make "ok" the default button <a href="https://github.com/asbru-cm/asbru-cm/issues/592">#592</a></li>
 <li>Support for Lubuntu 20.10 <a href="https://github.com/asbru-cm/asbru-cm/issues/720">#720</a></li>
@@ -1275,12 +1359,7 @@
 <li>Icon is not shown in tray bar anymore (Loki on EL8.2) <a href="https://github.com/asbru-cm/asbru-cm/issues/709">#709</a></li>
 <li>print() on closed filehandle $CMD at /opt/asbru/lib/asbru_conn line 1320. <a href="https://github.com/asbru-cm/asbru-cm/issues/700">#700</a></li>
 <li>KeePass password asked every time it is required <a href="https://github.com/asbru-cm/asbru-cm/issues/694">#694</a></li>
-<li>'show GLOBAL commands' covers bottom of RDP session screen <a href="https://github.com/asbru-cm/asbru-cm/issues/687">#687</a></li>
 <li>Loki EL7 - Paste copied Password from node context menu. <a href="https://github.com/asbru-cm/asbru-cm/issues/664">#664</a></li>
-<li>Close All terminals doesn't work <a href="https://github.com/asbru-cm/asbru-cm/issues/660">#660</a></li>
-<li>vertical split wrongly aligned when tabs are on right side <a href="https://github.com/asbru-cm/asbru-cm/issues/646">#646</a></li>
-<li>asbru crash after manual RDP session disconnection <a href="https://github.com/asbru-cm/asbru-cm/issues/538">#538</a></li>
-<li>Be able to drag and drop connections into groups <a href="https://github.com/asbru-cm/asbru-cm/issues/167">#167</a></li>
 <li>Another issue in generated autostart file <a href="https://github.com/asbru-cm/asbru-cm/issues/718">#718</a></li>
 <li>FreeBSD login error again <a href="https://github.com/asbru-cm/asbru-cm/issues/708">#708</a></li>
 <li>$TERMINAL{expect} Not Picking Up Anything <a href="https://github.com/asbru-cm/asbru-cm/issues/656">#656</a></li>
@@ -1309,21 +1388,10 @@
 <p><strong>Implemented enhancements:</strong></p>
 <ul>
 <li>Keyboard Focus with RDP  <a href="https://github.com/asbru-cm/asbru-cm/issues/638">#638</a></li>
-<li>"CTRL+TAB goes to" setting is now obsolete <a href="https://github.com/asbru-cm/asbru-cm/issues/630">#630</a></li>
-<li>Copy password not working properly after password change <a href="https://github.com/asbru-cm/asbru-cm/issues/626">#626</a></li>
-<li>An option to include time info in the session logs <a href="https://github.com/asbru-cm/asbru-cm/issues/603">#603</a></li>
 <li>Connection UI enhancements <a href="https://github.com/asbru-cm/asbru-cm/issues/579">#579</a></li>
-<li>Customize Keybindings <a href="https://github.com/asbru-cm/asbru-cm/issues/556">#556</a></li>
-<li>search function : Ctrl-F only works when focus is on connections pane <a href="https://github.com/asbru-cm/asbru-cm/issues/543">#543</a></li>
-<li>Open all connection of one folder <a href="https://github.com/asbru-cm/asbru-cm/issues/534">#534</a></li>
-<li>Jump Server authentication <a href="https://github.com/asbru-cm/asbru-cm/issues/490">#490</a></li>
-<li>Enable port range for mosh connections <a href="https://github.com/asbru-cm/asbru-cm/issues/424">#424</a></li>
-<li>Add hotkeys to commands <a href="https://github.com/asbru-cm/asbru-cm/issues/285">#285</a></li>
-<li>Add custom hotkeys for scripts and commands <a href="https://github.com/asbru-cm/asbru-cm/issues/43">#43</a></li>
 </ul>
 <p><strong>Fixed bugs:</strong></p>
 <ul>
-<li>Remove unwanted GLib message "Source ID 1234 was not found when attempting to remove it" when closing a RDP connection <a href="https://github.com/asbru-cm/asbru-cm/issues/633">#633</a></li>
 <li>Fatal crash on post exec <a href="https://github.com/asbru-cm/asbru-cm/issues/618">#618</a></li>
 <li>'Favourites'/'History'/'Clusters' tab label gets lost sometimes <a href="https://github.com/asbru-cm/asbru-cm/issues/230">#230</a></li>
 <li>Authentication failed - escaping $ in passwords field (VNC) <a href="https://github.com/asbru-cm/asbru-cm/issues/641">#641</a></li>
@@ -1334,9 +1402,7 @@
 <p><a href="https://github.com/asbru-cm/asbru-cm/compare/6.1.3...6.2.0">Full Changelog</a></p>
 <p><strong>Implemented enhancements:</strong></p>
 <ul>
-<li>Right click in a terminal should switch the focus to that terminal  <a href="https://github.com/asbru-cm/asbru-cm/issues/604">#604</a></li>
 <li>Support for Fedora 32 <a href="https://github.com/asbru-cm/asbru-cm/issues/594">#594</a></li>
-<li>Loki branch - Pseudo-jump server <a href="https://github.com/asbru-cm/asbru-cm/issues/470">#470</a></li>
 <li>a checkbox to lock Expect GUI 'goto' settings <a href="https://github.com/asbru-cm/asbru-cm/issues/564">#564</a></li>
 <li>Loki - EL7 - Make Get Command Line dialog copiable <a href="https://github.com/asbru-cm/asbru-cm/issues/558">#558</a></li>
 <li>Zoom in/out Text in terminal <a href="https://github.com/asbru-cm/asbru-cm/issues/447">#447</a></li>
@@ -1353,7 +1419,6 @@
 </ul>
 <p><strong>Fixed bugs:</strong></p>
 <ul>
-<li>Left click on several selected connections deselcts selection befores popup shows <a href="https://github.com/asbru-cm/asbru-cm/issues/617">#617</a></li>
 <li>Loki - EL7 - Can't select text from the begining of a line on ssh terminal <a href="https://github.com/asbru-cm/asbru-cm/issues/560">#560</a></li>
 <li>Loki - EL7 - Messages while closing some ssh sessions <a href="https://github.com/asbru-cm/asbru-cm/issues/557">#557</a></li>
 <li>Remote commands: Send \&lt;INTRO> at the end always working <a href="https://github.com/asbru-cm/asbru-cm/issues/605">#605</a></li>
