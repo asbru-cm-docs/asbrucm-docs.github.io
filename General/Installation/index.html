@@ -337,6 +337,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#gentoo" class="md-nav__link">
+    Gentoo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#installation-of-legacy-5x" class="md-nav__link">
     Installation of legacy 5.x
   </a>
@@ -1051,6 +1058,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#gentoo" class="md-nav__link">
+    Gentoo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#installation-of-legacy-5x" class="md-nav__link">
     Installation of legacy 5.x
   </a>
@@ -1240,6 +1254,34 @@ sudo dnf install asbru-cm
 <p>To test the latest development package, use the following instructions:</p>
 <div class="codehilite"><pre><span></span><code>curl -1sLf &#39;https://dl.cloudsmith.io/public/asbru-cm/loki/cfg/setup/bash.rpm.sh&#39; | sudo -E bash
 sudo dnf install asbru-cm
+</code></pre></div>
+
+
+<h2 id="gentoo">Gentoo<a class="headerlink" href="#gentoo" title="Permanent link">&para;</a></h2>
+<p><strong>Master release</strong></p>
+<p>To install the latest release on a fresh <a href="https://www.gentoo.org/">Gentoo</a> system, use the following instructions. First install necessary dependencies:</p>
+<div class="codehilite"><pre><span></span><code>emerge --ask dev-vcs/git
+emerge --ask dev-perl/YAML
+USE=&quot;perl&quot; emerge --ask dev-libs/ossp-uuid
+USE=&quot;minimal&quot; emerge --ask dev-perl/Type-Tiny-XS
+emerge --ask dev-perl/Crypt-CBC
+emerge --ask dev-perl/Gtk3
+emerge --ask dev-perl/Net-ARP
+emerge --ask dev-perl/Crypt-Blowfish
+emerge --ask dev-perl/Gtk3-SimpleList
+emerge --ask dev-perl/Expect
+</code></pre></div>
+
+
+<p>Because of the <a href="https://github.com/asbru-cm/asbru-cm/issues/816">issue</a> regarding latest Crypt-CBC, downgrade of that specific package is needed:</p>
+<div class="codehilite"><pre><span></span><code>emerge -C dev-perl/Crypt-CBC
+emerge --ask =dev-perl/Crypt-CBC-2.330.0-r2
+</code></pre></div>
+
+
+<p>Finally, clone the repository in convenient place, like ${HOME}/programs/asbru for example:</p>
+<div class="codehilite"><pre><span></span><code>mkdir -p ${HOME}/programs/asbru
+git clone https://github.com/asbru-cm/asbru-cm.git ${HOME}/programs/asbru
 </code></pre></div>
 
 
