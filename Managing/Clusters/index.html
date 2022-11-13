@@ -93,7 +93,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#why-do-you-need-a-cluster" tabindex="0" class="md-skip">
+      <a href="#clusters-management" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -775,9 +775,45 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Clusters
+      </label>
+    
     <a href="./" title="Clusters" class="md-nav__link md-nav__link--active">
       Clusters
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-do-you-need-a-cluster" class="md-nav__link">
+    Why do you need a cluster ?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-cluster" class="md-nav__link">
+    Create a cluster
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -802,6 +838,54 @@
   <li class="md-nav__item">
     <a href="../Expect/" title="Expect" class="md-nav__link">
       Expect
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../JumpServer/" title="Jump Server" class="md-nav__link">
+      Jump Server
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../IncognitoBrowser/" title="Incognito Browser" class="md-nav__link">
+      Incognito Browser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../General/Redistribution/" title="Redistributing" class="md-nav__link">
+      Redistributing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../General/AppImagePackaging/" title="AppImage Packaging" class="md-nav__link">
+      AppImage Packaging
     </a>
   </li>
 
@@ -900,6 +984,29 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-do-you-need-a-cluster" class="md-nav__link">
+    Why do you need a cluster ?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-cluster" class="md-nav__link">
+    Create a cluster
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -914,7 +1021,8 @@
                 
                 
                 <p>This article has been written by <a href="https://github.com/hanspr">Hans Peyrot</a></p>
-<h1 id="why-do-you-need-a-cluster">Why do you need a cluster ?<a class="headerlink" href="#why-do-you-need-a-cluster" title="Permanent link">&para;</a></h1>
+<h1 id="clusters-management">Clusters Management<a class="headerlink" href="#clusters-management" title="Permanent link">&para;</a></h1>
+<h2 id="why-do-you-need-a-cluster">Why do you need a cluster ?<a class="headerlink" href="#why-do-you-need-a-cluster" title="Permanent link">&para;</a></h2>
 <p>This is more an admin tool than programmers, you can use it to type common commands to servers that are identical or at least very similar, this allows you to:</p>
 <ul>
 <li>update several servers</li>
@@ -923,7 +1031,7 @@
 <p><strong>From a programmer point of view</strong></p>
 <p>As an example, I program remote Raspeberri Pi that are connected to electronic scales, etc. And have a very unique code that is similar across them, but I do not have a development environment because I do not have the interest in buying expensive scales or robot arms, to be able to develop. So I connect to all of them simultaneously, they all have exactly the same code; then I edit the code on one terminal and I'm patching on real time the others. Of course I could work on one and then copy the file to the others, but for small adjustments this has been always more practical.</p>
 <p>And there are some other more complicated uses when add to the terminals tunnels, expect, etc. All those tunnels will open simultaneously too.</p>
-<h1 id="create-a-cluster">Create a cluster<a class="headerlink" href="#create-a-cluster" title="Permanent link">&para;</a></h1>
+<h2 id="create-a-cluster">Create a cluster<a class="headerlink" href="#create-a-cluster" title="Permanent link">&para;</a></h2>
 <p>In <code>Clusters</code>, click on the <code>Add</code> button a provide the name of your new cluster:</p>
 <p><img alt="imagen" src="https://user-images.githubusercontent.com/1572396/67621669-81d8a900-f7d7-11e9-9587-140c838d9f0f.png" /></p>
 <p>Select the connections from the left list and add them to the cluster using button <code>Add to cluster</code>:</p>
@@ -938,7 +1046,7 @@
 <p>This will open all terminals <strong>simultaneously*<em> and link the keyboard to </em></strong>all terminals*** in the cluster.
 So anything you write on one will be simultaneously typed in the others.</p>
 <p><img alt="imagen" src="https://user-images.githubusercontent.com/1572396/67621699-fa3f6a00-f7d7-11e9-8bca-1cdde9285516.png" /></p>
-<h1 id="power-cluster-management">Power Cluster Management<a class="headerlink" href="#power-cluster-management" title="Permanent link">&para;</a></h1>
+<h2 id="power-cluster-management">Power Cluster Management<a class="headerlink" href="#power-cluster-management" title="Permanent link">&para;</a></h2>
 <p>The Power Cluster Management (aka PCC), is used on 2 conditions:</p>
 <ul>
 <li>You open several terminals that have no cluster</li>
