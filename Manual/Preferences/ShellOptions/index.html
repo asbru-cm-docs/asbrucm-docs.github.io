@@ -1022,10 +1022,14 @@
 <p><img alt="" src="../images/shell1.png" /></p>
 <ul>
 <li><strong>Start a shell on start up</strong> : Will open a local shell terminal when Ásbrú starts.</li>
-<li><strong>Shell Binary</strong> : Path to your preferred shell (bash, zsh, fish)</li>
-<li><strong>Shell options</strong> : any additional options to start your shell</li>
-<li><strong>Initial Directory</strong> : Path to your initial directory</li>
+<li><strong>Shell Binary</strong> : Path to your preferred shell (bash, zsh, fish).</li>
+<li><strong>Shell options</strong> : any additional options to start your shell.</li>
+<li><strong>Initial Directory</strong> : Path to your initial directory.</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Initial Directory</p>
+<p>The given path will not be expanded.  Consequently, a tilde (~) or <code>$HOME</code> will not be replaced by the home directory and shall not be used.</p>
+</div>
 <h2 id="look-feel">Look &amp; Feel<a class="headerlink" href="#look-feel" title="Permanent link">&para;</a></h2>
 <p><img alt="" src="../images/shell2.png" /></p>
 <p>This Section holds terminal configurations specific for local shell terminals.</p>
